@@ -6,7 +6,7 @@
 
     <groupId>com.github.krasa</groupId>
     <artifactId>krasa-jaxb-tools-example</artifactId>
-    <version>0.3</version>
+    <version>${project.version}</version>
     <modules>
         <module>cxf-xjc-plugin</module>
     </modules>
@@ -18,6 +18,9 @@
         <jaxb.version>2.2.6</jaxb.version>
         <validation-api.version>1.0.0.GA</validation-api.version>
         <hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
+
+
+        <project.version>0.4-SNAPSHOT</project.version>
     </properties>
 
     <dependencies>

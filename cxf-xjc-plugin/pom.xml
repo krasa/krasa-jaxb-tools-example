@@ -5,7 +5,7 @@
     <parent>
         <artifactId>krasa-jaxb-tools-example</artifactId>
         <groupId>com.github.krasa</groupId>
-        <version>0.3</version>
+        <version>${project.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -27,7 +27,7 @@
                 <artifactId>cxf-xjc-plugin</artifactId>
                 <version>2.6.0</version>
                 <configuration>
-                    <sourceRoot>${basedir}/src/generated/</sourceRoot>
+                    <sourceRoot>${basedir}/target/generated-sources/a</sourceRoot>
                     <xsdOptions>
                         <xsdOption>
                             <extension>true</extension>
@@ -36,6 +36,8 @@
                             <extensionArgs>
                                 <extensionArg>-XJsr303Annotations</extensionArg>
                                 <extensionArg>-XJsr303Annotations:targetNamespace=http://www.foo.com/bar</extensionArg>
+                                <extensionArg>-XJsr303Annotations:generateNotNullAnnotations=false</extensionArg>
+                                <extensionArg>-XJsr303Annotations:JSR_349=false</extensionArg>
                             </extensionArgs>
                         </xsdOption>
                     </xsdOptions>
