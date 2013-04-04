@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>krasa-jaxb-tools-example</artifactId>
+		<groupId>com.github.krasa</groupId>
+		<version>${project.version}</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>cxf-codegen-plugin</artifactId>
+
+	<properties>
+		<krasa-jaxb-tools.version>${project.version}</krasa-jaxb-tools.version>
+		<cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
+	</properties>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/generated</directory>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+				<version>${cxf-codegen-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>wsdl2java</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>../wsdl/Hello.wsdl</wsdl>
+									<extraargs>
+										<extraarg>-verbose</extraarg>
+										<extraarg>-frontend</extraarg>
+										<extraarg>jaxws21</extraarg>
+										<extraarg>-b</extraarg>
+										<extraarg>../wsdl/jaxws-Hello.xml</extraarg>
+										<extraarg>-xjc-XJsr303Annotations</extraarg>
+										<extraarg>-xjc-XJsr303Annotations:targetNamespace=http://www.foo.com/bar
+										</extraarg>
+										<!--optional, this is default values-->
+										<extraarg>-xjc-XJsr303Annotations:generateNotNullAnnotations=true</extraarg>
+										<extraarg>-xjc-XJsr303Annotations:JSR_349=false</extraarg>
+									</extraargs>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
+						<goals>
+							<goal>wsdl2java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>com.github.krasa</groupId>
+						<artifactId>krasa-jaxb-tools</artifactId>
+						<version>${krasa-jaxb-tools.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

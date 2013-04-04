@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.krasa</groupId>
-    <artifactId>krasa-jaxb-tools-example</artifactId>
-    <version>${project.version}</version>
-    <modules>
-        <module>cxf-xjc-plugin</module>
-    </modules>
-    <packaging>pom</packaging>
+	<groupId>com.github.krasa</groupId>
+	<artifactId>krasa-jaxb-tools-example</artifactId>
+	<version>${project.version}</version>
+	<modules>
+		<module>cxf-xjc-plugin</module>
+		<module>cxf-codegen-plugin</module>
+	</modules>
+	<packaging>pom</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven-jaxb2-plugin.version>0.8.2</maven-jaxb2-plugin.version>
-        <jaxb.version>2.2.6</jaxb.version>
-        <validation-api.version>1.0.0.GA</validation-api.version>
-        <hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-jaxb2-plugin.version>0.8.2</maven-jaxb2-plugin.version>
+		<jaxb.version>2.2.6</jaxb.version>
+		<validation-api.version>1.0.0.GA</validation-api.version>
+		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
 
 
-        <project.version>0.4-SNAPSHOT</project.version>
-    </properties>
+		<project.version>0.5-SNAPSHOT</project.version>
+	</properties>
 
-    <dependencies>
+	<dependencies>
 
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${validation-api.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${validation-api.version}</version>
+		</dependency>
 
-    </dependencies>
+	</dependencies>
 </project>
