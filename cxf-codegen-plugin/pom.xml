@@ -27,17 +27,18 @@
 				<executions>
 					<execution>
 						<id>wsdl2java</id>
+						<!--<phase>generate-sources-manual</phase>-->
 						<phase>generate-sources</phase>
 						<configuration>
 							<wsdlOptions>
 								<wsdlOption>
-									<wsdl>../wsdl/Hello.wsdl</wsdl>
+									<wsdl>${project.parent.basedir}/wsdl/Hello.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-verbose</extraarg>
 										<extraarg>-frontend</extraarg>
 										<extraarg>jaxws21</extraarg>
 										<extraarg>-b</extraarg>
-										<extraarg>../wsdl/jaxws-Hello.xml</extraarg>
+										<extraarg>${project.parent.basedir}/wsdl/jaxws-Hello.xml</extraarg>
 										<extraarg>-xjc-XJsr303Annotations</extraarg>
 										<extraarg>-xjc-XJsr303Annotations:targetNamespace=http://www.foo.com/bar
 										</extraarg>
