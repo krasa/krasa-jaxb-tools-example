@@ -6,7 +6,7 @@
 
 	<groupId>com.github.krasa</groupId>
 	<artifactId>krasa-jaxb-tools-example</artifactId>
-	<version>${project.version}</version>
+	<version>0.5-SNAPSHOT</version>
 	<modules>
 		<module>cxf-xjc-plugin</module>
 		<module>cxf-codegen-plugin</module>
@@ -20,10 +20,10 @@
 		<validation-api.version>1.0.0.GA</validation-api.version>
 		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
 
+		<krasa-jaxb-tools.version>0.5-SNAPSHOT</krasa-jaxb-tools.version>
+		<cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
 
-		<project.version>0.5-SNAPSHOT</project.version>
 	</properties>
-
 	<dependencies>
 
 		<dependency>
@@ -33,4 +33,20 @@
 		</dependency>
 
 	</dependencies>
+
+
+	<repositories>
+		<repository>
+			<id>snapshots-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+
 </project>

@@ -5,16 +5,12 @@
 	<parent>
 		<artifactId>krasa-jaxb-tools-example</artifactId>
 		<groupId>com.github.krasa</groupId>
-		<version>${project.version}</version>
+		<version>0.5-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>cxf-codegen-plugin</artifactId>
 
-	<properties>
-		<krasa-jaxb-tools.version>${project.version}</krasa-jaxb-tools.version>
-		<cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
-	</properties>
 
 	<build>
 		<resources>
