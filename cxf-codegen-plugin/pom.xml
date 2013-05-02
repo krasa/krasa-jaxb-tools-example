@@ -40,7 +40,7 @@
 										<extraarg>-b</extraarg>
 										<extraarg>${project.parent.basedir}/wsdl/jaxws-Hello.xml</extraarg>
 										<extraarg>-xjc-XJsr303Annotations</extraarg>
-										<extraarg>-xjc-XJsr303Annotations:targetNamespace=http://www.foo.com/bar
+										<extraarg>-xjc-XJsr303Annotations:targetNamespace=a
 										</extraarg>
 										<!--optional, this is default values-->
 										<extraarg>-xjc-XJsr303Annotations:generateNotNullAnnotations=true</extraarg>

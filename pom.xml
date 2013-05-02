@@ -10,19 +10,21 @@
 	<modules>
 		<module>cxf-xjc-plugin</module>
 		<module>cxf-codegen-plugin</module>
+		<module>maven-jaxb2-plugin</module>
 	</modules>
 	<packaging>pom</packaging>
 
 	<properties>
+		<krasa-jaxb-tools.version>0.5</krasa-jaxb-tools.version>
+
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven-jaxb2-plugin.version>0.8.2</maven-jaxb2-plugin.version>
 		<jaxb.version>2.2.6</jaxb.version>
 		<validation-api.version>1.0.0.GA</validation-api.version>
 		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
 
-		<krasa-jaxb-tools.version>0.5-SNAPSHOT</krasa-jaxb-tools.version>
 		<cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
-
 	</properties>
 	<dependencies>
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>krasa-jaxb-tools-example</artifactId>
+		<groupId>com.github.krasa</groupId>
+		<version>0.5-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>maven-jaxb2-plugin</artifactId>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>${project.parent.basedir}/src/generated</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>${maven-jaxb2-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<forceRegenerate>true</forceRegenerate>
+							<schemas>
+								<schema>
+									<fileset>
+										<directory>${project.parent.basedir}/wsdl</directory>
+										<includes>
+											<include>*.*</include>
+										</includes>
+										<excludes>
+											<exclude>*.xs</exclude>
+										</excludes>
+									</fileset>
+								</schema>
+							</schemas>
+							<extension>true</extension>
+							<args>
+								<arg>-XJsr303Annotations</arg>
+								<arg>-XJsr303Annotations:targetNamespace=a</arg>
+							</args>
+							<plugins>
+								<plugin>
+									<groupId>com.github.krasa</groupId>
+									<artifactId>krasa-jaxb-tools</artifactId>
+									<version>${krasa-jaxb-tools.version}</version>
+								</plugin>
+							</plugins>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

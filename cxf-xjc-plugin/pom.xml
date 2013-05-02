@@ -31,7 +31,7 @@
 							<packagename>foo</packagename>
 							<extensionArgs>
 								<extensionArg>-XJsr303Annotations</extensionArg>
-								<extensionArg>-XJsr303Annotations:targetNamespace=http://www.foo.com/bar</extensionArg>
+								<extensionArg>-XJsr303Annotations:targetNamespace=a</extensionArg>
 								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=false</extensionArg>
 								<extensionArg>-XJsr303Annotations:JSR_349=false</extensionArg>
 							</extensionArgs>
