@@ -1,100 +1,122 @@
 <xsd:schema
-        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="a"
-        xmlns:a="a"
-        elementFormDefault="qualified">
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="a"
+		xmlns:a="a"
+		elementFormDefault="qualified">
 
-    <xsd:element name="main" type="a:Main"/>
+	<xsd:element name="main" type="a:Main"/>
 
-    <xsd:complexType name="Main">
-        <xsd:sequence>
-            <xsd:element name="numbers" type="a:Numbers"/>
-            <xsd:element name="strings" type="a:Strings"/>
-            <xsd:element name="unsignedByte" type="a:unsignedByte"/>
-        </xsd:sequence>
-    </xsd:complexType>
+	<xsd:complexType name="Main">
+		<xsd:sequence>
+			<xsd:element name="numbers" type="a:Numbers"/>
+			<xsd:element name="strings" type="a:Strings"/>
+			<xsd:element name="unsignedByte" type="a:unsignedByte"/>
+			<xsd:element name="choices" type="a:Choices"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
-    <xsd:complexType name="Numbers">
-        <xsd:sequence>
-            <xsd:element name="minInclusive" type="a:minInclusive"/>
-            <xsd:element name="maxInclusive" type="a:maxInclusive"/>
+	<xsd:complexType name="Numbers">
+		<xsd:sequence>
+			<xsd:element name="minInclusive" type="a:minInclusive"/>
+			<xsd:element name="maxInclusive" type="a:maxInclusive"/>
 
-            <xsd:element name="minExclusive" type="a:minExclusive"/>
-            <xsd:element name="maxExclusive" type="a:maxExclusive"/>
-            <xsd:element name="minMaxExclusive" type="a:minMaxExclusive"/>
-        </xsd:sequence>
-    </xsd:complexType>
+			<xsd:element name="minExclusive" type="a:minExclusive"/>
+			<xsd:element name="maxExclusive" type="a:maxExclusive"/>
+			<xsd:element name="minMaxExclusive" type="a:minMaxExclusive"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
-    <xsd:complexType name="Strings">
-        <xsd:sequence>
-            <xsd:element name="pattern" type="a:pattern"/>
-            <xsd:element name="genericString" type="a:minMaxLength"/>
-            <xsd:element name="maxLength" type="a:maxLength"/>
-            <xsd:element name="minLength" type="a:minLength"/>
-            <xsd:element name="someCollection" minOccurs="1" maxOccurs="unbounded"/>
-        </xsd:sequence>
-    </xsd:complexType>
+	<xsd:complexType name="Strings">
+		<xsd:sequence>
+			<xsd:element name="pattern" type="a:pattern"/>
+			<xsd:element name="genericString" type="a:minMaxLength"/>
+			<xsd:element name="maxLength" type="a:maxLength"/>
+			<xsd:element name="minLength" type="a:minLength"/>
+			<xsd:element name="someCollection" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
-    <xsd:simpleType name="pattern">
-        <xsd:restriction base="xsd:string">
-            <xsd:pattern value="[0-9]"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:complexType name="Dates">
+		<xsd:sequence>
+			<xsd:element name="date1" type="a:date1"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
-    <xsd:simpleType name="minMaxLength">
-        <xsd:restriction base="xsd:string">
-            <xsd:minLength value="0"/>
-            <xsd:maxLength value="1024"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="pattern">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="maxLength">
-        <xsd:restriction base="xsd:string">
-            <xsd:maxLength value="1024"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="minMaxLength">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="0"/>
+			<xsd:maxLength value="1024"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="minLength">
-        <xsd:restriction base="xsd:string">
-            <xsd:minLength value="0"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="maxLength">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1024"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="unsignedByte">
-        <xsd:restriction base="xsd:unsignedByte">
-            <xsd:pattern value="[0-9]"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="minLength">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="maxInclusive">
-        <xsd:restriction base="xsd:long">
-            <xsd:maxInclusive value="1000"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="unsignedByte">
+		<xsd:restriction base="xsd:unsignedByte">
+			<xsd:pattern value="[0-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="minInclusive">
-        <xsd:restriction base="xsd:long">
-            <xsd:minInclusive value="1000"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="maxInclusive">
+		<xsd:restriction base="xsd:long">
+			<xsd:maxInclusive value="1000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="maxExclusive">
-        <xsd:restriction base="xsd:long">
-            <xsd:maxExclusive value="1000"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="minInclusive">
+		<xsd:restriction base="xsd:long">
+			<xsd:minInclusive value="1000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="minExclusive">
-        <xsd:restriction base="xsd:long">
-            <xsd:minExclusive value="0"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="maxExclusive">
+		<xsd:restriction base="xsd:long">
+			<xsd:maxExclusive value="1000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
-    <xsd:simpleType name="minMaxExclusive">
-        <xsd:restriction base="xsd:long">
-            <xsd:minExclusive value="0"/>
-            <xsd:maxExclusive value="1000"/>
-        </xsd:restriction>
-    </xsd:simpleType>
+	<xsd:simpleType name="minExclusive">
+		<xsd:restriction base="xsd:long">
+			<xsd:minExclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
+	<xsd:simpleType name="minMaxExclusive">
+		<xsd:restriction base="xsd:long">
+			<xsd:minExclusive value="0"/>
+			<xsd:maxExclusive value="1000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="date1">
+		<xsd:restriction base="xsd:gYearMonth">
+			<xsd:minInclusive value="1911-01"/>
+			<xsd:pattern value="\d{4}-\d{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="Choices">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="Tea" type="xsd:string"/>
+				<xsd:element name="Coffee" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
 </xsd:schema>
