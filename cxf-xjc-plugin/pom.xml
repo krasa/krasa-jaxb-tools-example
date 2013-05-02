@@ -23,16 +23,16 @@
 				<artifactId>cxf-xjc-plugin</artifactId>
 				<version>2.6.0</version>
 				<configuration>
-					<sourceRoot>${project.parent.basedir}/target/generated-sources/a</sourceRoot>
+					<sourceRoot>${basedir}/target/generated-sources/xjc</sourceRoot>
 					<xsdOptions>
 						<xsdOption>
 							<extension>true</extension>
 							<xsd>../schema/a.xsd</xsd>
-							<packagename>foo</packagename>
+							<packagename>a</packagename>
 							<extensionArgs>
 								<extensionArg>-XJsr303Annotations</extensionArg>
 								<extensionArg>-XJsr303Annotations:targetNamespace=a</extensionArg>
-								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=false</extensionArg>
+								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>
 								<extensionArg>-XJsr303Annotations:JSR_349=false</extensionArg>
 							</extensionArgs>
 						</xsdOption>
