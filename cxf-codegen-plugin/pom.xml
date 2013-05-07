@@ -15,7 +15,7 @@
 	<build>
 		<resources>
 			<resource>
-				<directory>${basedir}/src/generated</directory>
+				<directory>${project.basedir}/src/generated</directory>
 			</resource>
 		</resources>
 
@@ -30,6 +30,7 @@
 						<!--<phase>generate-sources-manual</phase>-->
 						<phase>generate-sources</phase>
 						<configuration>
+							<sourceRoot>${project.basedir}/src/generated</sourceRoot>
 							<wsdlOptions>
 								<wsdlOption>
 									<wsdl>${project.parent.basedir}/wsdl/Hello.wsdl</wsdl>

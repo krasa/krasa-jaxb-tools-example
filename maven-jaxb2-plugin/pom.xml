@@ -14,7 +14,7 @@
 	<build>
 		<resources>
 			<resource>
-				<directory>${project.parent.basedir}/src/generated</directory>
+				<directory>${project.basedir}/src/generated</directory>
 			</resource>
 		</resources>
 		<plugins>
@@ -28,6 +28,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
+							<generateDirectory>${project.basedir}/src/generated</generateDirectory>
 							<forceRegenerate>true</forceRegenerate>
 							<schemas>
 								<schema>
