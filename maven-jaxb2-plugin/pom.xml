@@ -45,6 +45,7 @@
 							</schemas>
 							<extension>true</extension>
 							<args>
+								<arg>-no-header</arg>
 								<arg>-XJsr303Annotations</arg>
 								<arg>-XJsr303Annotations:targetNamespace=a</arg>
 							</args>

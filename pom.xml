@@ -15,7 +15,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<krasa-jaxb-tools.version>0.6-SNAPSHOT</krasa-jaxb-tools.version>
+		<krasa-jaxb-tools.version>0.7-SNAPSHOT</krasa-jaxb-tools.version>
 
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
