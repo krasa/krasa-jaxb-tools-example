@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.validation.Valid;
@@ -138,7 +137,7 @@ public class Numbers {
 	 * Gets the value of the numberWithCode property.
 	 *
 	 * @return possible object is
-	 *         {@link NumberWithCode }
+	 * {@link NumberWithCode }
 	 */
 	public NumberWithCode getNumberWithCode() {
 		return numberWithCode;

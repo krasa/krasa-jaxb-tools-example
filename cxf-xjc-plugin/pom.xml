@@ -37,6 +37,18 @@
 								<extensionArg>-no-header</extensionArg>
 							</extensionArgs>
 						</xsdOption>
+						<xsdOption>
+							<extension>true</extension>
+							<xsd>../schema/b.xsd</xsd>
+							<packagename>b</packagename>
+							<extensionArgs>
+								<extensionArg>-XJsr303Annotations</extensionArg>
+								<extensionArg>-XJsr303Annotations:targetNamespace=b</extensionArg>
+								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>
+								<extensionArg>-XJsr303Annotations:JSR_349=false</extensionArg>
+								<extensionArg>-no-header</extensionArg>
+							</extensionArgs>
+						</xsdOption>
 					</xsdOptions>
 					<extensions>
 						<extension>com.github.krasa:krasa-jaxb-tools:${krasa-jaxb-tools.version}</extension>

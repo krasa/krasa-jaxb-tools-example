@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.validation.Valid;
@@ -61,7 +60,7 @@ public class Main {
 	 * Gets the value of the numbers property.
 	 *
 	 * @return possible object is
-	 *         {@link Numbers }
+	 * {@link Numbers }
 	 */
 	public Numbers getNumbers() {
 		return numbers;
@@ -81,7 +80,7 @@ public class Main {
 	 * Gets the value of the strings property.
 	 *
 	 * @return possible object is
-	 *         {@link Strings }
+	 * {@link Strings }
 	 */
 	public Strings getStrings() {
 		return strings;
@@ -115,7 +114,7 @@ public class Main {
 	 * Gets the value of the choices property.
 	 *
 	 * @return possible object is
-	 *         {@link Choices }
+	 * {@link Choices }
 	 */
 	public Choices getChoices() {
 		return choices;

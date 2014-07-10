@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.xml.bind.JAXBElement;
@@ -32,27 +31,6 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Strings }
-	 */
-	public Strings createStrings() {
-		return new Strings();
-	}
-
-	/**
-	 * Create an instance of {@link Dates }
-	 */
-	public Dates createDates() {
-		return new Dates();
-	}
-
-	/**
-	 * Create an instance of {@link NumberWithCode }
-	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
-	}
-
-	/**
 	 * Create an instance of {@link Choices }
 	 */
 	public Choices createChoices() {
@@ -67,10 +45,31 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link Strings }
+	 */
+	public Strings createStrings() {
+		return new Strings();
+	}
+
+	/**
 	 * Create an instance of {@link Numbers }
 	 */
 	public Numbers createNumbers() {
 		return new Numbers();
+	}
+
+	/**
+	 * Create an instance of {@link Dates }
+	 */
+	public Dates createDates() {
+		return new Dates();
+	}
+
+	/**
+	 * Create an instance of {@link NumberWithCode }
+	 */
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
 	}
 
 	/**

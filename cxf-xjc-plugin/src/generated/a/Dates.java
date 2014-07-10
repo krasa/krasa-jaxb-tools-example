@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.validation.constraints.NotNull;
@@ -40,7 +39,7 @@ public class Dates {
 	 * Gets the value of the date1 property.
 	 *
 	 * @return possible object is
-	 *         {@link XMLGregorianCalendar }
+	 * {@link XMLGregorianCalendar }
 	 */
 	public XMLGregorianCalendar getDate1() {
 		return date1;
