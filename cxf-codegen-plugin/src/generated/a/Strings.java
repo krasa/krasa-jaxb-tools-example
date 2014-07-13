@@ -1,8 +1,5 @@
-
 package a;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -10,6 +7,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -68,7 +67,7 @@ public class Strings {
 	 * Gets the value of the pattern property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getPattern() {
 		return pattern;
@@ -88,7 +87,7 @@ public class Strings {
 	 * Gets the value of the genericString property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getGenericString() {
 		return genericString;
@@ -108,7 +107,7 @@ public class Strings {
 	 * Gets the value of the maxLength property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getMaxLength() {
 		return maxLength;
@@ -128,7 +127,7 @@ public class Strings {
 	 * Gets the value of the minLength property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getMinLength() {
 		return minLength;

@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.xml.bind.JAXBElement;
@@ -53,10 +52,24 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link Enumeration }
+	 */
+	public Enumeration createEnumeration() {
+		return new Enumeration();
+	}
+
+	/**
 	 * Create an instance of {@link Strings }
 	 */
 	public Strings createStrings() {
 		return new Strings();
+	}
+
+	/**
+	 * Create an instance of {@link Enumerations }
+	 */
+	public Enumerations createEnumerations() {
+		return new Enumerations();
 	}
 
 	/**

@@ -1,4 +1,3 @@
-
 package laboratory.spring.krasa;
 
 import javax.validation.constraints.NotNull;
@@ -41,7 +40,7 @@ public class EchoResponse {
 	 * Gets the value of the originalMessage property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getOriginalMessage() {
 		return originalMessage;

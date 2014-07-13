@@ -35,9 +35,6 @@ public class WeightElement {
 
 	@XmlElement(name = "Unit", required = true)
 	@NotNull
-	@javax.validation.constraints.Pattern.List({
-
-	})
 	protected WeightUnitValue unit;
 	@XmlElement(name = "Value", required = true)
 	@NotNull

@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -43,7 +42,7 @@ public class Choices {
 	 * Gets the value of the tea property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getTea() {
 		return tea;
@@ -63,7 +62,7 @@ public class Choices {
 	 * Gets the value of the coffee property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getCoffee() {
 		return coffee;

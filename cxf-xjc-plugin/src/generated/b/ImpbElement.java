@@ -34,9 +34,6 @@ public class ImpbElement {
 
 	@XmlElement(name = "Construct", required = true)
 	@NotNull
-	@javax.validation.constraints.Pattern.List({
-
-	})
 	protected ImpbConstructValue construct;
 	@XmlElement(name = "Value", required = true)
 	@NotNull

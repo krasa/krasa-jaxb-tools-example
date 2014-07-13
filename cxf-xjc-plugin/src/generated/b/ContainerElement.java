@@ -34,9 +34,6 @@ public class ContainerElement {
 
 	@XmlElement(name = "Type", required = true)
 	@NotNull
-	@javax.validation.constraints.Pattern.List({
-
-	})
 	protected ContainerTypeValue type;
 	@XmlElement(name = "ContainerId", required = true)
 	@NotNull

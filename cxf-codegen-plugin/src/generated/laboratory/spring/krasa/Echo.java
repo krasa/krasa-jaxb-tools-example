@@ -1,5 +1,6 @@
-
 package laboratory.spring.krasa;
+
+import a.Main;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -8,8 +9,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-
-import a.Main;
 
 
 /**
@@ -50,7 +49,7 @@ public class Echo {
 	 * Gets the value of the message property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getMessage() {
 		return message;
@@ -70,7 +69,7 @@ public class Echo {
 	 * Gets the value of the main property.
 	 *
 	 * @return possible object is
-	 *         {@link Main }
+	 * {@link Main }
 	 */
 	public Main getMain() {
 		return main;

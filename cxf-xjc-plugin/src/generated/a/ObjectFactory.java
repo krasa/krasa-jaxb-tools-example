@@ -31,10 +31,17 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Choices }
+	 * Create an instance of {@link Strings }
 	 */
-	public Choices createChoices() {
-		return new Choices();
+	public Strings createStrings() {
+		return new Strings();
+	}
+
+	/**
+	 * Create an instance of {@link Enumerations }
+	 */
+	public Enumerations createEnumerations() {
+		return new Enumerations();
 	}
 
 	/**
@@ -45,10 +52,24 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Strings }
+	 * Create an instance of {@link NumberWithCode }
 	 */
-	public Strings createStrings() {
-		return new Strings();
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
+	}
+
+	/**
+	 * Create an instance of {@link Enumeration }
+	 */
+	public Enumeration createEnumeration() {
+		return new Enumeration();
+	}
+
+	/**
+	 * Create an instance of {@link Choices }
+	 */
+	public Choices createChoices() {
+		return new Choices();
 	}
 
 	/**
@@ -63,13 +84,6 @@ public class ObjectFactory {
 	 */
 	public Dates createDates() {
 		return new Dates();
-	}
-
-	/**
-	 * Create an instance of {@link NumberWithCode }
-	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
 	}
 
 	/**

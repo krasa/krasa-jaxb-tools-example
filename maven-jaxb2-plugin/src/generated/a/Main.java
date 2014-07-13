@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.validation.Valid;
@@ -25,6 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="strings" type="{a}Strings"/>
  *         &lt;element name="unsignedByte" type="{a}unsignedByte"/>
  *         &lt;element name="choices" type="{a}Choices"/>
+ *         &lt;element name="enumerations" type="{a}Enumerations"/>
+ *         &lt;element name="enumeration" type="{a}Enumeration"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +37,9 @@ import javax.xml.bind.annotation.XmlType;
 		"numbers",
 		"strings",
 		"unsignedByte",
-		"choices"
+		"choices",
+		"enumerations",
+		"enumeration"
 })
 public class Main {
 
@@ -56,12 +59,20 @@ public class Main {
 	@NotNull
 	@Valid
 	protected Choices choices;
+	@XmlElement(required = true)
+	@NotNull
+	@Valid
+	protected Enumerations enumerations;
+	@XmlElement(required = true)
+	@NotNull
+	@Valid
+	protected Enumeration enumeration;
 
 	/**
 	 * Gets the value of the numbers property.
 	 *
 	 * @return possible object is
-	 *         {@link Numbers }
+	 * {@link Numbers }
 	 */
 	public Numbers getNumbers() {
 		return numbers;
@@ -81,7 +92,7 @@ public class Main {
 	 * Gets the value of the strings property.
 	 *
 	 * @return possible object is
-	 *         {@link Strings }
+	 * {@link Strings }
 	 */
 	public Strings getStrings() {
 		return strings;
@@ -115,7 +126,7 @@ public class Main {
 	 * Gets the value of the choices property.
 	 *
 	 * @return possible object is
-	 *         {@link Choices }
+	 * {@link Choices }
 	 */
 	public Choices getChoices() {
 		return choices;
@@ -129,6 +140,46 @@ public class Main {
 	 */
 	public void setChoices(Choices value) {
 		this.choices = value;
+	}
+
+	/**
+	 * Gets the value of the enumerations property.
+	 *
+	 * @return possible object is
+	 * {@link Enumerations }
+	 */
+	public Enumerations getEnumerations() {
+		return enumerations;
+	}
+
+	/**
+	 * Sets the value of the enumerations property.
+	 *
+	 * @param value allowed object is
+	 *              {@link Enumerations }
+	 */
+	public void setEnumerations(Enumerations value) {
+		this.enumerations = value;
+	}
+
+	/**
+	 * Gets the value of the enumeration property.
+	 *
+	 * @return possible object is
+	 * {@link Enumeration }
+	 */
+	public Enumeration getEnumeration() {
+		return enumeration;
+	}
+
+	/**
+	 * Sets the value of the enumeration property.
+	 *
+	 * @param value allowed object is
+	 *              {@link Enumeration }
+	 */
+	public void setEnumeration(Enumeration value) {
+		this.enumeration = value;
 	}
 
 }

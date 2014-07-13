@@ -1,12 +1,7 @@
-
 package a;
 
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -40,7 +35,7 @@ public class NumberWithCode {
 	 * Gets the value of the value property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getValue() {
 		return value;
@@ -60,7 +55,7 @@ public class NumberWithCode {
 	 * Gets the value of the code property.
 	 *
 	 * @return possible object is
-	 *         {@link String }
+	 * {@link String }
 	 */
 	public String getCode() {
 		return code;

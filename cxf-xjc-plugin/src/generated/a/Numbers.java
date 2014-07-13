@@ -50,14 +50,14 @@ public class Numbers {
 	@DecimalMax("1000")
 	protected long maxInclusive;
 	@NotNull
-	@DecimalMin("0")
+	@DecimalMin("1")
 	protected long minExclusive;
 	@NotNull
-	@DecimalMax("1000")
+	@DecimalMax("999")
 	protected long maxExclusive;
 	@NotNull
-	@DecimalMax("1000")
-	@DecimalMin("0")
+	@DecimalMax("999")
+	@DecimalMin("1")
 	protected int minMaxExclusive;
 	@XmlElement(name = "NumberWithCode")
 	@Valid

@@ -1,24 +1,30 @@
 package a;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for Dates complex type.
+ * <p>Java class for Enumeration complex type.
  * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p/>
  * <pre>
- * &lt;complexType name="Dates">
+ * &lt;complexType name="Enumeration">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="date1" type="{a}date1"/>
+ *         &lt;element name="foo">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;enumeration value="N05"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,33 +32,34 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Dates", propOrder = {
-		"date1"
+@XmlType(name = "Enumeration", propOrder = {
+		"foo"
 })
-public class Dates {
+public class Enumeration {
 
 	@XmlElement(required = true)
 	@NotNull
-	protected XMLGregorianCalendar date1;
+	@Pattern(regexp = "N05")
+	protected String foo;
 
 	/**
-	 * Gets the value of the date1 property.
+	 * Gets the value of the foo property.
 	 *
 	 * @return possible object is
-	 * {@link XMLGregorianCalendar }
+	 * {@link String }
 	 */
-	public XMLGregorianCalendar getDate1() {
-		return date1;
+	public String getFoo() {
+		return foo;
 	}
 
 	/**
-	 * Sets the value of the date1 property.
+	 * Sets the value of the foo property.
 	 *
 	 * @param value allowed object is
-	 *              {@link XMLGregorianCalendar }
+	 *              {@link String }
 	 */
-	public void setDate1(XMLGregorianCalendar value) {
-		this.date1 = value;
+	public void setFoo(String value) {
+		this.foo = value;
 	}
 
 }
