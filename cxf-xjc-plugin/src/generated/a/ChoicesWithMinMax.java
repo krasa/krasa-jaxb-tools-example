@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Choices complex type.
+ * <p>Java class for ChoicesWithMinMax complex type.
  * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p/>
  * <pre>
- * &lt;complexType name="Choices">
+ * &lt;complexType name="ChoicesWithMinMax">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,11 +27,11 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Choices", propOrder = {
+@XmlType(name = "ChoicesWithMinMax", propOrder = {
 		"tea",
 		"coffee"
 })
-public class Choices {
+public class ChoicesWithMinMax {
 
 	@XmlElement(name = "Tea")
 	protected String tea;

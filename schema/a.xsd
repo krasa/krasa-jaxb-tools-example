@@ -12,6 +12,7 @@
 			<xsd:element name="strings" type="a:Strings"/>
 			<xsd:element name="unsignedByte" type="a:unsignedByte"/>
 			<xsd:element name="choices" type="a:Choices"/>
+			<xsd:element name="choicesWithMinMax" type="a:ChoicesWithMinMax"/>
 			<xsd:element name="enumerations" type="a:Enumerations"/>
 			<xsd:element name="enumeration" type="a:Enumeration"/>
 		</xsd:sequence>
@@ -134,6 +135,15 @@
 	<xsd:complexType name="Choices">
 		<xsd:sequence>
 			<xsd:choice>
+				<xsd:element name="Tea" type="xsd:string"/>
+				<xsd:element name="Coffee" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="ChoicesWithMinMax">
+		<xsd:sequence>
+			<xsd:choice minOccurs="1" maxOccurs="2">
 				<xsd:element name="Tea" type="xsd:string"/>
 				<xsd:element name="Coffee" type="xsd:string"/>
 			</xsd:choice>

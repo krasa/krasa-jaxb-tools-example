@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="strings" type="{a}Strings"/>
  *         &lt;element name="unsignedByte" type="{a}unsignedByte"/>
  *         &lt;element name="choices" type="{a}Choices"/>
+ *         &lt;element name="choicesWithMinMax" type="{a}ChoicesWithMinMax"/>
  *         &lt;element name="enumerations" type="{a}Enumerations"/>
  *         &lt;element name="enumeration" type="{a}Enumeration"/>
  *       &lt;/sequence>
@@ -38,6 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 		"strings",
 		"unsignedByte",
 		"choices",
+		"choicesWithMinMax",
 		"enumerations",
 		"enumeration"
 })
@@ -59,6 +61,10 @@ public class Main {
 	@NotNull
 	@Valid
 	protected Choices choices;
+	@XmlElement(required = true)
+	@NotNull
+	@Valid
+	protected ChoicesWithMinMax choicesWithMinMax;
 	@XmlElement(required = true)
 	@NotNull
 	@Valid
@@ -140,6 +146,26 @@ public class Main {
 	 */
 	public void setChoices(Choices value) {
 		this.choices = value;
+	}
+
+	/**
+	 * Gets the value of the choicesWithMinMax property.
+	 *
+	 * @return possible object is
+	 * {@link ChoicesWithMinMax }
+	 */
+	public ChoicesWithMinMax getChoicesWithMinMax() {
+		return choicesWithMinMax;
+	}
+
+	/**
+	 * Sets the value of the choicesWithMinMax property.
+	 *
+	 * @param value allowed object is
+	 *              {@link ChoicesWithMinMax }
+	 */
+	public void setChoicesWithMinMax(ChoicesWithMinMax value) {
+		this.choicesWithMinMax = value;
 	}
 
 	/**
