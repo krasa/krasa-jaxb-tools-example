@@ -1,6 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <jaxws:bindings
 		wsdlLocation="Hello.wsdl"
-		xmlns="http://java.sun.com/xml/ns/jaxws"
-		xmlns:jaxws="http://java.sun.com/xml/ns/jaxws">
-	<enableWrapperStyle>false</enableWrapperStyle>
-</jaxws:bindings>
+		xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+		xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" jaxb:version="2.0">
+	<!--jaxb:version="2.0"  IS FOR maven-jaxb2-plugin -->
+
+	<jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+
+	<jaxws:bindings node="wsdl:definitions/wsdl:types/xsd:schema">
+		<!--<jaxb:globalBindings choiceContentProperty="true">-->
+		<jaxb:globalBindings>
+
+			<!--
+				<jaxb:javaType name="java.util.Date"
+				xmlType="xs:dateTime"
+				parseMethod="org.apache.cxf.tools.common.DataTypeAdapter.parseDateTime"
+				printMethod="org.apache.cxf.tools.common.DataTypeAdapter.printDateTime"/>
+				<jaxb:javaType name="java.util.Date" xmlType="xs:date"
+				parseMethod="org.apache.cxf.tools.common.DataTypeAdapter.parseDate"
+				printMethod="org.apache.cxf.tools.common.DataTypeAdapter.printDate"/>
+			-->
+		</jaxb:globalBindings>
+	</jaxws:bindings>
+</jaxws:bindings> 
