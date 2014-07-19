@@ -48,10 +48,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link MpuResponseElement.ErrorList }
+	 * Create an instance of {@link AbstractRequest }
 	 */
-	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
-		return new MpuResponseElement.ErrorList();
+	public AbstractRequest createAbstractRequest() {
+		return new AbstractRequest();
 	}
 
 	/**
@@ -62,6 +62,20 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link LabelDetailElement }
+	 */
+	public LabelDetailElement createLabelDetailElement() {
+		return new LabelDetailElement();
+	}
+
+	/**
+	 * Create an instance of {@link MpuResponseElement.ErrorList }
+	 */
+	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
+		return new MpuResponseElement.ErrorList();
+	}
+
+	/**
 	 * Create an instance of {@link AddressElement }
 	 */
 	public AddressElement createAddressElement() {
@@ -69,24 +83,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link FreeFormAddressElement }
+	 * Create an instance of {@link EncodeRequest }
 	 */
-	public FreeFormAddressElement createFreeFormAddressElement() {
-		return new FreeFormAddressElement();
-	}
-
-	/**
-	 * Create an instance of {@link StandardAddressElement }
-	 */
-	public StandardAddressElement createStandardAddressElement() {
-		return new StandardAddressElement();
-	}
-
-	/**
-	 * Create an instance of {@link EncodeRequest.MpuList }
-	 */
-	public EncodeRequest.MpuList createEncodeRequestMpuList() {
-		return new EncodeRequest.MpuList();
+	public EncodeRequest createEncodeRequest() {
+		return new EncodeRequest();
 	}
 
 	/**
@@ -94,20 +94,6 @@ public class ObjectFactory {
 	 */
 	public ContainerElement createContainerElement() {
 		return new ContainerElement();
-	}
-
-	/**
-	 * Create an instance of {@link AbstractRequest }
-	 */
-	public AbstractRequest createAbstractRequest() {
-		return new AbstractRequest();
-	}
-
-	/**
-	 * Create an instance of {@link EncodeRequest }
-	 */
-	public EncodeRequest createEncodeRequest() {
-		return new EncodeRequest();
 	}
 
 	/**
@@ -125,6 +111,20 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link StandardAddressElement }
+	 */
+	public StandardAddressElement createStandardAddressElement() {
+		return new StandardAddressElement();
+	}
+
+	/**
+	 * Create an instance of {@link EncodeRequest.MpuList }
+	 */
+	public EncodeRequest.MpuList createEncodeRequestMpuList() {
+		return new EncodeRequest.MpuList();
+	}
+
+	/**
 	 * Create an instance of {@link PackageRefElement }
 	 */
 	public PackageRefElement createPackageRefElement() {
@@ -132,10 +132,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link LabelDetailElement }
+	 * Create an instance of {@link FreeFormAddressElement }
 	 */
-	public LabelDetailElement createLabelDetailElement() {
-		return new LabelDetailElement();
+	public FreeFormAddressElement createFreeFormAddressElement() {
+		return new FreeFormAddressElement();
 	}
 
 	/**

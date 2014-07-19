@@ -23,6 +23,8 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
 	private final static QName _Main_QNAME = new QName("a", "main");
+	private final static QName _ChoicesTea_QNAME = new QName("a", "Tea");
+	private final static QName _ChoicesCoffee_QNAME = new QName("a", "Coffee");
 
 	/**
 	 * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: a
@@ -31,10 +33,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Strings }
+	 * Create an instance of {@link Numbers }
 	 */
-	public Strings createStrings() {
-		return new Strings();
+	public Numbers createNumbers() {
+		return new Numbers();
 	}
 
 	/**
@@ -45,10 +47,24 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link Strings }
+	 */
+	public Strings createStrings() {
+		return new Strings();
+	}
+
+	/**
 	 * Create an instance of {@link Main }
 	 */
 	public Main createMain() {
 		return new Main();
+	}
+
+	/**
+	 * Create an instance of {@link Dates }
+	 */
+	public Dates createDates() {
+		return new Dates();
 	}
 
 	/**
@@ -73,25 +89,27 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Numbers }
-	 */
-	public Numbers createNumbers() {
-		return new Numbers();
-	}
-
-	/**
-	 * Create an instance of {@link Dates }
-	 */
-	public Dates createDates() {
-		return new Dates();
-	}
-
-	/**
 	 * Create an instance of {@link JAXBElement }{@code <}{@link Main }{@code >}}
 	 */
 	@XmlElementDecl(namespace = "a", name = "main")
 	public JAXBElement<Main> createMain(Main value) {
 		return new JAXBElement<Main>(_Main_QNAME, Main.class, null, value);
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+	 */
+	@XmlElementDecl(namespace = "a", name = "Tea", scope = Choices.class)
+	public JAXBElement<String> createChoicesTea(String value) {
+		return new JAXBElement<String>(_ChoicesTea_QNAME, String.class, Choices.class, value);
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+	 */
+	@XmlElementDecl(namespace = "a", name = "Coffee", scope = Choices.class)
+	public JAXBElement<String> createChoicesCoffee(String value) {
+		return new JAXBElement<String>(_ChoicesCoffee_QNAME, String.class, Choices.class, value);
 	}
 
 }

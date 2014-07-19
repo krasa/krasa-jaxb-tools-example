@@ -1,9 +1,7 @@
 package a;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -28,54 +26,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Choices", propOrder = {
-		"tea",
-		"coffee"
+		"teaOrCoffee"
 })
 public class Choices {
 
-	@XmlElement(name = "Tea")
-	protected String tea;
-	@XmlElement(name = "Coffee")
-	protected String coffee;
+	@XmlElementRefs({
+			@XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class),
+			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class)
+	})
+	protected JAXBElement<String> teaOrCoffee;
 
 	/**
-	 * Gets the value of the tea property.
+	 * Gets the value of the teaOrCoffee property.
 	 *
 	 * @return possible object is
-	 * {@link String }
+	 * {@link JAXBElement }{@code <}{@link String }{@code >}
+	 * {@link JAXBElement }{@code <}{@link String }{@code >}
 	 */
-	public String getTea() {
-		return tea;
+	public JAXBElement<String> getTeaOrCoffee() {
+		return teaOrCoffee;
 	}
 
 	/**
-	 * Sets the value of the tea property.
+	 * Sets the value of the teaOrCoffee property.
 	 *
 	 * @param value allowed object is
-	 *              {@link String }
+	 *              {@link JAXBElement }{@code <}{@link String }{@code >}
+	 *              {@link JAXBElement }{@code <}{@link String }{@code >}
 	 */
-	public void setTea(String value) {
-		this.tea = value;
-	}
-
-	/**
-	 * Gets the value of the coffee property.
-	 *
-	 * @return possible object is
-	 * {@link String }
-	 */
-	public String getCoffee() {
-		return coffee;
-	}
-
-	/**
-	 * Sets the value of the coffee property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
-	 */
-	public void setCoffee(String value) {
-		this.coffee = value;
+	public void setTeaOrCoffee(JAXBElement<String> value) {
+		this.teaOrCoffee = ((JAXBElement<String>) value);
 	}
 
 }

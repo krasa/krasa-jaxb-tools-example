@@ -28,6 +28,7 @@
 						<xsdOption>
 							<extension>true</extension>
 							<xsd>../schema/a.xsd</xsd>
+							<bindingFile>../schema/binding.xml</bindingFile>
 							<packagename>a</packagename>
 							<extensionArgs>
 								<extensionArg>-XJsr303Annotations</extensionArg>
