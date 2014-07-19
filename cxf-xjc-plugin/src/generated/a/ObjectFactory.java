@@ -40,13 +40,6 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Enumerations }
-	 */
-	public Enumerations createEnumerations() {
-		return new Enumerations();
-	}
-
-	/**
 	 * Create an instance of {@link Choices }
 	 */
 	public Choices createChoices() {
@@ -61,10 +54,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ChoicesWithMinMax }
+	 * Create an instance of {@link NumberWithCode }
 	 */
-	public ChoicesWithMinMax createChoicesWithMinMax() {
-		return new ChoicesWithMinMax();
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
 	}
 
 	/**
@@ -89,10 +82,17 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link NumberWithCode }
+	 * Create an instance of {@link ChoicesWithMinMax }
 	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link Enumerations }
+	 */
+	public Enumerations createEnumerations() {
+		return new Enumerations();
 	}
 
 	/**
