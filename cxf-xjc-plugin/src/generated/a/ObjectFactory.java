@@ -33,10 +33,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Numbers }
+	 * Create an instance of {@link Strings }
 	 */
-	public Numbers createNumbers() {
-		return new Numbers();
+	public Strings createStrings() {
+		return new Strings();
 	}
 
 	/**
@@ -47,10 +47,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Dates }
+	 * Create an instance of {@link ComplexChoicesWithMinMax }
 	 */
-	public Dates createDates() {
-		return new Dates();
+	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
+		return new ComplexChoicesWithMinMax();
 	}
 
 	/**
@@ -61,17 +61,17 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Strings }
+	 * Create an instance of {@link ChoicesWithMinMax }
 	 */
-	public Strings createStrings() {
-		return new Strings();
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
 	}
 
 	/**
-	 * Create an instance of {@link Main }
+	 * Create an instance of {@link ComplexChoices }
 	 */
-	public Main createMain() {
-		return new Main();
+	public ComplexChoices createComplexChoices() {
+		return new ComplexChoices();
 	}
 
 	/**
@@ -82,10 +82,24 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ChoicesWithMinMax }
+	 * Create an instance of {@link Dates }
 	 */
-	public ChoicesWithMinMax createChoicesWithMinMax() {
-		return new ChoicesWithMinMax();
+	public Dates createDates() {
+		return new Dates();
+	}
+
+	/**
+	 * Create an instance of {@link Tea }
+	 */
+	public Tea createTea() {
+		return new Tea();
+	}
+
+	/**
+	 * Create an instance of {@link Coffee }
+	 */
+	public Coffee createCoffee() {
+		return new Coffee();
 	}
 
 	/**
@@ -93,6 +107,20 @@ public class ObjectFactory {
 	 */
 	public Enumerations createEnumerations() {
 		return new Enumerations();
+	}
+
+	/**
+	 * Create an instance of {@link Numbers }
+	 */
+	public Numbers createNumbers() {
+		return new Numbers();
+	}
+
+	/**
+	 * Create an instance of {@link Main }
+	 */
+	public Main createMain() {
+		return new Main();
 	}
 
 	/**

@@ -1,24 +1,24 @@
 package a;
 
-import javax.xml.bind.JAXBElement;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 /**
- * <p>Java class for ChoicesWithMinMax complex type.
+ * <p>Java class for ComplexChoicesWithMinMax complex type.
  * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p/>
  * <pre>
- * &lt;complexType name="ChoicesWithMinMax">
+ * &lt;complexType name="ComplexChoicesWithMinMax">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;choice maxOccurs="2">
- *           &lt;element name="Tea" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *           &lt;element name="Coffee" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *           &lt;element name="Tea" type="{a}Tea"/>
+ *           &lt;element name="Coffee" type="{a}Coffee"/>
  *         &lt;/choice>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -27,16 +27,17 @@ import java.util.List;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ChoicesWithMinMax", propOrder = {
+@XmlType(name = "ComplexChoicesWithMinMax", propOrder = {
 		"teaOrCoffee"
 })
-public class ChoicesWithMinMax {
+public class ComplexChoicesWithMinMax {
 
-	@XmlElementRefs({
-			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class),
-			@XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class)
+	@XmlElements({
+			@XmlElement(name = "Coffee", type = Coffee.class),
+			@XmlElement(name = "Tea", type = Tea.class)
 	})
-	protected List<JAXBElement<String>> teaOrCoffee;
+	@Size(min = 1, max = 2)
+	protected List<Object> teaOrCoffee;
 
 	/**
 	 * Gets the value of the teaOrCoffee property.
@@ -56,12 +57,12 @@ public class ChoicesWithMinMax {
 	 * <p/>
 	 * <p/>
 	 * Objects of the following type(s) are allowed in the list
-	 * {@link JAXBElement }{@code <}{@link String }{@code >}
-	 * {@link JAXBElement }{@code <}{@link String }{@code >}
+	 * {@link Coffee }
+	 * {@link Tea }
 	 */
-	public List<JAXBElement<String>> getTeaOrCoffee() {
+	public List<Object> getTeaOrCoffee() {
 		if (teaOrCoffee == null) {
-			teaOrCoffee = new ArrayList<JAXBElement<String>>();
+			teaOrCoffee = new ArrayList<Object>();
 		}
 		return this.teaOrCoffee;
 	}

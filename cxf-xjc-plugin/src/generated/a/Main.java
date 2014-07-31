@@ -24,7 +24,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="strings" type="{a}Strings"/>
  *         &lt;element name="unsignedByte" type="{a}unsignedByte"/>
  *         &lt;element name="choices" type="{a}Choices"/>
+ *         &lt;element name="complexChoices" type="{a}ComplexChoices"/>
  *         &lt;element name="choicesWithMinMax" type="{a}ChoicesWithMinMax"/>
+ *         &lt;element name="complexChoicesWithMinMax" type="{a}ComplexChoicesWithMinMax"/>
  *         &lt;element name="enumerations" type="{a}Enumerations"/>
  *         &lt;element name="enumeration" type="{a}Enumeration"/>
  *       &lt;/sequence>
@@ -39,7 +41,9 @@ import javax.xml.bind.annotation.XmlType;
 		"strings",
 		"unsignedByte",
 		"choices",
+		"complexChoices",
 		"choicesWithMinMax",
+		"complexChoicesWithMinMax",
 		"enumerations",
 		"enumeration"
 })
@@ -64,7 +68,15 @@ public class Main {
 	@XmlElement(required = true)
 	@NotNull
 	@Valid
+	protected ComplexChoices complexChoices;
+	@XmlElement(required = true)
+	@NotNull
+	@Valid
 	protected ChoicesWithMinMax choicesWithMinMax;
+	@XmlElement(required = true)
+	@NotNull
+	@Valid
+	protected ComplexChoicesWithMinMax complexChoicesWithMinMax;
 	@XmlElement(required = true)
 	@NotNull
 	@Valid
@@ -149,6 +161,26 @@ public class Main {
 	}
 
 	/**
+	 * Gets the value of the complexChoices property.
+	 *
+	 * @return possible object is
+	 * {@link ComplexChoices }
+	 */
+	public ComplexChoices getComplexChoices() {
+		return complexChoices;
+	}
+
+	/**
+	 * Sets the value of the complexChoices property.
+	 *
+	 * @param value allowed object is
+	 *              {@link ComplexChoices }
+	 */
+	public void setComplexChoices(ComplexChoices value) {
+		this.complexChoices = value;
+	}
+
+	/**
 	 * Gets the value of the choicesWithMinMax property.
 	 *
 	 * @return possible object is
@@ -166,6 +198,26 @@ public class Main {
 	 */
 	public void setChoicesWithMinMax(ChoicesWithMinMax value) {
 		this.choicesWithMinMax = value;
+	}
+
+	/**
+	 * Gets the value of the complexChoicesWithMinMax property.
+	 *
+	 * @return possible object is
+	 * {@link ComplexChoicesWithMinMax }
+	 */
+	public ComplexChoicesWithMinMax getComplexChoicesWithMinMax() {
+		return complexChoicesWithMinMax;
+	}
+
+	/**
+	 * Sets the value of the complexChoicesWithMinMax property.
+	 *
+	 * @param value allowed object is
+	 *              {@link ComplexChoicesWithMinMax }
+	 */
+	public void setComplexChoicesWithMinMax(ComplexChoicesWithMinMax value) {
+		this.complexChoicesWithMinMax = value;
 	}
 
 	/**
