@@ -1,5 +1,9 @@
 package b;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -31,7 +35,8 @@ import java.math.BigDecimal;
 		"unit",
 		"value"
 })
-public class WeightElement {
+public class WeightElement
+		implements Equals, HashCode {
 
 	@XmlElement(name = "Unit", required = true)
 	@NotNull
@@ -78,6 +83,60 @@ public class WeightElement {
 	 */
 	public void setValue(BigDecimal value) {
 		this.value = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			WeightUnitValue theUnit;
+			theUnit = this.getUnit();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unit", theUnit), currentHashCode, theUnit);
+		}
+		{
+			BigDecimal theValue;
+			theValue = this.getValue();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof WeightElement)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final WeightElement that = ((WeightElement) object);
+		{
+			WeightUnitValue lhsUnit;
+			lhsUnit = this.getUnit();
+			WeightUnitValue rhsUnit;
+			rhsUnit = that.getUnit();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "unit", lhsUnit), LocatorUtils.property(thatLocator, "unit", rhsUnit), lhsUnit, rhsUnit)) {
+				return false;
+			}
+		}
+		{
+			BigDecimal lhsValue;
+			lhsValue = this.getValue();
+			BigDecimal rhsValue;
+			rhsValue = that.getValue();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

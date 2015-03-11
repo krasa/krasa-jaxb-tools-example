@@ -1,5 +1,9 @@
 package a;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -28,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Tea", propOrder = {
 		"foo"
 })
-public class Tea {
+public class Tea implements Equals, HashCode {
 
 	protected String foo;
 
@@ -50,6 +54,46 @@ public class Tea {
 	 */
 	public void setFoo(String value) {
 		this.foo = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			String theFoo;
+			theFoo = this.getFoo();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "foo", theFoo), currentHashCode, theFoo);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof Tea)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final Tea that = ((Tea) object);
+		{
+			String lhsFoo;
+			lhsFoo = this.getFoo();
+			String rhsFoo;
+			rhsFoo = that.getFoo();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "foo", lhsFoo), LocatorUtils.property(thatLocator, "foo", rhsFoo), lhsFoo, rhsFoo)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

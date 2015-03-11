@@ -1,5 +1,9 @@
 package b;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,7 +53,8 @@ import java.util.List;
 		"mailItemId",
 		"delconFromImpb"
 })
-public class MpuResponseElement {
+public class MpuResponseElement
+		implements Equals, HashCode {
 
 	@XmlElement(name = "ErrorList")
 	protected MpuResponseElement.ErrorList errorList;
@@ -184,6 +189,116 @@ public class MpuResponseElement {
 		this.delconFromImpb = value;
 	}
 
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			MpuResponseElement.ErrorList theErrorList;
+			theErrorList = this.getErrorList();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "errorList", theErrorList), currentHashCode, theErrorList);
+		}
+		{
+			LabelDetailElement theLabelDetail;
+			theLabelDetail = this.getLabelDetail();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelDetail", theLabelDetail), currentHashCode, theLabelDetail);
+		}
+		{
+			String theLabelZpl;
+			theLabelZpl = this.getLabelZpl();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelZpl", theLabelZpl), currentHashCode, theLabelZpl);
+		}
+		{
+			byte[] theLabelImage;
+			theLabelImage = this.getLabelImage();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelImage", theLabelImage), currentHashCode, theLabelImage);
+		}
+		{
+			String theMailItemId;
+			theMailItemId = this.getMailItemId();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailItemId", theMailItemId), currentHashCode, theMailItemId);
+		}
+		{
+			String theDelconFromImpb;
+			theDelconFromImpb = this.getDelconFromImpb();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "delconFromImpb", theDelconFromImpb), currentHashCode, theDelconFromImpb);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof MpuResponseElement)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final MpuResponseElement that = ((MpuResponseElement) object);
+		{
+			MpuResponseElement.ErrorList lhsErrorList;
+			lhsErrorList = this.getErrorList();
+			MpuResponseElement.ErrorList rhsErrorList;
+			rhsErrorList = that.getErrorList();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "errorList", lhsErrorList), LocatorUtils.property(thatLocator, "errorList", rhsErrorList), lhsErrorList, rhsErrorList)) {
+				return false;
+			}
+		}
+		{
+			LabelDetailElement lhsLabelDetail;
+			lhsLabelDetail = this.getLabelDetail();
+			LabelDetailElement rhsLabelDetail;
+			rhsLabelDetail = that.getLabelDetail();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelDetail", lhsLabelDetail), LocatorUtils.property(thatLocator, "labelDetail", rhsLabelDetail), lhsLabelDetail, rhsLabelDetail)) {
+				return false;
+			}
+		}
+		{
+			String lhsLabelZpl;
+			lhsLabelZpl = this.getLabelZpl();
+			String rhsLabelZpl;
+			rhsLabelZpl = that.getLabelZpl();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelZpl", lhsLabelZpl), LocatorUtils.property(thatLocator, "labelZpl", rhsLabelZpl), lhsLabelZpl, rhsLabelZpl)) {
+				return false;
+			}
+		}
+		{
+			byte[] lhsLabelImage;
+			lhsLabelImage = this.getLabelImage();
+			byte[] rhsLabelImage;
+			rhsLabelImage = that.getLabelImage();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelImage", lhsLabelImage), LocatorUtils.property(thatLocator, "labelImage", rhsLabelImage), lhsLabelImage, rhsLabelImage)) {
+				return false;
+			}
+		}
+		{
+			String lhsMailItemId;
+			lhsMailItemId = this.getMailItemId();
+			String rhsMailItemId;
+			rhsMailItemId = that.getMailItemId();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "mailItemId", lhsMailItemId), LocatorUtils.property(thatLocator, "mailItemId", rhsMailItemId), lhsMailItemId, rhsMailItemId)) {
+				return false;
+			}
+		}
+		{
+			String lhsDelconFromImpb;
+			lhsDelconFromImpb = this.getDelconFromImpb();
+			String rhsDelconFromImpb;
+			rhsDelconFromImpb = that.getDelconFromImpb();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "delconFromImpb", lhsDelconFromImpb), LocatorUtils.property(thatLocator, "delconFromImpb", rhsDelconFromImpb), lhsDelconFromImpb, rhsDelconFromImpb)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
+	}
+
 
 	/**
 	 * <p>Java class for anonymous complex type.
@@ -206,7 +321,8 @@ public class MpuResponseElement {
 	@XmlType(name = "", propOrder = {
 			"error"
 	})
-	public static class ErrorList {
+	public static class ErrorList
+			implements Equals, HashCode {
 
 		@XmlElement(name = "Error")
 		protected List<String> error;
@@ -236,6 +352,46 @@ public class MpuResponseElement {
 				error = new ArrayList<String>();
 			}
 			return this.error;
+		}
+
+		public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+			int currentHashCode = 1;
+			{
+				List<String> theError;
+				theError = (((this.error != null) && (!this.error.isEmpty())) ? this.getError() : null);
+				currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "error", theError), currentHashCode, theError);
+			}
+			return currentHashCode;
+		}
+
+		public int hashCode() {
+			final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+			return this.hashCode(null, strategy);
+		}
+
+		public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+			if (!(object instanceof MpuResponseElement.ErrorList)) {
+				return false;
+			}
+			if (this == object) {
+				return true;
+			}
+			final MpuResponseElement.ErrorList that = ((MpuResponseElement.ErrorList) object);
+			{
+				List<String> lhsError;
+				lhsError = (((this.error != null) && (!this.error.isEmpty())) ? this.getError() : null);
+				List<String> rhsError;
+				rhsError = (((that.error != null) && (!that.error.isEmpty())) ? that.getError() : null);
+				if (!strategy.equals(LocatorUtils.property(thisLocator, "error", lhsError), LocatorUtils.property(thatLocator, "error", rhsError), lhsError, rhsError)) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		public boolean equals(Object object) {
+			final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+			return equals(null, null, object, strategy);
 		}
 
 	}

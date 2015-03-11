@@ -1,5 +1,9 @@
 package b;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -52,7 +56,8 @@ import javax.xml.bind.annotation.XmlType;
 		"orderedProductCode",
 		"mailBanner"
 })
-public class LabelDetailElement {
+public class LabelDetailElement
+		implements Equals, HashCode {
 
 	@XmlElement(name = "Impb")
 	protected ImpbElement impb;
@@ -346,6 +351,214 @@ public class LabelDetailElement {
 	 */
 	public void setMailBanner(String value) {
 		this.mailBanner = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			ImpbElement theImpb;
+			theImpb = this.getImpb();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "impb", theImpb), currentHashCode, theImpb);
+		}
+		{
+			String theServiceTypeCode;
+			theServiceTypeCode = this.getServiceTypeCode();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "serviceTypeCode", theServiceTypeCode), currentHashCode, theServiceTypeCode);
+		}
+		{
+			AddressElement theCorrectedAddress;
+			theCorrectedAddress = this.getCorrectedAddress();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "correctedAddress", theCorrectedAddress), currentHashCode, theCorrectedAddress);
+		}
+		{
+			String theMailTypeCode;
+			theMailTypeCode = this.getMailTypeCode();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailTypeCode", theMailTypeCode), currentHashCode, theMailTypeCode);
+		}
+		{
+			AddressElement theShipperAddress;
+			theShipperAddress = this.getShipperAddress();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "shipperAddress", theShipperAddress), currentHashCode, theShipperAddress);
+		}
+		{
+			String theInboundSortCode;
+			theInboundSortCode = this.getInboundSortCode();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "inboundSortCode", theInboundSortCode), currentHashCode, theInboundSortCode);
+		}
+		{
+			String theIntendedReceivingFacility;
+			theIntendedReceivingFacility = this.getIntendedReceivingFacility();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "intendedReceivingFacility", theIntendedReceivingFacility), currentHashCode, theIntendedReceivingFacility);
+		}
+		{
+			String theOutboundSortCode;
+			theOutboundSortCode = this.getOutboundSortCode();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "outboundSortCode", theOutboundSortCode), currentHashCode, theOutboundSortCode);
+		}
+		{
+			String theSortingSetupVersion;
+			theSortingSetupVersion = this.getSortingSetupVersion();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "sortingSetupVersion", theSortingSetupVersion), currentHashCode, theSortingSetupVersion);
+		}
+		{
+			String theZipPlus4;
+			theZipPlus4 = this.getZipPlus4();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "zipPlus4", theZipPlus4), currentHashCode, theZipPlus4);
+		}
+		{
+			String theServiceLevel;
+			theServiceLevel = this.getServiceLevel();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "serviceLevel", theServiceLevel), currentHashCode, theServiceLevel);
+		}
+		{
+			String theOrderedProductCode;
+			theOrderedProductCode = this.getOrderedProductCode();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "orderedProductCode", theOrderedProductCode), currentHashCode, theOrderedProductCode);
+		}
+		{
+			String theMailBanner;
+			theMailBanner = this.getMailBanner();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailBanner", theMailBanner), currentHashCode, theMailBanner);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof LabelDetailElement)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final LabelDetailElement that = ((LabelDetailElement) object);
+		{
+			ImpbElement lhsImpb;
+			lhsImpb = this.getImpb();
+			ImpbElement rhsImpb;
+			rhsImpb = that.getImpb();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "impb", lhsImpb), LocatorUtils.property(thatLocator, "impb", rhsImpb), lhsImpb, rhsImpb)) {
+				return false;
+			}
+		}
+		{
+			String lhsServiceTypeCode;
+			lhsServiceTypeCode = this.getServiceTypeCode();
+			String rhsServiceTypeCode;
+			rhsServiceTypeCode = that.getServiceTypeCode();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "serviceTypeCode", lhsServiceTypeCode), LocatorUtils.property(thatLocator, "serviceTypeCode", rhsServiceTypeCode), lhsServiceTypeCode, rhsServiceTypeCode)) {
+				return false;
+			}
+		}
+		{
+			AddressElement lhsCorrectedAddress;
+			lhsCorrectedAddress = this.getCorrectedAddress();
+			AddressElement rhsCorrectedAddress;
+			rhsCorrectedAddress = that.getCorrectedAddress();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "correctedAddress", lhsCorrectedAddress), LocatorUtils.property(thatLocator, "correctedAddress", rhsCorrectedAddress), lhsCorrectedAddress, rhsCorrectedAddress)) {
+				return false;
+			}
+		}
+		{
+			String lhsMailTypeCode;
+			lhsMailTypeCode = this.getMailTypeCode();
+			String rhsMailTypeCode;
+			rhsMailTypeCode = that.getMailTypeCode();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "mailTypeCode", lhsMailTypeCode), LocatorUtils.property(thatLocator, "mailTypeCode", rhsMailTypeCode), lhsMailTypeCode, rhsMailTypeCode)) {
+				return false;
+			}
+		}
+		{
+			AddressElement lhsShipperAddress;
+			lhsShipperAddress = this.getShipperAddress();
+			AddressElement rhsShipperAddress;
+			rhsShipperAddress = that.getShipperAddress();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "shipperAddress", lhsShipperAddress), LocatorUtils.property(thatLocator, "shipperAddress", rhsShipperAddress), lhsShipperAddress, rhsShipperAddress)) {
+				return false;
+			}
+		}
+		{
+			String lhsInboundSortCode;
+			lhsInboundSortCode = this.getInboundSortCode();
+			String rhsInboundSortCode;
+			rhsInboundSortCode = that.getInboundSortCode();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "inboundSortCode", lhsInboundSortCode), LocatorUtils.property(thatLocator, "inboundSortCode", rhsInboundSortCode), lhsInboundSortCode, rhsInboundSortCode)) {
+				return false;
+			}
+		}
+		{
+			String lhsIntendedReceivingFacility;
+			lhsIntendedReceivingFacility = this.getIntendedReceivingFacility();
+			String rhsIntendedReceivingFacility;
+			rhsIntendedReceivingFacility = that.getIntendedReceivingFacility();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "intendedReceivingFacility", lhsIntendedReceivingFacility), LocatorUtils.property(thatLocator, "intendedReceivingFacility", rhsIntendedReceivingFacility), lhsIntendedReceivingFacility, rhsIntendedReceivingFacility)) {
+				return false;
+			}
+		}
+		{
+			String lhsOutboundSortCode;
+			lhsOutboundSortCode = this.getOutboundSortCode();
+			String rhsOutboundSortCode;
+			rhsOutboundSortCode = that.getOutboundSortCode();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "outboundSortCode", lhsOutboundSortCode), LocatorUtils.property(thatLocator, "outboundSortCode", rhsOutboundSortCode), lhsOutboundSortCode, rhsOutboundSortCode)) {
+				return false;
+			}
+		}
+		{
+			String lhsSortingSetupVersion;
+			lhsSortingSetupVersion = this.getSortingSetupVersion();
+			String rhsSortingSetupVersion;
+			rhsSortingSetupVersion = that.getSortingSetupVersion();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "sortingSetupVersion", lhsSortingSetupVersion), LocatorUtils.property(thatLocator, "sortingSetupVersion", rhsSortingSetupVersion), lhsSortingSetupVersion, rhsSortingSetupVersion)) {
+				return false;
+			}
+		}
+		{
+			String lhsZipPlus4;
+			lhsZipPlus4 = this.getZipPlus4();
+			String rhsZipPlus4;
+			rhsZipPlus4 = that.getZipPlus4();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "zipPlus4", lhsZipPlus4), LocatorUtils.property(thatLocator, "zipPlus4", rhsZipPlus4), lhsZipPlus4, rhsZipPlus4)) {
+				return false;
+			}
+		}
+		{
+			String lhsServiceLevel;
+			lhsServiceLevel = this.getServiceLevel();
+			String rhsServiceLevel;
+			rhsServiceLevel = that.getServiceLevel();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "serviceLevel", lhsServiceLevel), LocatorUtils.property(thatLocator, "serviceLevel", rhsServiceLevel), lhsServiceLevel, rhsServiceLevel)) {
+				return false;
+			}
+		}
+		{
+			String lhsOrderedProductCode;
+			lhsOrderedProductCode = this.getOrderedProductCode();
+			String rhsOrderedProductCode;
+			rhsOrderedProductCode = that.getOrderedProductCode();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "orderedProductCode", lhsOrderedProductCode), LocatorUtils.property(thatLocator, "orderedProductCode", rhsOrderedProductCode), lhsOrderedProductCode, rhsOrderedProductCode)) {
+				return false;
+			}
+		}
+		{
+			String lhsMailBanner;
+			lhsMailBanner = this.getMailBanner();
+			String rhsMailBanner;
+			rhsMailBanner = that.getMailBanner();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "mailBanner", lhsMailBanner), LocatorUtils.property(thatLocator, "mailBanner", rhsMailBanner), lhsMailBanner, rhsMailBanner)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

@@ -1,5 +1,9 @@
 package b;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -29,7 +33,8 @@ import javax.xml.bind.annotation.XmlType;
 		"printFlag",
 		"labelText"
 })
-public class PackageRefElement {
+public class PackageRefElement
+		implements Equals, HashCode {
 
 	@XmlElement(name = "PrintFlag")
 	protected Boolean printFlag;
@@ -74,6 +79,60 @@ public class PackageRefElement {
 	 */
 	public void setLabelText(String value) {
 		this.labelText = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			Boolean thePrintFlag;
+			thePrintFlag = this.isPrintFlag();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "printFlag", thePrintFlag), currentHashCode, thePrintFlag);
+		}
+		{
+			String theLabelText;
+			theLabelText = this.getLabelText();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelText", theLabelText), currentHashCode, theLabelText);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof PackageRefElement)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final PackageRefElement that = ((PackageRefElement) object);
+		{
+			Boolean lhsPrintFlag;
+			lhsPrintFlag = this.isPrintFlag();
+			Boolean rhsPrintFlag;
+			rhsPrintFlag = that.isPrintFlag();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "printFlag", lhsPrintFlag), LocatorUtils.property(thatLocator, "printFlag", rhsPrintFlag), lhsPrintFlag, rhsPrintFlag)) {
+				return false;
+			}
+		}
+		{
+			String lhsLabelText;
+			lhsLabelText = this.getLabelText();
+			String rhsLabelText;
+			rhsLabelText = that.getLabelText();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelText", lhsLabelText), LocatorUtils.property(thatLocator, "labelText", rhsLabelText), lhsLabelText, rhsLabelText)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

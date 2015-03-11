@@ -19,6 +19,25 @@
 		</resources>
 		<plugins>
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>${build-helper-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/generated</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-xjc-plugin</artifactId>
 				<version>2.6.0</version>
@@ -31,6 +50,9 @@
 							<bindingFile>../schema/binding.xml</bindingFile>
 							<packagename>a</packagename>
 							<extensionArgs>
+								<extensionArg>-XhashCode</extensionArg>
+								<extensionArg>-Xequals</extensionArg>
+								<extensionArg>-XReplacePrimitives</extensionArg>
 								<extensionArg>-XJsr303Annotations</extensionArg>
 								<extensionArg>-XJsr303Annotations:targetNamespace=a</extensionArg>
 								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>
@@ -43,6 +65,9 @@
 							<xsd>../schema/b.xsd</xsd>
 							<packagename>b</packagename>
 							<extensionArgs>
+								<extensionArg>-XhashCode</extensionArg>
+								<extensionArg>-Xequals</extensionArg>
+								<extensionArg>-XReplacePrimitives</extensionArg>
 								<extensionArg>-XJsr303Annotations</extensionArg>
 								<extensionArg>-XJsr303Annotations:targetNamespace=b</extensionArg>
 								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>
@@ -51,9 +76,6 @@
 							</extensionArgs>
 						</xsdOption>
 					</xsdOptions>
-					<extensions>
-						<extension>com.github.krasa:krasa-jaxb-tools:${krasa-jaxb-tools.version}</extension>
-					</extensions>
 				</configuration>
 				<executions>
 					<execution>
@@ -64,6 +86,18 @@
 						</goals>
 					</execution>
 				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.jvnet.jaxb2_commons</groupId>
+						<artifactId>jaxb2-basics</artifactId>
+						<version>${jaxb2-basics.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>com.github.krasa</groupId>
+						<artifactId>krasa-jaxb-tools</artifactId>
+						<version>${krasa-jaxb-tools.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 
 		</plugins>

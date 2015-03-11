@@ -1,5 +1,9 @@
 package a;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
@@ -30,11 +34,12 @@ import java.util.List;
 @XmlType(name = "ChoicesWithMinMax", propOrder = {
 		"teaOrCoffee"
 })
-public class ChoicesWithMinMax {
+public class ChoicesWithMinMax
+		implements Equals, HashCode {
 
 	@XmlElementRefs({
-			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class),
-			@XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class)
+			@XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class),
+			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class)
 	})
 	protected List<JAXBElement<String>> teaOrCoffee;
 
@@ -64,6 +69,46 @@ public class ChoicesWithMinMax {
 			teaOrCoffee = new ArrayList<JAXBElement<String>>();
 		}
 		return this.teaOrCoffee;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			List<JAXBElement<String>> theTeaOrCoffee;
+			theTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee() : null);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "teaOrCoffee", theTeaOrCoffee), currentHashCode, theTeaOrCoffee);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof ChoicesWithMinMax)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final ChoicesWithMinMax that = ((ChoicesWithMinMax) object);
+		{
+			List<JAXBElement<String>> lhsTeaOrCoffee;
+			lhsTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee() : null);
+			List<JAXBElement<String>> rhsTeaOrCoffee;
+			rhsTeaOrCoffee = (((that.teaOrCoffee != null) && (!that.teaOrCoffee.isEmpty())) ? that.getTeaOrCoffee() : null);
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "teaOrCoffee", lhsTeaOrCoffee), LocatorUtils.property(thatLocator, "teaOrCoffee", rhsTeaOrCoffee), lhsTeaOrCoffee, rhsTeaOrCoffee)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

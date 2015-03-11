@@ -41,17 +41,17 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ImpbElement }
+	 * Create an instance of {@link EncodeRequest.MpuList }
 	 */
-	public ImpbElement createImpbElement() {
-		return new ImpbElement();
+	public EncodeRequest.MpuList createEncodeRequestMpuList() {
+		return new EncodeRequest.MpuList();
 	}
 
 	/**
-	 * Create an instance of {@link LabelDetailElement }
+	 * Create an instance of {@link StandardAddressElement }
 	 */
-	public LabelDetailElement createLabelDetailElement() {
-		return new LabelDetailElement();
+	public StandardAddressElement createStandardAddressElement() {
+		return new StandardAddressElement();
 	}
 
 	/**
@@ -62,45 +62,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link MpuResponseElement.ErrorList }
+	 * Create an instance of {@link LabelDetailElement }
 	 */
-	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
-		return new MpuResponseElement.ErrorList();
-	}
-
-	/**
-	 * Create an instance of {@link WeightElement }
-	 */
-	public WeightElement createWeightElement() {
-		return new WeightElement();
-	}
-
-	/**
-	 * Create an instance of {@link EncodeRequest.MpuList }
-	 */
-	public EncodeRequest.MpuList createEncodeRequestMpuList() {
-		return new EncodeRequest.MpuList();
-	}
-
-	/**
-	 * Create an instance of {@link AddressElement }
-	 */
-	public AddressElement createAddressElement() {
-		return new AddressElement();
-	}
-
-	/**
-	 * Create an instance of {@link PackageRefElement }
-	 */
-	public PackageRefElement createPackageRefElement() {
-		return new PackageRefElement();
-	}
-
-	/**
-	 * Create an instance of {@link AbstractRequest }
-	 */
-	public AbstractRequest createAbstractRequest() {
-		return new AbstractRequest();
+	public LabelDetailElement createLabelDetailElement() {
+		return new LabelDetailElement();
 	}
 
 	/**
@@ -118,6 +83,13 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link ImpbElement }
+	 */
+	public ImpbElement createImpbElement() {
+		return new ImpbElement();
+	}
+
+	/**
 	 * Create an instance of {@link ContainerElement }
 	 */
 	public ContainerElement createContainerElement() {
@@ -125,10 +97,31 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link StandardAddressElement }
+	 * Create an instance of {@link AddressElement }
 	 */
-	public StandardAddressElement createStandardAddressElement() {
-		return new StandardAddressElement();
+	public AddressElement createAddressElement() {
+		return new AddressElement();
+	}
+
+	/**
+	 * Create an instance of {@link PackageRefElement }
+	 */
+	public PackageRefElement createPackageRefElement() {
+		return new PackageRefElement();
+	}
+
+	/**
+	 * Create an instance of {@link MpuResponseElement.ErrorList }
+	 */
+	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
+		return new MpuResponseElement.ErrorList();
+	}
+
+	/**
+	 * Create an instance of {@link WeightElement }
+	 */
+	public WeightElement createWeightElement() {
+		return new WeightElement();
 	}
 
 	/**
@@ -136,6 +129,13 @@ public class ObjectFactory {
 	 */
 	public MpuElement createMpuElement() {
 		return new MpuElement();
+	}
+
+	/**
+	 * Create an instance of {@link AbstractRequest }
+	 */
+	public AbstractRequest createAbstractRequest() {
+		return new AbstractRequest();
 	}
 
 	/**

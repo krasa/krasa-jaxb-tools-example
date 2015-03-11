@@ -1,5 +1,9 @@
 package b;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -29,7 +33,8 @@ import javax.xml.bind.annotation.XmlType;
 		"freeFormAddress",
 		"standardAddress"
 })
-public class AddressElement {
+public class AddressElement
+		implements Equals, HashCode {
 
 	@XmlElement(name = "FreeFormAddress")
 	protected FreeFormAddressElement freeFormAddress;
@@ -74,6 +79,60 @@ public class AddressElement {
 	 */
 	public void setStandardAddress(StandardAddressElement value) {
 		this.standardAddress = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			FreeFormAddressElement theFreeFormAddress;
+			theFreeFormAddress = this.getFreeFormAddress();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "freeFormAddress", theFreeFormAddress), currentHashCode, theFreeFormAddress);
+		}
+		{
+			StandardAddressElement theStandardAddress;
+			theStandardAddress = this.getStandardAddress();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "standardAddress", theStandardAddress), currentHashCode, theStandardAddress);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof AddressElement)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final AddressElement that = ((AddressElement) object);
+		{
+			FreeFormAddressElement lhsFreeFormAddress;
+			lhsFreeFormAddress = this.getFreeFormAddress();
+			FreeFormAddressElement rhsFreeFormAddress;
+			rhsFreeFormAddress = that.getFreeFormAddress();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "freeFormAddress", lhsFreeFormAddress), LocatorUtils.property(thatLocator, "freeFormAddress", rhsFreeFormAddress), lhsFreeFormAddress, rhsFreeFormAddress)) {
+				return false;
+			}
+		}
+		{
+			StandardAddressElement lhsStandardAddress;
+			lhsStandardAddress = this.getStandardAddress();
+			StandardAddressElement rhsStandardAddress;
+			rhsStandardAddress = that.getStandardAddress();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "standardAddress", lhsStandardAddress), LocatorUtils.property(thatLocator, "standardAddress", rhsStandardAddress), lhsStandardAddress, rhsStandardAddress)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

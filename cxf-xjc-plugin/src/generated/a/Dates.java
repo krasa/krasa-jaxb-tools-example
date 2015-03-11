@@ -1,5 +1,9 @@
 package a;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -29,7 +33,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "Dates", propOrder = {
 		"date1"
 })
-public class Dates {
+public class Dates
+		implements Equals, HashCode {
 
 	@XmlElement(required = true)
 	@NotNull
@@ -53,6 +58,46 @@ public class Dates {
 	 */
 	public void setDate1(XMLGregorianCalendar value) {
 		this.date1 = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			XMLGregorianCalendar theDate1;
+			theDate1 = this.getDate1();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "date1", theDate1), currentHashCode, theDate1);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof Dates)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final Dates that = ((Dates) object);
+		{
+			XMLGregorianCalendar lhsDate1;
+			lhsDate1 = this.getDate1();
+			XMLGregorianCalendar rhsDate1;
+			rhsDate1 = that.getDate1();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "date1", lhsDate1), LocatorUtils.property(thatLocator, "date1", rhsDate1), lhsDate1, rhsDate1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }
