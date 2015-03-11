@@ -15,8 +15,10 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<krasa-jaxb-tools.version>1.2-SNAPSHOT</krasa-jaxb-tools.version>
-
+		<krasa-jaxb-tools.version>1.3-SNAPSHOT</krasa-jaxb-tools.version>
+		
+		<jaxb2-basics.version>0.9.3</jaxb2-basics.version>
+		<jaxb2-basics-runtime.version>0.9.3</jaxb2-basics-runtime.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven-jaxb2-plugin.version>0.8.2</maven-jaxb2-plugin.version>
@@ -25,6 +27,8 @@
 		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
 
 		<cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
+		<jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
+		<build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
 	</properties>
 	<dependencies>
 

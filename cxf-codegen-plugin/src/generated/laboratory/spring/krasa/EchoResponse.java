@@ -1,5 +1,9 @@
 package laboratory.spring.krasa;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -29,7 +33,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "EchoResponse", propOrder = {
 		"originalMessage"
 })
-public class EchoResponse {
+public class EchoResponse
+		implements Equals, HashCode {
 
 	@XmlElement(name = "OriginalMessage", required = true)
 	@NotNull
@@ -54,6 +59,46 @@ public class EchoResponse {
 	 */
 	public void setOriginalMessage(String value) {
 		this.originalMessage = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			String theOriginalMessage;
+			theOriginalMessage = this.getOriginalMessage();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "originalMessage", theOriginalMessage), currentHashCode, theOriginalMessage);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof EchoResponse)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final EchoResponse that = ((EchoResponse) object);
+		{
+			String lhsOriginalMessage;
+			lhsOriginalMessage = this.getOriginalMessage();
+			String rhsOriginalMessage;
+			rhsOriginalMessage = that.getOriginalMessage();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "originalMessage", lhsOriginalMessage), LocatorUtils.property(thatLocator, "originalMessage", rhsOriginalMessage), lhsOriginalMessage, rhsOriginalMessage)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

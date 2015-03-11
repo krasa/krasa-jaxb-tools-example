@@ -11,6 +11,15 @@
 
 	<artifactId>cxf-codegen-plugin</artifactId>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>${jaxb2-basics-runtime.version}</version>
+		</dependency>
+	</dependencies>
+	<properties>
+	</properties>
 
 	<build>
 		<resources>
@@ -20,6 +29,25 @@
 		</resources>
 
 		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>${build-helper-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/generated</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-codegen-plugin</artifactId>
@@ -40,6 +68,9 @@
 										<extraarg>jaxws21</extraarg>
 										<extraarg>-b</extraarg>
 										<extraarg>${project.parent.basedir}/wsdl/jaxws-Hello.xml</extraarg>
+										<extraarg>-xjc-XhashCode</extraarg>
+										<extraarg>-xjc-Xequals</extraarg>
+										<extraarg>-xjc-XReplacePrimitives</extraarg>
 										<extraarg>-xjc-XJsr303Annotations</extraarg>
 										<extraarg>-xjc-XJsr303Annotations:targetNamespace=a
 										</extraarg>
@@ -57,6 +88,11 @@
 					</execution>
 				</executions>
 				<dependencies>
+					<dependency>
+						<groupId>org.jvnet.jaxb2_commons</groupId>
+						<artifactId>jaxb2-basics</artifactId>
+						<version>${jaxb2-basics.version}</version>
+					</dependency>
 					<dependency>
 						<groupId>com.github.krasa</groupId>
 						<artifactId>krasa-jaxb-tools</artifactId>

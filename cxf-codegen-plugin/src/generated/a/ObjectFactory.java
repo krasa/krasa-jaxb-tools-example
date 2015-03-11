@@ -23,6 +23,8 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
 	private final static QName _Main_QNAME = new QName("a", "main");
+	private final static QName _ChoicesWithMinMaxTea_QNAME = new QName("a", "Tea");
+	private final static QName _ChoicesWithMinMaxCoffee_QNAME = new QName("a", "Coffee");
 
 	/**
 	 * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: a
@@ -31,31 +33,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Main }
+	 * Create an instance of {@link NumberWithCode }
 	 */
-	public Main createMain() {
-		return new Main();
-	}
-
-	/**
-	 * Create an instance of {@link Dates }
-	 */
-	public Dates createDates() {
-		return new Dates();
-	}
-
-	/**
-	 * Create an instance of {@link Choices }
-	 */
-	public Choices createChoices() {
-		return new Choices();
-	}
-
-	/**
-	 * Create an instance of {@link Enumeration }
-	 */
-	public Enumeration createEnumeration() {
-		return new Enumeration();
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
 	}
 
 	/**
@@ -73,6 +54,69 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link Coffee }
+	 */
+	public Coffee createCoffee() {
+		return new Coffee();
+	}
+
+	/**
+	 * Create an instance of {@link Choices }
+	 */
+	public Choices createChoices() {
+		return new Choices();
+	}
+
+	/**
+	 * Create an instance of {@link Main }
+	 */
+	public Main createMain() {
+		return new Main();
+	}
+
+	/**
+	 * Create an instance of {@link Enumeration }
+	 */
+	public Enumeration createEnumeration() {
+		return new Enumeration();
+	}
+
+	/**
+	 * Create an instance of {@link Tea }
+	 */
+	public Tea createTea() {
+		return new Tea();
+	}
+
+	/**
+	 * Create an instance of {@link Dates }
+	 */
+	public Dates createDates() {
+		return new Dates();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoicesWithMinMax }
+	 */
+	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
+		return new ComplexChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoices }
+	 */
+	public ComplexChoices createComplexChoices() {
+		return new ComplexChoices();
+	}
+
+	/**
+	 * Create an instance of {@link Primitives }
+	 */
+	public Primitives createPrimitives() {
+		return new Primitives();
+	}
+
+	/**
 	 * Create an instance of {@link Numbers }
 	 */
 	public Numbers createNumbers() {
@@ -80,10 +124,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link NumberWithCode }
+	 * Create an instance of {@link ChoicesWithMinMax }
 	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
 	}
 
 	/**
@@ -92,6 +136,22 @@ public class ObjectFactory {
 	@XmlElementDecl(namespace = "a", name = "main")
 	public JAXBElement<Main> createMain(Main value) {
 		return new JAXBElement<Main>(_Main_QNAME, Main.class, null, value);
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+	 */
+	@XmlElementDecl(namespace = "a", name = "Tea", scope = ChoicesWithMinMax.class)
+	public JAXBElement<String> createChoicesWithMinMaxTea(String value) {
+		return new JAXBElement<String>(_ChoicesWithMinMaxTea_QNAME, String.class, ChoicesWithMinMax.class, value);
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+	 */
+	@XmlElementDecl(namespace = "a", name = "Coffee", scope = ChoicesWithMinMax.class)
+	public JAXBElement<String> createChoicesWithMinMaxCoffee(String value) {
+		return new JAXBElement<String>(_ChoicesWithMinMaxCoffee_QNAME, String.class, ChoicesWithMinMax.class, value);
 	}
 
 }

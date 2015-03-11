@@ -1,12 +1,15 @@
 package a;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +25,7 @@ import java.util.List;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="pattern" type="{a}pattern"/>
+ *         &lt;element name="idType" type="{a}idType"/>
  *         &lt;element name="genericString" type="{a}minMaxLength"/>
  *         &lt;element name="maxLength" type="{a}maxLength"/>
  *         &lt;element name="minLength" type="{a}minLength"/>
@@ -35,17 +39,26 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Strings", propOrder = {
 		"pattern",
+		"idType",
 		"genericString",
 		"maxLength",
 		"minLength",
 		"someCollection"
 })
-public class Strings {
+public class Strings
+		implements Equals, HashCode {
 
 	@XmlElement(required = true)
 	@NotNull
 	@Pattern(regexp = "[0-9]")
 	protected String pattern;
+	@XmlElement(required = true)
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@NotNull
+	@Size(max = 100)
+	@Pattern(regexp = "[[_:A-Za-z]-[:]][[-._:A-Za-z0-9]-[:]]*")
+	protected String idType;
 	@XmlElement(required = true)
 	@NotNull
 	@Size(min = 0, max = 1024)
@@ -81,6 +94,26 @@ public class Strings {
 	 */
 	public void setPattern(String value) {
 		this.pattern = value;
+	}
+
+	/**
+	 * Gets the value of the idType property.
+	 *
+	 * @return possible object is
+	 * {@link String }
+	 */
+	public String getIdType() {
+		return idType;
+	}
+
+	/**
+	 * Sets the value of the idType property.
+	 *
+	 * @param value allowed object is
+	 *              {@link String }
+	 */
+	public void setIdType(String value) {
+		this.idType = value;
 	}
 
 	/**
@@ -168,6 +201,116 @@ public class Strings {
 			someCollection = new ArrayList<Object>();
 		}
 		return this.someCollection;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			String thePattern;
+			thePattern = this.getPattern();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "pattern", thePattern), currentHashCode, thePattern);
+		}
+		{
+			String theIdType;
+			theIdType = this.getIdType();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "idType", theIdType), currentHashCode, theIdType);
+		}
+		{
+			String theGenericString;
+			theGenericString = this.getGenericString();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "genericString", theGenericString), currentHashCode, theGenericString);
+		}
+		{
+			String theMaxLength;
+			theMaxLength = this.getMaxLength();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "maxLength", theMaxLength), currentHashCode, theMaxLength);
+		}
+		{
+			String theMinLength;
+			theMinLength = this.getMinLength();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minLength", theMinLength), currentHashCode, theMinLength);
+		}
+		{
+			List<Object> theSomeCollection;
+			theSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection() : null);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "someCollection", theSomeCollection), currentHashCode, theSomeCollection);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof Strings)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final Strings that = ((Strings) object);
+		{
+			String lhsPattern;
+			lhsPattern = this.getPattern();
+			String rhsPattern;
+			rhsPattern = that.getPattern();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "pattern", lhsPattern), LocatorUtils.property(thatLocator, "pattern", rhsPattern), lhsPattern, rhsPattern)) {
+				return false;
+			}
+		}
+		{
+			String lhsIdType;
+			lhsIdType = this.getIdType();
+			String rhsIdType;
+			rhsIdType = that.getIdType();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "idType", lhsIdType), LocatorUtils.property(thatLocator, "idType", rhsIdType), lhsIdType, rhsIdType)) {
+				return false;
+			}
+		}
+		{
+			String lhsGenericString;
+			lhsGenericString = this.getGenericString();
+			String rhsGenericString;
+			rhsGenericString = that.getGenericString();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "genericString", lhsGenericString), LocatorUtils.property(thatLocator, "genericString", rhsGenericString), lhsGenericString, rhsGenericString)) {
+				return false;
+			}
+		}
+		{
+			String lhsMaxLength;
+			lhsMaxLength = this.getMaxLength();
+			String rhsMaxLength;
+			rhsMaxLength = that.getMaxLength();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "maxLength", lhsMaxLength), LocatorUtils.property(thatLocator, "maxLength", rhsMaxLength), lhsMaxLength, rhsMaxLength)) {
+				return false;
+			}
+		}
+		{
+			String lhsMinLength;
+			lhsMinLength = this.getMinLength();
+			String rhsMinLength;
+			rhsMinLength = that.getMinLength();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "minLength", lhsMinLength), LocatorUtils.property(thatLocator, "minLength", rhsMinLength), lhsMinLength, rhsMinLength)) {
+				return false;
+			}
+		}
+		{
+			List<Object> lhsSomeCollection;
+			lhsSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection() : null);
+			List<Object> rhsSomeCollection;
+			rhsSomeCollection = (((that.someCollection != null) && (!that.someCollection.isEmpty())) ? that.getSomeCollection() : null);
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "someCollection", lhsSomeCollection), LocatorUtils.property(thatLocator, "someCollection", rhsSomeCollection), lhsSomeCollection, rhsSomeCollection)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

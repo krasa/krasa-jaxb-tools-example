@@ -4,6 +4,7 @@ import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
+import javax.validation.Valid;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -11,18 +12,18 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Choices complex type.
+ * <p>Java class for ComplexChoices complex type.
  * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p/>
  * <pre>
- * &lt;complexType name="Choices">
+ * &lt;complexType name="ComplexChoices">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;choice>
- *           &lt;element name="Tea" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *           &lt;element name="Coffee" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *           &lt;element name="Tea" type="{a}Tea"/>
+ *           &lt;element name="Coffee" type="{a}Coffee"/>
  *         &lt;/choice>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -31,25 +32,27 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Choices", propOrder = {
+@XmlType(name = "ComplexChoices", propOrder = {
 		"tea",
 		"coffee"
 })
-public class Choices
+public class ComplexChoices
 		implements Equals, HashCode {
 
 	@XmlElement(name = "Tea")
-	protected String tea;
+	@Valid
+	protected Tea tea;
 	@XmlElement(name = "Coffee")
-	protected String coffee;
+	@Valid
+	protected Coffee coffee;
 
 	/**
 	 * Gets the value of the tea property.
 	 *
 	 * @return possible object is
-	 * {@link String }
+	 * {@link Tea }
 	 */
-	public String getTea() {
+	public Tea getTea() {
 		return tea;
 	}
 
@@ -57,9 +60,9 @@ public class Choices
 	 * Sets the value of the tea property.
 	 *
 	 * @param value allowed object is
-	 *              {@link String }
+	 *              {@link Tea }
 	 */
-	public void setTea(String value) {
+	public void setTea(Tea value) {
 		this.tea = value;
 	}
 
@@ -67,9 +70,9 @@ public class Choices
 	 * Gets the value of the coffee property.
 	 *
 	 * @return possible object is
-	 * {@link String }
+	 * {@link Coffee }
 	 */
-	public String getCoffee() {
+	public Coffee getCoffee() {
 		return coffee;
 	}
 
@@ -77,21 +80,21 @@ public class Choices
 	 * Sets the value of the coffee property.
 	 *
 	 * @param value allowed object is
-	 *              {@link String }
+	 *              {@link Coffee }
 	 */
-	public void setCoffee(String value) {
+	public void setCoffee(Coffee value) {
 		this.coffee = value;
 	}
 
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = 1;
 		{
-			String theTea;
+			Tea theTea;
 			theTea = this.getTea();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "tea", theTea), currentHashCode, theTea);
 		}
 		{
-			String theCoffee;
+			Coffee theCoffee;
 			theCoffee = this.getCoffee();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "coffee", theCoffee), currentHashCode, theCoffee);
 		}
@@ -104,26 +107,26 @@ public class Choices
 	}
 
 	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
-		if (!(object instanceof Choices)) {
+		if (!(object instanceof ComplexChoices)) {
 			return false;
 		}
 		if (this == object) {
 			return true;
 		}
-		final Choices that = ((Choices) object);
+		final ComplexChoices that = ((ComplexChoices) object);
 		{
-			String lhsTea;
+			Tea lhsTea;
 			lhsTea = this.getTea();
-			String rhsTea;
+			Tea rhsTea;
 			rhsTea = that.getTea();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "tea", lhsTea), LocatorUtils.property(thatLocator, "tea", rhsTea), lhsTea, rhsTea)) {
 				return false;
 			}
 		}
 		{
-			String lhsCoffee;
+			Coffee lhsCoffee;
 			lhsCoffee = this.getCoffee();
-			String rhsCoffee;
+			Coffee rhsCoffee;
 			rhsCoffee = that.getCoffee();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "coffee", lhsCoffee), LocatorUtils.property(thatLocator, "coffee", rhsCoffee), lhsCoffee, rhsCoffee)) {
 				return false;
