@@ -1,5 +1,9 @@
 package a;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.*;
 
@@ -23,7 +27,8 @@ import javax.xml.bind.annotation.*;
 @XmlType(name = "NumberWithCode", propOrder = {
 		"value"
 })
-public class NumberWithCode {
+public class NumberWithCode
+		implements Equals, HashCode {
 
 	@XmlValue
 	@Size(min = 1, max = 5)
@@ -69,6 +74,60 @@ public class NumberWithCode {
 	 */
 	public void setCode(String value) {
 		this.code = value;
+	}
+
+	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
+		int currentHashCode = 1;
+		{
+			String theValue;
+			theValue = this.getValue();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
+		}
+		{
+			String theCode;
+			theCode = this.getCode();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "code", theCode), currentHashCode, theCode);
+		}
+		return currentHashCode;
+	}
+
+	public int hashCode() {
+		final HashCodeStrategy strategy = JAXBHashCodeStrategy.INSTANCE;
+		return this.hashCode(null, strategy);
+	}
+
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		if (!(object instanceof NumberWithCode)) {
+			return false;
+		}
+		if (this == object) {
+			return true;
+		}
+		final NumberWithCode that = ((NumberWithCode) object);
+		{
+			String lhsValue;
+			lhsValue = this.getValue();
+			String rhsValue;
+			rhsValue = that.getValue();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+				return false;
+			}
+		}
+		{
+			String lhsCode;
+			lhsCode = this.getCode();
+			String rhsCode;
+			rhsCode = that.getCode();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "code", lhsCode), LocatorUtils.property(thatLocator, "code", rhsCode), lhsCode, rhsCode)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean equals(Object object) {
+		final EqualsStrategy strategy = JAXBEqualsStrategy.INSTANCE;
+		return equals(null, null, object, strategy);
 	}
 
 }

@@ -12,11 +12,6 @@
 	<artifactId>cxf-codegen-plugin</artifactId>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
-			<version>${jaxb2-basics-runtime.version}</version>
-		</dependency>
 	</dependencies>
 	<properties>
 	</properties>
@@ -68,9 +63,9 @@
 										<extraarg>jaxws21</extraarg>
 										<extraarg>-b</extraarg>
 										<extraarg>${project.parent.basedir}/wsdl/jaxws-Hello.xml</extraarg>
+										<extraarg>-xjc-XReplacePrimitives</extraarg>
 										<extraarg>-xjc-XhashCode</extraarg>
 										<extraarg>-xjc-Xequals</extraarg>
-										<extraarg>-xjc-XReplacePrimitives</extraarg>
 										<extraarg>-xjc-XJsr303Annotations</extraarg>
 										<extraarg>-xjc-XJsr303Annotations:targetNamespace=a
 										</extraarg>

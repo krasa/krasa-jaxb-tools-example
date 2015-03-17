@@ -1,11 +1,11 @@
-package laboratory.spring.krasa;
+package a;
 
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Pattern;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -13,16 +13,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for EchoResponse complex type.
+ * <p>Java class for Enumeration complex type.
  * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p/>
  * <pre>
- * &lt;complexType name="EchoResponse">
+ * &lt;complexType name="Enumeration">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="OriginalMessage" type="{http://krasa.spring.laboratory/}genericString"/>
+ *         &lt;element name="foo">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;enumeration value="N05"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,43 +36,43 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EchoResponse", propOrder = {
-		"originalMessage"
+@XmlType(name = "Enumeration", propOrder = {
+		"foo"
 })
-public class EchoResponse
+public class Enumeration
 		implements Equals, HashCode {
 
-	@XmlElement(name = "OriginalMessage", required = true)
+	@XmlElement(required = true)
 	@NotNull
-	@Size(min = 0, max = 1024)
-	protected String originalMessage;
+	@Pattern(regexp = "N05")
+	protected String foo;
 
 	/**
-	 * Gets the value of the originalMessage property.
+	 * Gets the value of the foo property.
 	 *
 	 * @return possible object is
 	 * {@link String }
 	 */
-	public String getOriginalMessage() {
-		return originalMessage;
+	public String getFoo() {
+		return foo;
 	}
 
 	/**
-	 * Sets the value of the originalMessage property.
+	 * Sets the value of the foo property.
 	 *
 	 * @param value allowed object is
 	 *              {@link String }
 	 */
-	public void setOriginalMessage(String value) {
-		this.originalMessage = value;
+	public void setFoo(String value) {
+		this.foo = value;
 	}
 
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = 1;
 		{
-			String theOriginalMessage;
-			theOriginalMessage = this.getOriginalMessage();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "originalMessage", theOriginalMessage), currentHashCode, theOriginalMessage);
+			String theFoo;
+			theFoo = this.getFoo();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "foo", theFoo), currentHashCode, theFoo);
 		}
 		return currentHashCode;
 	}
@@ -77,19 +83,19 @@ public class EchoResponse
 	}
 
 	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
-		if (!(object instanceof EchoResponse)) {
+		if (!(object instanceof Enumeration)) {
 			return false;
 		}
 		if (this == object) {
 			return true;
 		}
-		final EchoResponse that = ((EchoResponse) object);
+		final Enumeration that = ((Enumeration) object);
 		{
-			String lhsOriginalMessage;
-			lhsOriginalMessage = this.getOriginalMessage();
-			String rhsOriginalMessage;
-			rhsOriginalMessage = that.getOriginalMessage();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "originalMessage", lhsOriginalMessage), LocatorUtils.property(thatLocator, "originalMessage", rhsOriginalMessage), lhsOriginalMessage, rhsOriginalMessage)) {
+			String lhsFoo;
+			lhsFoo = this.getFoo();
+			String rhsFoo;
+			rhsFoo = that.getFoo();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "foo", lhsFoo), LocatorUtils.property(thatLocator, "foo", rhsFoo), lhsFoo, rhsFoo)) {
 				return false;
 			}
 		}

@@ -333,7 +333,7 @@ public class Main
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "strings", theStrings), currentHashCode, theStrings);
 		}
 		{
-			short theUnsignedByte;
+			Short theUnsignedByte;
 			theUnsignedByte = this.getUnsignedByte();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unsignedByte", theUnsignedByte), currentHashCode, theUnsignedByte);
 		}
@@ -412,9 +412,9 @@ public class Main
 			}
 		}
 		{
-			short lhsUnsignedByte;
+			Short lhsUnsignedByte;
 			lhsUnsignedByte = this.getUnsignedByte();
-			short rhsUnsignedByte;
+			Short rhsUnsignedByte;
 			rhsUnsignedByte = that.getUnsignedByte();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "unsignedByte", lhsUnsignedByte), LocatorUtils.property(thatLocator, "unsignedByte", rhsUnsignedByte), lhsUnsignedByte, rhsUnsignedByte)) {
 				return false;

@@ -157,7 +157,7 @@ public class EncodeRequest
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = super.hashCode(locator, strategy);
 		{
-			int theCustomerId;
+			Integer theCustomerId;
 			theCustomerId = this.getCustomerId();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "customerId", theCustomerId), currentHashCode, theCustomerId);
 		}
@@ -167,12 +167,12 @@ public class EncodeRequest
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "batchRef", theBatchRef), currentHashCode, theBatchRef);
 		}
 		{
-			boolean theHaltOnError;
+			java.lang.Boolean theHaltOnError;
 			theHaltOnError = this.isHaltOnError();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "haltOnError", theHaltOnError), currentHashCode, theHaltOnError);
 		}
 		{
-			boolean theRejectAllOnError;
+			java.lang.Boolean theRejectAllOnError;
 			theRejectAllOnError = this.isRejectAllOnError();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "rejectAllOnError", theRejectAllOnError), currentHashCode, theRejectAllOnError);
 		}
@@ -201,9 +201,9 @@ public class EncodeRequest
 		}
 		final EncodeRequest that = ((EncodeRequest) object);
 		{
-			int lhsCustomerId;
+			Integer lhsCustomerId;
 			lhsCustomerId = this.getCustomerId();
-			int rhsCustomerId;
+			Integer rhsCustomerId;
 			rhsCustomerId = that.getCustomerId();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "customerId", lhsCustomerId), LocatorUtils.property(thatLocator, "customerId", rhsCustomerId), lhsCustomerId, rhsCustomerId)) {
 				return false;
@@ -219,18 +219,18 @@ public class EncodeRequest
 			}
 		}
 		{
-			boolean lhsHaltOnError;
+			java.lang.Boolean lhsHaltOnError;
 			lhsHaltOnError = this.isHaltOnError();
-			boolean rhsHaltOnError;
+			java.lang.Boolean rhsHaltOnError;
 			rhsHaltOnError = that.isHaltOnError();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "haltOnError", lhsHaltOnError), LocatorUtils.property(thatLocator, "haltOnError", rhsHaltOnError), lhsHaltOnError, rhsHaltOnError)) {
 				return false;
 			}
 		}
 		{
-			boolean lhsRejectAllOnError;
+			java.lang.Boolean lhsRejectAllOnError;
 			lhsRejectAllOnError = this.isRejectAllOnError();
-			boolean rhsRejectAllOnError;
+			java.lang.Boolean rhsRejectAllOnError;
 			rhsRejectAllOnError = that.isRejectAllOnError();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "rejectAllOnError", lhsRejectAllOnError), LocatorUtils.property(thatLocator, "rejectAllOnError", rhsRejectAllOnError), lhsRejectAllOnError, rhsRejectAllOnError)) {
 				return false;

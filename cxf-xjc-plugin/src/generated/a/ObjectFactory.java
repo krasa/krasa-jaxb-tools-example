@@ -33,24 +33,24 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Coffee }
+	 * Create an instance of {@link Choices }
 	 */
-	public Coffee createCoffee() {
-		return new Coffee();
+	public Choices createChoices() {
+		return new Choices();
 	}
 
 	/**
-	 * Create an instance of {@link ChoicesWithMinMax }
+	 * Create an instance of {@link ComplexChoices }
 	 */
-	public ChoicesWithMinMax createChoicesWithMinMax() {
-		return new ChoicesWithMinMax();
+	public ComplexChoices createComplexChoices() {
+		return new ComplexChoices();
 	}
 
 	/**
-	 * Create an instance of {@link Enumeration }
+	 * Create an instance of {@link Dates }
 	 */
-	public Enumeration createEnumeration() {
-		return new Enumeration();
+	public Dates createDates() {
+		return new Dates();
 	}
 
 	/**
@@ -61,10 +61,38 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Numbers }
+	 * Create an instance of {@link Primitives }
 	 */
-	public Numbers createNumbers() {
-		return new Numbers();
+	public Primitives createPrimitives() {
+		return new Primitives();
+	}
+
+	/**
+	 * Create an instance of {@link Enumeration }
+	 */
+	public Enumeration createEnumeration() {
+		return new Enumeration();
+	}
+
+	/**
+	 * Create an instance of {@link NumberWithCode }
+	 */
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
+	}
+
+	/**
+	 * Create an instance of {@link Tea }
+	 */
+	public Tea createTea() {
+		return new Tea();
+	}
+
+	/**
+	 * Create an instance of {@link ChoicesWithMinMax }
+	 */
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
 	}
 
 	/**
@@ -82,10 +110,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Choices }
+	 * Create an instance of {@link Numbers }
 	 */
-	public Choices createChoices() {
-		return new Choices();
+	public Numbers createNumbers() {
+		return new Numbers();
 	}
 
 	/**
@@ -96,38 +124,10 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Tea }
+	 * Create an instance of {@link Coffee }
 	 */
-	public Tea createTea() {
-		return new Tea();
-	}
-
-	/**
-	 * Create an instance of {@link NumberWithCode }
-	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
-	}
-
-	/**
-	 * Create an instance of {@link Primitives }
-	 */
-	public Primitives createPrimitives() {
-		return new Primitives();
-	}
-
-	/**
-	 * Create an instance of {@link Dates }
-	 */
-	public Dates createDates() {
-		return new Dates();
-	}
-
-	/**
-	 * Create an instance of {@link ComplexChoices }
-	 */
-	public ComplexChoices createComplexChoices() {
-		return new ComplexChoices();
+	public Coffee createCoffee() {
+		return new Coffee();
 	}
 
 	/**

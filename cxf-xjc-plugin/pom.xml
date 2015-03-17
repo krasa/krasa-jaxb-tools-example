@@ -50,9 +50,9 @@
 							<bindingFile>../schema/binding.xml</bindingFile>
 							<packagename>a</packagename>
 							<extensionArgs>
+								<extensionArg>-XReplacePrimitives</extensionArg>
 								<extensionArg>-XhashCode</extensionArg>
 								<extensionArg>-Xequals</extensionArg>
-								<extensionArg>-XReplacePrimitives</extensionArg>
 								<extensionArg>-XJsr303Annotations</extensionArg>
 								<extensionArg>-XJsr303Annotations:targetNamespace=a</extensionArg>
 								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>
@@ -65,9 +65,9 @@
 							<xsd>../schema/b.xsd</xsd>
 							<packagename>b</packagename>
 							<extensionArgs>
+								<extensionArg>-XReplacePrimitives</extensionArg>
 								<extensionArg>-XhashCode</extensionArg>
 								<extensionArg>-Xequals</extensionArg>
-								<extensionArg>-XReplacePrimitives</extensionArg>
 								<extensionArg>-XJsr303Annotations</extensionArg>
 								<extensionArg>-XJsr303Annotations:targetNamespace=b</extensionArg>
 								<extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>

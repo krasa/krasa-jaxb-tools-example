@@ -46,14 +46,22 @@
 							<extension>true</extension>
 							<args>
 								<arg>-no-header</arg>
+								<arg>-XReplacePrimitives</arg>
 								<arg>-XJsr303Annotations</arg>
 								<arg>-XJsr303Annotations:targetNamespace=a</arg>
+								<arg>-XhashCode</arg>
+								<arg>-Xequals</arg>
 							</args>
 							<plugins>
 								<plugin>
 									<groupId>com.github.krasa</groupId>
 									<artifactId>krasa-jaxb-tools</artifactId>
 									<version>${krasa-jaxb-tools.version}</version>
+								</plugin>
+								<plugin>
+									<groupId>org.jvnet.jaxb2_commons</groupId>
+									<artifactId>jaxb2-basics</artifactId>
+									<version>${jaxb2-basics.version}</version>
 								</plugin>
 							</plugins>
 						</configuration>

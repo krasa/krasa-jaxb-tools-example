@@ -35,15 +35,15 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="Primitives">
-        <xsd:sequence>
-            <xsd:element name="int" type="xsd:int"/>
-            <xsd:element name="long" type="xsd:long"/>
-            <xsd:element name="boolean" type="xsd:boolean"/>
-            <xsd:element name="double" type="xsd:double"/>
-            <xsd:element name="float" type="xsd:float"/>
-            <xsd:element name="byte" type="xsd:byte"/>
-            <xsd:element name="short" type="xsd:short"/>
-        </xsd:sequence>
+		<xsd:sequence>
+			<xsd:element name="int" type="xsd:int"/>
+			<xsd:element name="long" type="xsd:long"/>
+			<xsd:element name="boolean" type="xsd:boolean"/>
+			<xsd:element name="double" type="xsd:double"/>
+			<xsd:element name="float" type="xsd:float"/>
+			<xsd:element name="byte" type="xsd:byte"/>
+			<xsd:element name="short" type="xsd:short"/>
+		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:simpleType name="Number">
@@ -157,17 +157,17 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	
+
 	<xsd:simpleType name="ArrayOfBytes">
-	      <xsd:restriction base="xsd:hexBinary">
-	          <xsd:maxLength value="18" />
-	      </xsd:restriction>
+		<xsd:restriction base="xsd:hexBinary">
+			<xsd:maxLength value="18"/>
+		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 	<xsd:simpleType name="idType">
-	    <xsd:restriction base="xsd:ID">
-	        <xsd:maxLength value="100"/>
-	    </xsd:restriction>
+		<xsd:restriction base="xsd:ID">
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
 	</xsd:simpleType>
 
 	<xsd:complexType name="ComplexChoices">

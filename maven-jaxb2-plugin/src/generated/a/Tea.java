@@ -4,25 +4,24 @@ import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
-import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for Dates complex type.
+ * <p>Java class for Tea complex type.
  * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p/>
  * <pre>
- * &lt;complexType name="Dates">
+ * &lt;complexType name="Tea">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="date1" type="{a}date1"/>
+ *         &lt;choice>
+ *           &lt;element name="foo" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;/choice>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,42 +29,39 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Dates", propOrder = {
-		"date1"
+@XmlType(name = "Tea", propOrder = {
+		"foo"
 })
-public class Dates
-		implements Equals, HashCode {
+public class Tea implements Equals, HashCode {
 
-	@XmlElement(required = true)
-	@NotNull
-	protected XMLGregorianCalendar date1;
+	protected String foo;
 
 	/**
-	 * Gets the value of the date1 property.
+	 * Gets the value of the foo property.
 	 *
 	 * @return possible object is
-	 * {@link XMLGregorianCalendar }
+	 * {@link String }
 	 */
-	public XMLGregorianCalendar getDate1() {
-		return date1;
+	public String getFoo() {
+		return foo;
 	}
 
 	/**
-	 * Sets the value of the date1 property.
+	 * Sets the value of the foo property.
 	 *
 	 * @param value allowed object is
-	 *              {@link XMLGregorianCalendar }
+	 *              {@link String }
 	 */
-	public void setDate1(XMLGregorianCalendar value) {
-		this.date1 = value;
+	public void setFoo(String value) {
+		this.foo = value;
 	}
 
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = 1;
 		{
-			XMLGregorianCalendar theDate1;
-			theDate1 = this.getDate1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "date1", theDate1), currentHashCode, theDate1);
+			String theFoo;
+			theFoo = this.getFoo();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "foo", theFoo), currentHashCode, theFoo);
 		}
 		return currentHashCode;
 	}
@@ -76,19 +72,19 @@ public class Dates
 	}
 
 	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
-		if (!(object instanceof Dates)) {
+		if (!(object instanceof Tea)) {
 			return false;
 		}
 		if (this == object) {
 			return true;
 		}
-		final Dates that = ((Dates) object);
+		final Tea that = ((Tea) object);
 		{
-			XMLGregorianCalendar lhsDate1;
-			lhsDate1 = this.getDate1();
-			XMLGregorianCalendar rhsDate1;
-			rhsDate1 = that.getDate1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "date1", lhsDate1), LocatorUtils.property(thatLocator, "date1", rhsDate1), lhsDate1, rhsDate1)) {
+			String lhsFoo;
+			lhsFoo = this.getFoo();
+			String rhsFoo;
+			rhsFoo = that.getFoo();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "foo", lhsFoo), LocatorUtils.property(thatLocator, "foo", rhsFoo), lhsFoo, rhsFoo)) {
 				return false;
 			}
 		}

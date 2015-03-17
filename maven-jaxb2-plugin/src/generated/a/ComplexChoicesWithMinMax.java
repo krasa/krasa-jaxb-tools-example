@@ -4,25 +4,25 @@ import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
-import javax.xml.bind.JAXBElement;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 /**
- * <p>Java class for ChoicesWithMinMax complex type.
+ * <p>Java class for ComplexChoicesWithMinMax complex type.
  * <p/>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p/>
  * <pre>
- * &lt;complexType name="ChoicesWithMinMax">
+ * &lt;complexType name="ComplexChoicesWithMinMax">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;choice maxOccurs="2">
- *           &lt;element name="Tea" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *           &lt;element name="Coffee" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *           &lt;element name="Tea" type="{a}Tea"/>
+ *           &lt;element name="Coffee" type="{a}Coffee"/>
  *         &lt;/choice>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -31,17 +31,18 @@ import java.util.List;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ChoicesWithMinMax", propOrder = {
+@XmlType(name = "ComplexChoicesWithMinMax", propOrder = {
 		"teaOrCoffee"
 })
-public class ChoicesWithMinMax
+public class ComplexChoicesWithMinMax
 		implements Equals, HashCode {
 
-	@XmlElementRefs({
-			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class),
-			@XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class)
+	@XmlElements({
+			@XmlElement(name = "Tea", type = Tea.class),
+			@XmlElement(name = "Coffee", type = Coffee.class)
 	})
-	protected List<JAXBElement<String>> teaOrCoffee;
+	@Size(min = 1, max = 2)
+	protected List<Object> teaOrCoffee;
 
 	/**
 	 * Gets the value of the teaOrCoffee property.
@@ -61,12 +62,12 @@ public class ChoicesWithMinMax
 	 * <p/>
 	 * <p/>
 	 * Objects of the following type(s) are allowed in the list
-	 * {@link JAXBElement }{@code <}{@link String }{@code >}
-	 * {@link JAXBElement }{@code <}{@link String }{@code >}
+	 * {@link Tea }
+	 * {@link Coffee }
 	 */
-	public List<JAXBElement<String>> getTeaOrCoffee() {
+	public List<Object> getTeaOrCoffee() {
 		if (teaOrCoffee == null) {
-			teaOrCoffee = new ArrayList<JAXBElement<String>>();
+			teaOrCoffee = new ArrayList<Object>();
 		}
 		return this.teaOrCoffee;
 	}
@@ -74,7 +75,7 @@ public class ChoicesWithMinMax
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = 1;
 		{
-			List<JAXBElement<String>> theTeaOrCoffee;
+			List<Object> theTeaOrCoffee;
 			theTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee() : null);
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "teaOrCoffee", theTeaOrCoffee), currentHashCode, theTeaOrCoffee);
 		}
@@ -87,17 +88,17 @@ public class ChoicesWithMinMax
 	}
 
 	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
-		if (!(object instanceof ChoicesWithMinMax)) {
+		if (!(object instanceof ComplexChoicesWithMinMax)) {
 			return false;
 		}
 		if (this == object) {
 			return true;
 		}
-		final ChoicesWithMinMax that = ((ChoicesWithMinMax) object);
+		final ComplexChoicesWithMinMax that = ((ComplexChoicesWithMinMax) object);
 		{
-			List<JAXBElement<String>> lhsTeaOrCoffee;
+			List<Object> lhsTeaOrCoffee;
 			lhsTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee() : null);
-			List<JAXBElement<String>> rhsTeaOrCoffee;
+			List<Object> rhsTeaOrCoffee;
 			rhsTeaOrCoffee = (((that.teaOrCoffee != null) && (!that.teaOrCoffee.isEmpty())) ? that.getTeaOrCoffee() : null);
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "teaOrCoffee", lhsTeaOrCoffee), LocatorUtils.property(thatLocator, "teaOrCoffee", rhsTeaOrCoffee), lhsTeaOrCoffee, rhsTeaOrCoffee)) {
 				return false;
