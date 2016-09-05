@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb"
-		  version="2.1">
-	<!--<globalBindings choiceContentProperty="true"/> -->
-</bindings> 
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               jaxb:version="2.0">
+    <jaxb:bindings schemaLocation="a.xsd">
+        <jaxb:bindings node="//xsd:simpleType[@name='FaxNumber']">
+            <jaxb:javaType name="com.example.FaxNumber"
+                           parseMethod="com.example.FaxNumber.parse"
+                           printMethod="com.example.FaxNumber.print"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+</jaxb:bindings>

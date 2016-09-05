@@ -1,20 +1,21 @@
 package a;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for Primitives complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for Primitives complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="Primitives">
  *   &lt;complexContent>
@@ -32,19 +33,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Primitives", propOrder = {
-		"_int",
-		"_long",
-		"_boolean",
-		"_double",
-		"_float",
-		"_byte",
-		"_short"
-})
-public class Primitives
-		implements Equals, HashCode {
+@XmlType(name = "Primitives", propOrder = { "_int", "_long", "_boolean", "_double", "_float", "_byte", "_short" })
+public class Primitives implements Equals, HashCode {
 
 	@XmlElement(name = "int")
 	@javax.validation.constraints.NotNull
@@ -74,6 +68,7 @@ public class Primitives
 
 	/**
 	 * Gets the value of the int property.
+	 * 
 	 */
 	public Integer getInt() {
 		return _int;
@@ -81,6 +76,7 @@ public class Primitives
 
 	/**
 	 * Sets the value of the int property.
+	 * 
 	 */
 	public void setInt(Integer value) {
 		this._int = value;
@@ -88,6 +84,7 @@ public class Primitives
 
 	/**
 	 * Gets the value of the long property.
+	 * 
 	 */
 	public Long getLong() {
 		return _long;
@@ -95,6 +92,7 @@ public class Primitives
 
 	/**
 	 * Sets the value of the long property.
+	 * 
 	 */
 	public void setLong(Long value) {
 		this._long = value;
@@ -102,6 +100,7 @@ public class Primitives
 
 	/**
 	 * Gets the value of the boolean property.
+	 * 
 	 */
 	public Boolean isBoolean() {
 		return _boolean;
@@ -109,6 +108,7 @@ public class Primitives
 
 	/**
 	 * Sets the value of the boolean property.
+	 * 
 	 */
 	public void setBoolean(Boolean value) {
 		this._boolean = value;
@@ -116,6 +116,7 @@ public class Primitives
 
 	/**
 	 * Gets the value of the double property.
+	 * 
 	 */
 	public Double getDouble() {
 		return _double;
@@ -123,6 +124,7 @@ public class Primitives
 
 	/**
 	 * Sets the value of the double property.
+	 * 
 	 */
 	public void setDouble(Double value) {
 		this._double = value;
@@ -130,6 +132,7 @@ public class Primitives
 
 	/**
 	 * Gets the value of the float property.
+	 * 
 	 */
 	public Float getFloat() {
 		return _float;
@@ -137,6 +140,7 @@ public class Primitives
 
 	/**
 	 * Sets the value of the float property.
+	 * 
 	 */
 	public void setFloat(Float value) {
 		this._float = value;
@@ -144,6 +148,7 @@ public class Primitives
 
 	/**
 	 * Gets the value of the byte property.
+	 * 
 	 */
 	public Byte getByte() {
 		return _byte;
@@ -151,6 +156,7 @@ public class Primitives
 
 	/**
 	 * Sets the value of the byte property.
+	 * 
 	 */
 	public void setByte(Byte value) {
 		this._byte = value;
@@ -158,6 +164,7 @@ public class Primitives
 
 	/**
 	 * Gets the value of the short property.
+	 * 
 	 */
 	public Short getShort() {
 		return _short;
@@ -165,6 +172,7 @@ public class Primitives
 
 	/**
 	 * Sets the value of the short property.
+	 * 
 	 */
 	public void setShort(Short value) {
 		this._short = value;
@@ -180,32 +188,38 @@ public class Primitives
 		{
 			Long theLong;
 			theLong = this.getLong();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_long", theLong), currentHashCode, theLong);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_long", theLong), currentHashCode,
+					theLong);
 		}
 		{
 			Boolean theBoolean;
 			theBoolean = this.isBoolean();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_boolean", theBoolean), currentHashCode, theBoolean);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_boolean", theBoolean),
+					currentHashCode, theBoolean);
 		}
 		{
 			Double theDouble;
 			theDouble = this.getDouble();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_double", theDouble), currentHashCode, theDouble);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_double", theDouble), currentHashCode,
+					theDouble);
 		}
 		{
 			Float theFloat;
 			theFloat = this.getFloat();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_float", theFloat), currentHashCode, theFloat);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_float", theFloat), currentHashCode,
+					theFloat);
 		}
 		{
 			Byte theByte;
 			theByte = this.getByte();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_byte", theByte), currentHashCode, theByte);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_byte", theByte), currentHashCode,
+					theByte);
 		}
 		{
 			Short theShort;
 			theShort = this.getShort();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_short", theShort), currentHashCode, theShort);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_short", theShort), currentHashCode,
+					theShort);
 		}
 		return currentHashCode;
 	}
@@ -228,7 +242,8 @@ public class Primitives
 			lhsInt = this.getInt();
 			Integer rhsInt;
 			rhsInt = that.getInt();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "_int", lhsInt), LocatorUtils.property(thatLocator, "_int", rhsInt), lhsInt, rhsInt)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "_int", lhsInt),
+					LocatorUtils.property(thatLocator, "_int", rhsInt), lhsInt, rhsInt)) {
 				return false;
 			}
 		}
@@ -237,7 +252,8 @@ public class Primitives
 			lhsLong = this.getLong();
 			Long rhsLong;
 			rhsLong = that.getLong();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "_long", lhsLong), LocatorUtils.property(thatLocator, "_long", rhsLong), lhsLong, rhsLong)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "_long", lhsLong),
+					LocatorUtils.property(thatLocator, "_long", rhsLong), lhsLong, rhsLong)) {
 				return false;
 			}
 		}
@@ -246,7 +262,8 @@ public class Primitives
 			lhsBoolean = this.isBoolean();
 			Boolean rhsBoolean;
 			rhsBoolean = that.isBoolean();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "_boolean", lhsBoolean), LocatorUtils.property(thatLocator, "_boolean", rhsBoolean), lhsBoolean, rhsBoolean)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "_boolean", lhsBoolean),
+					LocatorUtils.property(thatLocator, "_boolean", rhsBoolean), lhsBoolean, rhsBoolean)) {
 				return false;
 			}
 		}
@@ -255,7 +272,8 @@ public class Primitives
 			lhsDouble = this.getDouble();
 			Double rhsDouble;
 			rhsDouble = that.getDouble();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "_double", lhsDouble), LocatorUtils.property(thatLocator, "_double", rhsDouble), lhsDouble, rhsDouble)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "_double", lhsDouble),
+					LocatorUtils.property(thatLocator, "_double", rhsDouble), lhsDouble, rhsDouble)) {
 				return false;
 			}
 		}
@@ -264,7 +282,8 @@ public class Primitives
 			lhsFloat = this.getFloat();
 			Float rhsFloat;
 			rhsFloat = that.getFloat();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "_float", lhsFloat), LocatorUtils.property(thatLocator, "_float", rhsFloat), lhsFloat, rhsFloat)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "_float", lhsFloat),
+					LocatorUtils.property(thatLocator, "_float", rhsFloat), lhsFloat, rhsFloat)) {
 				return false;
 			}
 		}
@@ -273,7 +292,8 @@ public class Primitives
 			lhsByte = this.getByte();
 			Byte rhsByte;
 			rhsByte = that.getByte();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "_byte", lhsByte), LocatorUtils.property(thatLocator, "_byte", rhsByte), lhsByte, rhsByte)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "_byte", lhsByte),
+					LocatorUtils.property(thatLocator, "_byte", rhsByte), lhsByte, rhsByte)) {
 				return false;
 			}
 		}
@@ -282,7 +302,8 @@ public class Primitives
 			lhsShort = this.getShort();
 			Short rhsShort;
 			rhsShort = that.getShort();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "_short", lhsShort), LocatorUtils.property(thatLocator, "_short", rhsShort), lhsShort, rhsShort)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "_short", lhsShort),
+					LocatorUtils.property(thatLocator, "_short", rhsShort), lhsShort, rhsShort)) {
 				return false;
 			}
 		}

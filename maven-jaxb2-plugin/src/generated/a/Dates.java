@@ -1,9 +1,5 @@
 package a;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -11,12 +7,17 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for Dates complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for Dates complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="Dates">
  *   &lt;complexContent>
@@ -28,13 +29,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Dates", propOrder = {
-		"date1"
-})
-public class Dates
-		implements Equals, HashCode {
+@XmlType(name = "Dates", propOrder = { "date1" })
+public class Dates implements Equals, HashCode {
 
 	@XmlElement(required = true)
 	@NotNull
@@ -42,9 +42,9 @@ public class Dates
 
 	/**
 	 * Gets the value of the date1 property.
-	 *
-	 * @return possible object is
-	 * {@link XMLGregorianCalendar }
+	 * 
+	 * @return possible object is {@link XMLGregorianCalendar }
+	 * 
 	 */
 	public XMLGregorianCalendar getDate1() {
 		return date1;
@@ -52,9 +52,10 @@ public class Dates
 
 	/**
 	 * Sets the value of the date1 property.
-	 *
-	 * @param value allowed object is
-	 *              {@link XMLGregorianCalendar }
+	 * 
+	 * @param value
+	 *            allowed object is {@link XMLGregorianCalendar }
+	 * 
 	 */
 	public void setDate1(XMLGregorianCalendar value) {
 		this.date1 = value;
@@ -65,7 +66,8 @@ public class Dates
 		{
 			XMLGregorianCalendar theDate1;
 			theDate1 = this.getDate1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "date1", theDate1), currentHashCode, theDate1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "date1", theDate1), currentHashCode,
+					theDate1);
 		}
 		return currentHashCode;
 	}
@@ -88,7 +90,8 @@ public class Dates
 			lhsDate1 = this.getDate1();
 			XMLGregorianCalendar rhsDate1;
 			rhsDate1 = that.getDate1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "date1", lhsDate1), LocatorUtils.property(thatLocator, "date1", rhsDate1), lhsDate1, rhsDate1)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "date1", lhsDate1),
+					LocatorUtils.property(thatLocator, "date1", rhsDate1), lhsDate1, rhsDate1)) {
 				return false;
 			}
 		}

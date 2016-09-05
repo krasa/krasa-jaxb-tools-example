@@ -1,9 +1,5 @@
 package laboratory.spring.krasa;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -11,12 +7,17 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for EchoResponse complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for EchoResponse complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="EchoResponse">
  *   &lt;complexContent>
@@ -28,13 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EchoResponse", propOrder = {
-		"originalMessage"
-})
-public class EchoResponse
-		implements Equals, HashCode {
+@XmlType(name = "EchoResponse", propOrder = { "originalMessage" })
+public class EchoResponse implements Equals, HashCode {
 
 	@XmlElement(name = "OriginalMessage", required = true)
 	@NotNull
@@ -43,9 +43,9 @@ public class EchoResponse
 
 	/**
 	 * Gets the value of the originalMessage property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getOriginalMessage() {
 		return originalMessage;
@@ -53,9 +53,10 @@ public class EchoResponse
 
 	/**
 	 * Sets the value of the originalMessage property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setOriginalMessage(String value) {
 		this.originalMessage = value;
@@ -66,7 +67,8 @@ public class EchoResponse
 		{
 			String theOriginalMessage;
 			theOriginalMessage = this.getOriginalMessage();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "originalMessage", theOriginalMessage), currentHashCode, theOriginalMessage);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "originalMessage", theOriginalMessage),
+					currentHashCode, theOriginalMessage);
 		}
 		return currentHashCode;
 	}
@@ -89,7 +91,9 @@ public class EchoResponse
 			lhsOriginalMessage = this.getOriginalMessage();
 			String rhsOriginalMessage;
 			rhsOriginalMessage = that.getOriginalMessage();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "originalMessage", lhsOriginalMessage), LocatorUtils.property(thatLocator, "originalMessage", rhsOriginalMessage), lhsOriginalMessage, rhsOriginalMessage)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "originalMessage", lhsOriginalMessage),
+					LocatorUtils.property(thatLocator, "originalMessage", rhsOriginalMessage), lhsOriginalMessage,
+					rhsOriginalMessage)) {
 				return false;
 			}
 		}

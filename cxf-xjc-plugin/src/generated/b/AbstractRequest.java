@@ -1,19 +1,20 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 
 /**
- * <p>Java class for abstractRequest complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for abstractRequest complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="abstractRequest">
  *   &lt;complexContent>
@@ -24,16 +25,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "abstractRequest")
-@XmlSeeAlso({
-		EncodeRequest.class
-})
-public class AbstractRequest
-		extends AbstractElement
-		implements Equals, HashCode {
-
+@XmlSeeAlso({ EncodeRequest.class })
+public class AbstractRequest extends AbstractElement implements Equals, HashCode {
 
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = super.hashCode(locator, strategy);

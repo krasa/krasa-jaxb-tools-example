@@ -1,22 +1,24 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import java.math.BigDecimal;
 
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import java.math.BigDecimal;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for weightElement complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for weightElement complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="weightElement">
  *   &lt;complexContent>
@@ -29,14 +31,12 @@ import java.math.BigDecimal;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "weightElement", propOrder = {
-		"unit",
-		"value"
-})
-public class WeightElement
-		implements Equals, HashCode {
+@XmlType(name = "weightElement", propOrder = { "unit", "value" })
+public class WeightElement implements Equals, HashCode {
 
 	@XmlElement(name = "Unit", required = true)
 	@NotNull
@@ -47,9 +47,9 @@ public class WeightElement
 
 	/**
 	 * Gets the value of the unit property.
-	 *
-	 * @return possible object is
-	 * {@link WeightUnitValue }
+	 * 
+	 * @return possible object is {@link WeightUnitValue }
+	 * 
 	 */
 	public WeightUnitValue getUnit() {
 		return unit;
@@ -57,9 +57,10 @@ public class WeightElement
 
 	/**
 	 * Sets the value of the unit property.
-	 *
-	 * @param value allowed object is
-	 *              {@link WeightUnitValue }
+	 * 
+	 * @param value
+	 *            allowed object is {@link WeightUnitValue }
+	 * 
 	 */
 	public void setUnit(WeightUnitValue value) {
 		this.unit = value;
@@ -67,9 +68,9 @@ public class WeightElement
 
 	/**
 	 * Gets the value of the value property.
-	 *
-	 * @return possible object is
-	 * {@link BigDecimal }
+	 * 
+	 * @return possible object is {@link BigDecimal }
+	 * 
 	 */
 	public BigDecimal getValue() {
 		return value;
@@ -77,9 +78,10 @@ public class WeightElement
 
 	/**
 	 * Sets the value of the value property.
-	 *
-	 * @param value allowed object is
-	 *              {@link BigDecimal }
+	 * 
+	 * @param value
+	 *            allowed object is {@link BigDecimal }
+	 * 
 	 */
 	public void setValue(BigDecimal value) {
 		this.value = value;
@@ -90,12 +92,14 @@ public class WeightElement
 		{
 			WeightUnitValue theUnit;
 			theUnit = this.getUnit();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unit", theUnit), currentHashCode, theUnit);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unit", theUnit), currentHashCode,
+					theUnit);
 		}
 		{
 			BigDecimal theValue;
 			theValue = this.getValue();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode,
+					theValue);
 		}
 		return currentHashCode;
 	}
@@ -118,7 +122,8 @@ public class WeightElement
 			lhsUnit = this.getUnit();
 			WeightUnitValue rhsUnit;
 			rhsUnit = that.getUnit();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "unit", lhsUnit), LocatorUtils.property(thatLocator, "unit", rhsUnit), lhsUnit, rhsUnit)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "unit", lhsUnit),
+					LocatorUtils.property(thatLocator, "unit", rhsUnit), lhsUnit, rhsUnit)) {
 				return false;
 			}
 		}
@@ -127,7 +132,8 @@ public class WeightElement
 			lhsValue = this.getValue();
 			BigDecimal rhsValue;
 			rhsValue = that.getValue();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue),
+					LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
 				return false;
 			}
 		}

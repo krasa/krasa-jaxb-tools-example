@@ -1,23 +1,25 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import java.util.ArrayList;
-import java.util.List;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for encodeRequest complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for encodeRequest complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="encodeRequest">
  *   &lt;complexContent>
@@ -43,18 +45,12 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "encodeRequest", propOrder = {
-		"customerId",
-		"batchRef",
-		"haltOnError",
-		"rejectAllOnError",
-		"mpuList"
-})
-public class EncodeRequest
-		extends AbstractRequest
-		implements Equals, HashCode {
+@XmlType(name = "encodeRequest", propOrder = { "customerId", "batchRef", "haltOnError", "rejectAllOnError", "mpuList" })
+public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 
 	@XmlElement(name = "CustomerId")
 	@javax.validation.constraints.NotNull
@@ -74,6 +70,7 @@ public class EncodeRequest
 
 	/**
 	 * Gets the value of the customerId property.
+	 * 
 	 */
 	public Integer getCustomerId() {
 		return customerId;
@@ -81,6 +78,7 @@ public class EncodeRequest
 
 	/**
 	 * Sets the value of the customerId property.
+	 * 
 	 */
 	public void setCustomerId(Integer value) {
 		this.customerId = value;
@@ -88,9 +86,9 @@ public class EncodeRequest
 
 	/**
 	 * Gets the value of the batchRef property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getBatchRef() {
 		return batchRef;
@@ -98,9 +96,10 @@ public class EncodeRequest
 
 	/**
 	 * Sets the value of the batchRef property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setBatchRef(String value) {
 		this.batchRef = value;
@@ -108,6 +107,7 @@ public class EncodeRequest
 
 	/**
 	 * Gets the value of the haltOnError property.
+	 * 
 	 */
 	public java.lang.Boolean isHaltOnError() {
 		return haltOnError;
@@ -115,6 +115,7 @@ public class EncodeRequest
 
 	/**
 	 * Sets the value of the haltOnError property.
+	 * 
 	 */
 	public void setHaltOnError(java.lang.Boolean value) {
 		this.haltOnError = value;
@@ -122,6 +123,7 @@ public class EncodeRequest
 
 	/**
 	 * Gets the value of the rejectAllOnError property.
+	 * 
 	 */
 	public java.lang.Boolean isRejectAllOnError() {
 		return rejectAllOnError;
@@ -129,6 +131,7 @@ public class EncodeRequest
 
 	/**
 	 * Sets the value of the rejectAllOnError property.
+	 * 
 	 */
 	public void setRejectAllOnError(java.lang.Boolean value) {
 		this.rejectAllOnError = value;
@@ -136,9 +139,9 @@ public class EncodeRequest
 
 	/**
 	 * Gets the value of the mpuList property.
-	 *
-	 * @return possible object is
-	 * {@link EncodeRequest.MpuList }
+	 * 
+	 * @return possible object is {@link EncodeRequest.MpuList }
+	 * 
 	 */
 	public EncodeRequest.MpuList getMpuList() {
 		return mpuList;
@@ -146,9 +149,10 @@ public class EncodeRequest
 
 	/**
 	 * Sets the value of the mpuList property.
-	 *
-	 * @param value allowed object is
-	 *              {@link EncodeRequest.MpuList }
+	 * 
+	 * @param value
+	 *            allowed object is {@link EncodeRequest.MpuList }
+	 * 
 	 */
 	public void setMpuList(EncodeRequest.MpuList value) {
 		this.mpuList = value;
@@ -159,27 +163,33 @@ public class EncodeRequest
 		{
 			Integer theCustomerId;
 			theCustomerId = this.getCustomerId();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "customerId", theCustomerId), currentHashCode, theCustomerId);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "customerId", theCustomerId),
+					currentHashCode, theCustomerId);
 		}
 		{
 			String theBatchRef;
 			theBatchRef = this.getBatchRef();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "batchRef", theBatchRef), currentHashCode, theBatchRef);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "batchRef", theBatchRef),
+					currentHashCode, theBatchRef);
 		}
 		{
 			java.lang.Boolean theHaltOnError;
 			theHaltOnError = this.isHaltOnError();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "haltOnError", theHaltOnError), currentHashCode, theHaltOnError);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "haltOnError", theHaltOnError),
+					currentHashCode, theHaltOnError);
 		}
 		{
 			java.lang.Boolean theRejectAllOnError;
 			theRejectAllOnError = this.isRejectAllOnError();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "rejectAllOnError", theRejectAllOnError), currentHashCode, theRejectAllOnError);
+			currentHashCode = strategy.hashCode(
+					LocatorUtils.property(locator, "rejectAllOnError", theRejectAllOnError), currentHashCode,
+					theRejectAllOnError);
 		}
 		{
 			EncodeRequest.MpuList theMpuList;
 			theMpuList = this.getMpuList();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpuList", theMpuList), currentHashCode, theMpuList);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpuList", theMpuList), currentHashCode,
+					theMpuList);
 		}
 		return currentHashCode;
 	}
@@ -205,7 +215,8 @@ public class EncodeRequest
 			lhsCustomerId = this.getCustomerId();
 			Integer rhsCustomerId;
 			rhsCustomerId = that.getCustomerId();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "customerId", lhsCustomerId), LocatorUtils.property(thatLocator, "customerId", rhsCustomerId), lhsCustomerId, rhsCustomerId)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "customerId", lhsCustomerId),
+					LocatorUtils.property(thatLocator, "customerId", rhsCustomerId), lhsCustomerId, rhsCustomerId)) {
 				return false;
 			}
 		}
@@ -214,7 +225,8 @@ public class EncodeRequest
 			lhsBatchRef = this.getBatchRef();
 			String rhsBatchRef;
 			rhsBatchRef = that.getBatchRef();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "batchRef", lhsBatchRef), LocatorUtils.property(thatLocator, "batchRef", rhsBatchRef), lhsBatchRef, rhsBatchRef)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "batchRef", lhsBatchRef),
+					LocatorUtils.property(thatLocator, "batchRef", rhsBatchRef), lhsBatchRef, rhsBatchRef)) {
 				return false;
 			}
 		}
@@ -223,7 +235,8 @@ public class EncodeRequest
 			lhsHaltOnError = this.isHaltOnError();
 			java.lang.Boolean rhsHaltOnError;
 			rhsHaltOnError = that.isHaltOnError();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "haltOnError", lhsHaltOnError), LocatorUtils.property(thatLocator, "haltOnError", rhsHaltOnError), lhsHaltOnError, rhsHaltOnError)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "haltOnError", lhsHaltOnError),
+					LocatorUtils.property(thatLocator, "haltOnError", rhsHaltOnError), lhsHaltOnError, rhsHaltOnError)) {
 				return false;
 			}
 		}
@@ -232,7 +245,9 @@ public class EncodeRequest
 			lhsRejectAllOnError = this.isRejectAllOnError();
 			java.lang.Boolean rhsRejectAllOnError;
 			rhsRejectAllOnError = that.isRejectAllOnError();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "rejectAllOnError", lhsRejectAllOnError), LocatorUtils.property(thatLocator, "rejectAllOnError", rhsRejectAllOnError), lhsRejectAllOnError, rhsRejectAllOnError)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "rejectAllOnError", lhsRejectAllOnError),
+					LocatorUtils.property(thatLocator, "rejectAllOnError", rhsRejectAllOnError), lhsRejectAllOnError,
+					rhsRejectAllOnError)) {
 				return false;
 			}
 		}
@@ -241,7 +256,8 @@ public class EncodeRequest
 			lhsMpuList = this.getMpuList();
 			EncodeRequest.MpuList rhsMpuList;
 			rhsMpuList = that.getMpuList();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "mpuList", lhsMpuList), LocatorUtils.property(thatLocator, "mpuList", rhsMpuList), lhsMpuList, rhsMpuList)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "mpuList", lhsMpuList),
+					LocatorUtils.property(thatLocator, "mpuList", rhsMpuList), lhsMpuList, rhsMpuList)) {
 				return false;
 			}
 		}
@@ -253,12 +269,13 @@ public class EncodeRequest
 		return equals(null, null, object, strategy);
 	}
 
-
 	/**
-	 * <p>Java class for anonymous complex type.
-	 * <p/>
-	 * <p>The following schema fragment specifies the expected content contained within this class.
-	 * <p/>
+	 * <p>
+	 * Java class for anonymous complex type.
+	 * 
+	 * <p>
+	 * The following schema fragment specifies the expected content contained within this class.
+	 * 
 	 * <pre>
 	 * &lt;complexType>
 	 *   &lt;complexContent>
@@ -270,13 +287,12 @@ public class EncodeRequest
 	 *   &lt;/complexContent>
 	 * &lt;/complexType>
 	 * </pre>
+	 * 
+	 * 
 	 */
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlType(name = "", propOrder = {
-			"mpu"
-	})
-	public static class MpuList
-			implements Equals, HashCode {
+	@XmlType(name = "", propOrder = { "mpu" })
+	public static class MpuList implements Equals, HashCode {
 
 		@XmlElement(name = "Mpu", required = true)
 		@javax.validation.constraints.NotNull
@@ -285,23 +301,24 @@ public class EncodeRequest
 
 		/**
 		 * Gets the value of the mpu property.
-		 * <p/>
-		 * <p/>
-		 * This accessor method returns a reference to the live list,
-		 * not a snapshot. Therefore any modification you make to the
-		 * returned list will be present inside the JAXB object.
-		 * This is why there is not a <CODE>set</CODE> method for the mpu property.
-		 * <p/>
-		 * <p/>
+		 * 
+		 * <p>
+		 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you
+		 * make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE>
+		 * method for the mpu property.
+		 * 
+		 * <p>
 		 * For example, to add a new item, do as follows:
+		 * 
 		 * <pre>
-		 *    getMpu().add(newItem);
+		 * getMpu().add(newItem);
 		 * </pre>
-		 * <p/>
-		 * <p/>
-		 * <p/>
-		 * Objects of the following type(s) are allowed in the list
-		 * {@link MpuElement }
+		 * 
+		 * 
+		 * <p>
+		 * Objects of the following type(s) are allowed in the list {@link MpuElement }
+		 * 
+		 * 
 		 */
 		public List<MpuElement> getMpu() {
 			if (mpu == null) {
@@ -315,7 +332,8 @@ public class EncodeRequest
 			{
 				List<MpuElement> theMpu;
 				theMpu = (((this.mpu != null) && (!this.mpu.isEmpty())) ? this.getMpu() : null);
-				currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpu", theMpu), currentHashCode, theMpu);
+				currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpu", theMpu), currentHashCode,
+						theMpu);
 			}
 			return currentHashCode;
 		}
@@ -325,7 +343,8 @@ public class EncodeRequest
 			return this.hashCode(null, strategy);
 		}
 
-		public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+		public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+				EqualsStrategy strategy) {
 			if (!(object instanceof EncodeRequest.MpuList)) {
 				return false;
 			}
@@ -338,7 +357,8 @@ public class EncodeRequest
 				lhsMpu = (((this.mpu != null) && (!this.mpu.isEmpty())) ? this.getMpu() : null);
 				List<MpuElement> rhsMpu;
 				rhsMpu = (((that.mpu != null) && (!that.mpu.isEmpty())) ? that.getMpu() : null);
-				if (!strategy.equals(LocatorUtils.property(thisLocator, "mpu", lhsMpu), LocatorUtils.property(thatLocator, "mpu", rhsMpu), lhsMpu, rhsMpu)) {
+				if (!strategy.equals(LocatorUtils.property(thisLocator, "mpu", lhsMpu),
+						LocatorUtils.property(thatLocator, "mpu", rhsMpu), lhsMpu, rhsMpu)) {
 					return false;
 				}
 			}

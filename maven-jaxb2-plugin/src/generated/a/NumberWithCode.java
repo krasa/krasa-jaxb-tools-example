@@ -1,18 +1,19 @@
 package a;
 
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.*;
+
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
-import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.*;
-
-
 /**
- * <p>Java class for NumberWithCode complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for NumberWithCode complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="NumberWithCode">
  *   &lt;simpleContent>
@@ -22,13 +23,12 @@ import javax.xml.bind.annotation.*;
  *   &lt;/simpleContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NumberWithCode", propOrder = {
-		"value"
-})
-public class NumberWithCode
-		implements Equals, HashCode {
+@XmlType(name = "NumberWithCode", propOrder = { "value" })
+public class NumberWithCode implements Equals, HashCode {
 
 	@XmlValue
 	@Size(min = 1, max = 5)
@@ -38,9 +38,9 @@ public class NumberWithCode
 
 	/**
 	 * Gets the value of the value property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getValue() {
 		return value;
@@ -48,9 +48,10 @@ public class NumberWithCode
 
 	/**
 	 * Sets the value of the value property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setValue(String value) {
 		this.value = value;
@@ -58,9 +59,9 @@ public class NumberWithCode
 
 	/**
 	 * Gets the value of the code property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getCode() {
 		return code;
@@ -68,9 +69,10 @@ public class NumberWithCode
 
 	/**
 	 * Sets the value of the code property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setCode(String value) {
 		this.code = value;
@@ -81,12 +83,14 @@ public class NumberWithCode
 		{
 			String theValue;
 			theValue = this.getValue();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode,
+					theValue);
 		}
 		{
 			String theCode;
 			theCode = this.getCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "code", theCode), currentHashCode, theCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "code", theCode), currentHashCode,
+					theCode);
 		}
 		return currentHashCode;
 	}
@@ -109,7 +113,8 @@ public class NumberWithCode
 			lhsValue = this.getValue();
 			String rhsValue;
 			rhsValue = that.getValue();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue),
+					LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
 				return false;
 			}
 		}
@@ -118,7 +123,8 @@ public class NumberWithCode
 			lhsCode = this.getCode();
 			String rhsCode;
 			rhsCode = that.getCode();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "code", lhsCode), LocatorUtils.property(thatLocator, "code", rhsCode), lhsCode, rhsCode)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "code", lhsCode),
+					LocatorUtils.property(thatLocator, "code", rhsCode), lhsCode, rhsCode)) {
 				return false;
 			}
 		}

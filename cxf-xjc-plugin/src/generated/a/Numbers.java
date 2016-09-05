@@ -1,21 +1,23 @@
 package a;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.Valid;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for Numbers complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for Numbers complex type.
+ * <p>
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="Numbers">
  *   &lt;complexContent>
@@ -34,16 +36,9 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Numbers", propOrder = {
-		"minInclusive",
-		"maxInclusive",
-		"minExclusive",
-		"maxExclusive",
-		"minMaxExclusive",
-		"numberWithCode"
-})
-public class Numbers
-		implements Equals, HashCode {
+@XmlType(name = "Numbers", propOrder = { "minInclusive", "maxInclusive", "minExclusive", "maxExclusive",
+		"minMaxExclusive", "numberWithCode" })
+public class Numbers implements Equals, HashCode {
 
 	@javax.validation.constraints.NotNull
 	@javax.validation.constraints.DecimalMin("1000")
@@ -138,8 +133,7 @@ public class Numbers
 	/**
 	 * Gets the value of the numberWithCode property.
 	 *
-	 * @return possible object is
-	 * {@link NumberWithCode }
+	 * @return possible object is {@link NumberWithCode }
 	 */
 	public NumberWithCode getNumberWithCode() {
 		return numberWithCode;
@@ -148,8 +142,8 @@ public class Numbers
 	/**
 	 * Sets the value of the numberWithCode property.
 	 *
-	 * @param value allowed object is
-	 *              {@link NumberWithCode }
+	 * @param value
+	 *            allowed object is {@link NumberWithCode }
 	 */
 	public void setNumberWithCode(NumberWithCode value) {
 		this.numberWithCode = value;
@@ -160,32 +154,38 @@ public class Numbers
 		{
 			java.lang.Long theMinInclusive;
 			theMinInclusive = this.getMinInclusive();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minInclusive", theMinInclusive), currentHashCode, theMinInclusive);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minInclusive", theMinInclusive),
+					currentHashCode, theMinInclusive);
 		}
 		{
 			java.lang.Long theMaxInclusive;
 			theMaxInclusive = this.getMaxInclusive();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "maxInclusive", theMaxInclusive), currentHashCode, theMaxInclusive);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "maxInclusive", theMaxInclusive),
+					currentHashCode, theMaxInclusive);
 		}
 		{
 			java.lang.Long theMinExclusive;
 			theMinExclusive = this.getMinExclusive();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minExclusive", theMinExclusive), currentHashCode, theMinExclusive);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minExclusive", theMinExclusive),
+					currentHashCode, theMinExclusive);
 		}
 		{
 			java.lang.Long theMaxExclusive;
 			theMaxExclusive = this.getMaxExclusive();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "maxExclusive", theMaxExclusive), currentHashCode, theMaxExclusive);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "maxExclusive", theMaxExclusive),
+					currentHashCode, theMaxExclusive);
 		}
 		{
 			Integer theMinMaxExclusive;
 			theMinMaxExclusive = this.getMinMaxExclusive();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minMaxExclusive", theMinMaxExclusive), currentHashCode, theMinMaxExclusive);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minMaxExclusive", theMinMaxExclusive),
+					currentHashCode, theMinMaxExclusive);
 		}
 		{
 			NumberWithCode theNumberWithCode;
 			theNumberWithCode = this.getNumberWithCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "numberWithCode", theNumberWithCode), currentHashCode, theNumberWithCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "numberWithCode", theNumberWithCode),
+					currentHashCode, theNumberWithCode);
 		}
 		return currentHashCode;
 	}
@@ -208,7 +208,9 @@ public class Numbers
 			lhsMinInclusive = this.getMinInclusive();
 			java.lang.Long rhsMinInclusive;
 			rhsMinInclusive = that.getMinInclusive();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "minInclusive", lhsMinInclusive), LocatorUtils.property(thatLocator, "minInclusive", rhsMinInclusive), lhsMinInclusive, rhsMinInclusive)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "minInclusive", lhsMinInclusive),
+					LocatorUtils.property(thatLocator, "minInclusive", rhsMinInclusive), lhsMinInclusive,
+					rhsMinInclusive)) {
 				return false;
 			}
 		}
@@ -217,7 +219,9 @@ public class Numbers
 			lhsMaxInclusive = this.getMaxInclusive();
 			java.lang.Long rhsMaxInclusive;
 			rhsMaxInclusive = that.getMaxInclusive();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "maxInclusive", lhsMaxInclusive), LocatorUtils.property(thatLocator, "maxInclusive", rhsMaxInclusive), lhsMaxInclusive, rhsMaxInclusive)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "maxInclusive", lhsMaxInclusive),
+					LocatorUtils.property(thatLocator, "maxInclusive", rhsMaxInclusive), lhsMaxInclusive,
+					rhsMaxInclusive)) {
 				return false;
 			}
 		}
@@ -226,7 +230,9 @@ public class Numbers
 			lhsMinExclusive = this.getMinExclusive();
 			java.lang.Long rhsMinExclusive;
 			rhsMinExclusive = that.getMinExclusive();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "minExclusive", lhsMinExclusive), LocatorUtils.property(thatLocator, "minExclusive", rhsMinExclusive), lhsMinExclusive, rhsMinExclusive)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "minExclusive", lhsMinExclusive),
+					LocatorUtils.property(thatLocator, "minExclusive", rhsMinExclusive), lhsMinExclusive,
+					rhsMinExclusive)) {
 				return false;
 			}
 		}
@@ -235,7 +241,9 @@ public class Numbers
 			lhsMaxExclusive = this.getMaxExclusive();
 			java.lang.Long rhsMaxExclusive;
 			rhsMaxExclusive = that.getMaxExclusive();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "maxExclusive", lhsMaxExclusive), LocatorUtils.property(thatLocator, "maxExclusive", rhsMaxExclusive), lhsMaxExclusive, rhsMaxExclusive)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "maxExclusive", lhsMaxExclusive),
+					LocatorUtils.property(thatLocator, "maxExclusive", rhsMaxExclusive), lhsMaxExclusive,
+					rhsMaxExclusive)) {
 				return false;
 			}
 		}
@@ -244,7 +252,9 @@ public class Numbers
 			lhsMinMaxExclusive = this.getMinMaxExclusive();
 			Integer rhsMinMaxExclusive;
 			rhsMinMaxExclusive = that.getMinMaxExclusive();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "minMaxExclusive", lhsMinMaxExclusive), LocatorUtils.property(thatLocator, "minMaxExclusive", rhsMinMaxExclusive), lhsMinMaxExclusive, rhsMinMaxExclusive)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "minMaxExclusive", lhsMinMaxExclusive),
+					LocatorUtils.property(thatLocator, "minMaxExclusive", rhsMinMaxExclusive), lhsMinMaxExclusive,
+					rhsMinMaxExclusive)) {
 				return false;
 			}
 		}
@@ -253,7 +263,9 @@ public class Numbers
 			lhsNumberWithCode = this.getNumberWithCode();
 			NumberWithCode rhsNumberWithCode;
 			rhsNumberWithCode = that.getNumberWithCode();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "numberWithCode", lhsNumberWithCode), LocatorUtils.property(thatLocator, "numberWithCode", rhsNumberWithCode), lhsNumberWithCode, rhsNumberWithCode)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "numberWithCode", lhsNumberWithCode),
+					LocatorUtils.property(thatLocator, "numberWithCode", rhsNumberWithCode), lhsNumberWithCode,
+					rhsNumberWithCode)) {
 				return false;
 			}
 		}

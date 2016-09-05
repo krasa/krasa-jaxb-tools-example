@@ -1,20 +1,21 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for addressElement complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for addressElement complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="addressElement">
  *   &lt;complexContent>
@@ -27,14 +28,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "addressElement", propOrder = {
-		"freeFormAddress",
-		"standardAddress"
-})
-public class AddressElement
-		implements Equals, HashCode {
+@XmlType(name = "addressElement", propOrder = { "freeFormAddress", "standardAddress" })
+public class AddressElement implements Equals, HashCode {
 
 	@XmlElement(name = "FreeFormAddress")
 	protected FreeFormAddressElement freeFormAddress;
@@ -43,9 +42,9 @@ public class AddressElement
 
 	/**
 	 * Gets the value of the freeFormAddress property.
-	 *
-	 * @return possible object is
-	 * {@link FreeFormAddressElement }
+	 * 
+	 * @return possible object is {@link FreeFormAddressElement }
+	 * 
 	 */
 	public FreeFormAddressElement getFreeFormAddress() {
 		return freeFormAddress;
@@ -53,9 +52,10 @@ public class AddressElement
 
 	/**
 	 * Sets the value of the freeFormAddress property.
-	 *
-	 * @param value allowed object is
-	 *              {@link FreeFormAddressElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link FreeFormAddressElement }
+	 * 
 	 */
 	public void setFreeFormAddress(FreeFormAddressElement value) {
 		this.freeFormAddress = value;
@@ -63,9 +63,9 @@ public class AddressElement
 
 	/**
 	 * Gets the value of the standardAddress property.
-	 *
-	 * @return possible object is
-	 * {@link StandardAddressElement }
+	 * 
+	 * @return possible object is {@link StandardAddressElement }
+	 * 
 	 */
 	public StandardAddressElement getStandardAddress() {
 		return standardAddress;
@@ -73,9 +73,10 @@ public class AddressElement
 
 	/**
 	 * Sets the value of the standardAddress property.
-	 *
-	 * @param value allowed object is
-	 *              {@link StandardAddressElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link StandardAddressElement }
+	 * 
 	 */
 	public void setStandardAddress(StandardAddressElement value) {
 		this.standardAddress = value;
@@ -86,12 +87,14 @@ public class AddressElement
 		{
 			FreeFormAddressElement theFreeFormAddress;
 			theFreeFormAddress = this.getFreeFormAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "freeFormAddress", theFreeFormAddress), currentHashCode, theFreeFormAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "freeFormAddress", theFreeFormAddress),
+					currentHashCode, theFreeFormAddress);
 		}
 		{
 			StandardAddressElement theStandardAddress;
 			theStandardAddress = this.getStandardAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "standardAddress", theStandardAddress), currentHashCode, theStandardAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "standardAddress", theStandardAddress),
+					currentHashCode, theStandardAddress);
 		}
 		return currentHashCode;
 	}
@@ -114,7 +117,9 @@ public class AddressElement
 			lhsFreeFormAddress = this.getFreeFormAddress();
 			FreeFormAddressElement rhsFreeFormAddress;
 			rhsFreeFormAddress = that.getFreeFormAddress();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "freeFormAddress", lhsFreeFormAddress), LocatorUtils.property(thatLocator, "freeFormAddress", rhsFreeFormAddress), lhsFreeFormAddress, rhsFreeFormAddress)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "freeFormAddress", lhsFreeFormAddress),
+					LocatorUtils.property(thatLocator, "freeFormAddress", rhsFreeFormAddress), lhsFreeFormAddress,
+					rhsFreeFormAddress)) {
 				return false;
 			}
 		}
@@ -123,7 +128,9 @@ public class AddressElement
 			lhsStandardAddress = this.getStandardAddress();
 			StandardAddressElement rhsStandardAddress;
 			rhsStandardAddress = that.getStandardAddress();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "standardAddress", lhsStandardAddress), LocatorUtils.property(thatLocator, "standardAddress", rhsStandardAddress), lhsStandardAddress, rhsStandardAddress)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "standardAddress", lhsStandardAddress),
+					LocatorUtils.property(thatLocator, "standardAddress", rhsStandardAddress), lhsStandardAddress,
+					rhsStandardAddress)) {
 				return false;
 			}
 		}

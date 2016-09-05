@@ -1,9 +1,5 @@
 package a;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -11,12 +7,18 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for Enumeration complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for Enumeration complex type.
+ * <p>
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="Enumeration">
  *   &lt;complexContent>
@@ -36,11 +38,8 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Enumeration", propOrder = {
-		"foo"
-})
-public class Enumeration
-		implements Equals, HashCode {
+@XmlType(name = "Enumeration", propOrder = { "foo" })
+public class Enumeration implements Equals, HashCode {
 
 	@XmlElement(required = true)
 	@NotNull
@@ -50,8 +49,7 @@ public class Enumeration
 	/**
 	 * Gets the value of the foo property.
 	 *
-	 * @return possible object is
-	 * {@link String }
+	 * @return possible object is {@link String }
 	 */
 	public String getFoo() {
 		return foo;
@@ -60,8 +58,8 @@ public class Enumeration
 	/**
 	 * Sets the value of the foo property.
 	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * @param value
+	 *            allowed object is {@link String }
 	 */
 	public void setFoo(String value) {
 		this.foo = value;
@@ -95,7 +93,8 @@ public class Enumeration
 			lhsFoo = this.getFoo();
 			String rhsFoo;
 			rhsFoo = that.getFoo();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "foo", lhsFoo), LocatorUtils.property(thatLocator, "foo", rhsFoo), lhsFoo, rhsFoo)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "foo", lhsFoo),
+					LocatorUtils.property(thatLocator, "foo", rhsFoo), lhsFoo, rhsFoo)) {
 				return false;
 			}
 		}

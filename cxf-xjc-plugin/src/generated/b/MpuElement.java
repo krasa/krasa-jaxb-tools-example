@@ -1,21 +1,22 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for mpuElement complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for mpuElement complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="mpuElement">
  *   &lt;complexContent>
@@ -43,29 +44,14 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "mpuElement", propOrder = {
-		"packageId",
-		"packageRef",
-		"consigneeAddress",
-		"returnAddress",
-		"orderedProductCode",
-		"weight",
-		"service",
-		"billingRef1",
-		"billingRef2",
-		"thirdPartyBillTo",
-		"mailTypeCode",
-		"facilityCode",
-		"expectedShipDate",
-		"impb",
-		"containerRef1",
-		"containerRef2",
-		"response"
-})
-public class MpuElement
-		implements Equals, HashCode {
+@XmlType(name = "mpuElement", propOrder = { "packageId", "packageRef", "consigneeAddress", "returnAddress",
+		"orderedProductCode", "weight", "service", "billingRef1", "billingRef2", "thirdPartyBillTo", "mailTypeCode",
+		"facilityCode", "expectedShipDate", "impb", "containerRef1", "containerRef2", "response" })
+public class MpuElement implements Equals, HashCode {
 
 	@XmlElement(name = "PackageId")
 	protected String packageId;
@@ -109,9 +95,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the packageId property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getPackageId() {
 		return packageId;
@@ -119,9 +105,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the packageId property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setPackageId(String value) {
 		this.packageId = value;
@@ -129,9 +116,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the packageRef property.
-	 *
-	 * @return possible object is
-	 * {@link PackageRefElement }
+	 * 
+	 * @return possible object is {@link PackageRefElement }
+	 * 
 	 */
 	public PackageRefElement getPackageRef() {
 		return packageRef;
@@ -139,9 +126,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the packageRef property.
-	 *
-	 * @param value allowed object is
-	 *              {@link PackageRefElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link PackageRefElement }
+	 * 
 	 */
 	public void setPackageRef(PackageRefElement value) {
 		this.packageRef = value;
@@ -149,9 +137,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the consigneeAddress property.
-	 *
-	 * @return possible object is
-	 * {@link AddressElement }
+	 * 
+	 * @return possible object is {@link AddressElement }
+	 * 
 	 */
 	public AddressElement getConsigneeAddress() {
 		return consigneeAddress;
@@ -159,9 +147,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the consigneeAddress property.
-	 *
-	 * @param value allowed object is
-	 *              {@link AddressElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link AddressElement }
+	 * 
 	 */
 	public void setConsigneeAddress(AddressElement value) {
 		this.consigneeAddress = value;
@@ -169,9 +158,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the returnAddress property.
-	 *
-	 * @return possible object is
-	 * {@link AddressElement }
+	 * 
+	 * @return possible object is {@link AddressElement }
+	 * 
 	 */
 	public AddressElement getReturnAddress() {
 		return returnAddress;
@@ -179,9 +168,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the returnAddress property.
-	 *
-	 * @param value allowed object is
-	 *              {@link AddressElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link AddressElement }
+	 * 
 	 */
 	public void setReturnAddress(AddressElement value) {
 		this.returnAddress = value;
@@ -189,9 +179,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the orderedProductCode property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getOrderedProductCode() {
 		return orderedProductCode;
@@ -199,9 +189,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the orderedProductCode property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setOrderedProductCode(String value) {
 		this.orderedProductCode = value;
@@ -209,9 +200,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the weight property.
-	 *
-	 * @return possible object is
-	 * {@link WeightElement }
+	 * 
+	 * @return possible object is {@link WeightElement }
+	 * 
 	 */
 	public WeightElement getWeight() {
 		return weight;
@@ -219,9 +210,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the weight property.
-	 *
-	 * @param value allowed object is
-	 *              {@link WeightElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link WeightElement }
+	 * 
 	 */
 	public void setWeight(WeightElement value) {
 		this.weight = value;
@@ -229,9 +221,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the service property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getService() {
 		return service;
@@ -239,9 +231,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the service property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setService(String value) {
 		this.service = value;
@@ -249,9 +242,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the billingRef1 property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getBillingRef1() {
 		return billingRef1;
@@ -259,9 +252,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the billingRef1 property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setBillingRef1(String value) {
 		this.billingRef1 = value;
@@ -269,9 +263,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the billingRef2 property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getBillingRef2() {
 		return billingRef2;
@@ -279,9 +273,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the billingRef2 property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setBillingRef2(String value) {
 		this.billingRef2 = value;
@@ -289,9 +284,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the thirdPartyBillTo property.
-	 *
-	 * @return possible object is
-	 * {@link Integer }
+	 * 
+	 * @return possible object is {@link Integer }
+	 * 
 	 */
 	public Integer getThirdPartyBillTo() {
 		return thirdPartyBillTo;
@@ -299,9 +294,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the thirdPartyBillTo property.
-	 *
-	 * @param value allowed object is
-	 *              {@link Integer }
+	 * 
+	 * @param value
+	 *            allowed object is {@link Integer }
+	 * 
 	 */
 	public void setThirdPartyBillTo(Integer value) {
 		this.thirdPartyBillTo = value;
@@ -309,9 +305,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the mailTypeCode property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getMailTypeCode() {
 		return mailTypeCode;
@@ -319,9 +315,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the mailTypeCode property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setMailTypeCode(String value) {
 		this.mailTypeCode = value;
@@ -329,9 +326,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the facilityCode property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getFacilityCode() {
 		return facilityCode;
@@ -339,9 +336,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the facilityCode property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setFacilityCode(String value) {
 		this.facilityCode = value;
@@ -349,9 +347,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the expectedShipDate property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getExpectedShipDate() {
 		return expectedShipDate;
@@ -359,9 +357,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the expectedShipDate property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setExpectedShipDate(String value) {
 		this.expectedShipDate = value;
@@ -369,9 +368,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the impb property.
-	 *
-	 * @return possible object is
-	 * {@link ImpbElement }
+	 * 
+	 * @return possible object is {@link ImpbElement }
+	 * 
 	 */
 	public ImpbElement getImpb() {
 		return impb;
@@ -379,9 +378,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the impb property.
-	 *
-	 * @param value allowed object is
-	 *              {@link ImpbElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link ImpbElement }
+	 * 
 	 */
 	public void setImpb(ImpbElement value) {
 		this.impb = value;
@@ -389,9 +389,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the containerRef1 property.
-	 *
-	 * @return possible object is
-	 * {@link ContainerElement }
+	 * 
+	 * @return possible object is {@link ContainerElement }
+	 * 
 	 */
 	public ContainerElement getContainerRef1() {
 		return containerRef1;
@@ -399,9 +399,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the containerRef1 property.
-	 *
-	 * @param value allowed object is
-	 *              {@link ContainerElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link ContainerElement }
+	 * 
 	 */
 	public void setContainerRef1(ContainerElement value) {
 		this.containerRef1 = value;
@@ -409,9 +410,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the containerRef2 property.
-	 *
-	 * @return possible object is
-	 * {@link ContainerElement }
+	 * 
+	 * @return possible object is {@link ContainerElement }
+	 * 
 	 */
 	public ContainerElement getContainerRef2() {
 		return containerRef2;
@@ -419,9 +420,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the containerRef2 property.
-	 *
-	 * @param value allowed object is
-	 *              {@link ContainerElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link ContainerElement }
+	 * 
 	 */
 	public void setContainerRef2(ContainerElement value) {
 		this.containerRef2 = value;
@@ -429,9 +431,9 @@ public class MpuElement
 
 	/**
 	 * Gets the value of the response property.
-	 *
-	 * @return possible object is
-	 * {@link MpuResponseElement }
+	 * 
+	 * @return possible object is {@link MpuResponseElement }
+	 * 
 	 */
 	public MpuResponseElement getResponse() {
 		return response;
@@ -439,9 +441,10 @@ public class MpuElement
 
 	/**
 	 * Sets the value of the response property.
-	 *
-	 * @param value allowed object is
-	 *              {@link MpuResponseElement }
+	 * 
+	 * @param value
+	 *            allowed object is {@link MpuResponseElement }
+	 * 
 	 */
 	public void setResponse(MpuResponseElement value) {
 		this.response = value;
@@ -452,87 +455,108 @@ public class MpuElement
 		{
 			String thePackageId;
 			thePackageId = this.getPackageId();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageId", thePackageId), currentHashCode, thePackageId);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageId", thePackageId),
+					currentHashCode, thePackageId);
 		}
 		{
 			PackageRefElement thePackageRef;
 			thePackageRef = this.getPackageRef();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageRef", thePackageRef), currentHashCode, thePackageRef);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageRef", thePackageRef),
+					currentHashCode, thePackageRef);
 		}
 		{
 			AddressElement theConsigneeAddress;
 			theConsigneeAddress = this.getConsigneeAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "consigneeAddress", theConsigneeAddress), currentHashCode, theConsigneeAddress);
+			currentHashCode = strategy.hashCode(
+					LocatorUtils.property(locator, "consigneeAddress", theConsigneeAddress), currentHashCode,
+					theConsigneeAddress);
 		}
 		{
 			AddressElement theReturnAddress;
 			theReturnAddress = this.getReturnAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "returnAddress", theReturnAddress), currentHashCode, theReturnAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "returnAddress", theReturnAddress),
+					currentHashCode, theReturnAddress);
 		}
 		{
 			String theOrderedProductCode;
 			theOrderedProductCode = this.getOrderedProductCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "orderedProductCode", theOrderedProductCode), currentHashCode, theOrderedProductCode);
+			currentHashCode = strategy.hashCode(
+					LocatorUtils.property(locator, "orderedProductCode", theOrderedProductCode), currentHashCode,
+					theOrderedProductCode);
 		}
 		{
 			WeightElement theWeight;
 			theWeight = this.getWeight();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "weight", theWeight), currentHashCode, theWeight);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "weight", theWeight), currentHashCode,
+					theWeight);
 		}
 		{
 			String theService;
 			theService = this.getService();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "service", theService), currentHashCode, theService);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "service", theService), currentHashCode,
+					theService);
 		}
 		{
 			String theBillingRef1;
 			theBillingRef1 = this.getBillingRef1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef1", theBillingRef1), currentHashCode, theBillingRef1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef1", theBillingRef1),
+					currentHashCode, theBillingRef1);
 		}
 		{
 			String theBillingRef2;
 			theBillingRef2 = this.getBillingRef2();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef2", theBillingRef2), currentHashCode, theBillingRef2);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef2", theBillingRef2),
+					currentHashCode, theBillingRef2);
 		}
 		{
 			Integer theThirdPartyBillTo;
 			theThirdPartyBillTo = this.getThirdPartyBillTo();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "thirdPartyBillTo", theThirdPartyBillTo), currentHashCode, theThirdPartyBillTo);
+			currentHashCode = strategy.hashCode(
+					LocatorUtils.property(locator, "thirdPartyBillTo", theThirdPartyBillTo), currentHashCode,
+					theThirdPartyBillTo);
 		}
 		{
 			String theMailTypeCode;
 			theMailTypeCode = this.getMailTypeCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailTypeCode", theMailTypeCode), currentHashCode, theMailTypeCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailTypeCode", theMailTypeCode),
+					currentHashCode, theMailTypeCode);
 		}
 		{
 			String theFacilityCode;
 			theFacilityCode = this.getFacilityCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "facilityCode", theFacilityCode), currentHashCode, theFacilityCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "facilityCode", theFacilityCode),
+					currentHashCode, theFacilityCode);
 		}
 		{
 			String theExpectedShipDate;
 			theExpectedShipDate = this.getExpectedShipDate();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "expectedShipDate", theExpectedShipDate), currentHashCode, theExpectedShipDate);
+			currentHashCode = strategy.hashCode(
+					LocatorUtils.property(locator, "expectedShipDate", theExpectedShipDate), currentHashCode,
+					theExpectedShipDate);
 		}
 		{
 			ImpbElement theImpb;
 			theImpb = this.getImpb();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "impb", theImpb), currentHashCode, theImpb);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "impb", theImpb), currentHashCode,
+					theImpb);
 		}
 		{
 			ContainerElement theContainerRef1;
 			theContainerRef1 = this.getContainerRef1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef1", theContainerRef1), currentHashCode, theContainerRef1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef1", theContainerRef1),
+					currentHashCode, theContainerRef1);
 		}
 		{
 			ContainerElement theContainerRef2;
 			theContainerRef2 = this.getContainerRef2();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef2", theContainerRef2), currentHashCode, theContainerRef2);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef2", theContainerRef2),
+					currentHashCode, theContainerRef2);
 		}
 		{
 			MpuResponseElement theResponse;
 			theResponse = this.getResponse();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "response", theResponse), currentHashCode, theResponse);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "response", theResponse),
+					currentHashCode, theResponse);
 		}
 		return currentHashCode;
 	}
@@ -555,7 +579,8 @@ public class MpuElement
 			lhsPackageId = this.getPackageId();
 			String rhsPackageId;
 			rhsPackageId = that.getPackageId();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "packageId", lhsPackageId), LocatorUtils.property(thatLocator, "packageId", rhsPackageId), lhsPackageId, rhsPackageId)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "packageId", lhsPackageId),
+					LocatorUtils.property(thatLocator, "packageId", rhsPackageId), lhsPackageId, rhsPackageId)) {
 				return false;
 			}
 		}
@@ -564,7 +589,8 @@ public class MpuElement
 			lhsPackageRef = this.getPackageRef();
 			PackageRefElement rhsPackageRef;
 			rhsPackageRef = that.getPackageRef();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "packageRef", lhsPackageRef), LocatorUtils.property(thatLocator, "packageRef", rhsPackageRef), lhsPackageRef, rhsPackageRef)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "packageRef", lhsPackageRef),
+					LocatorUtils.property(thatLocator, "packageRef", rhsPackageRef), lhsPackageRef, rhsPackageRef)) {
 				return false;
 			}
 		}
@@ -573,7 +599,9 @@ public class MpuElement
 			lhsConsigneeAddress = this.getConsigneeAddress();
 			AddressElement rhsConsigneeAddress;
 			rhsConsigneeAddress = that.getConsigneeAddress();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "consigneeAddress", lhsConsigneeAddress), LocatorUtils.property(thatLocator, "consigneeAddress", rhsConsigneeAddress), lhsConsigneeAddress, rhsConsigneeAddress)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "consigneeAddress", lhsConsigneeAddress),
+					LocatorUtils.property(thatLocator, "consigneeAddress", rhsConsigneeAddress), lhsConsigneeAddress,
+					rhsConsigneeAddress)) {
 				return false;
 			}
 		}
@@ -582,7 +610,9 @@ public class MpuElement
 			lhsReturnAddress = this.getReturnAddress();
 			AddressElement rhsReturnAddress;
 			rhsReturnAddress = that.getReturnAddress();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "returnAddress", lhsReturnAddress), LocatorUtils.property(thatLocator, "returnAddress", rhsReturnAddress), lhsReturnAddress, rhsReturnAddress)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "returnAddress", lhsReturnAddress),
+					LocatorUtils.property(thatLocator, "returnAddress", rhsReturnAddress), lhsReturnAddress,
+					rhsReturnAddress)) {
 				return false;
 			}
 		}
@@ -591,7 +621,9 @@ public class MpuElement
 			lhsOrderedProductCode = this.getOrderedProductCode();
 			String rhsOrderedProductCode;
 			rhsOrderedProductCode = that.getOrderedProductCode();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "orderedProductCode", lhsOrderedProductCode), LocatorUtils.property(thatLocator, "orderedProductCode", rhsOrderedProductCode), lhsOrderedProductCode, rhsOrderedProductCode)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "orderedProductCode", lhsOrderedProductCode),
+					LocatorUtils.property(thatLocator, "orderedProductCode", rhsOrderedProductCode),
+					lhsOrderedProductCode, rhsOrderedProductCode)) {
 				return false;
 			}
 		}
@@ -600,7 +632,8 @@ public class MpuElement
 			lhsWeight = this.getWeight();
 			WeightElement rhsWeight;
 			rhsWeight = that.getWeight();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "weight", lhsWeight), LocatorUtils.property(thatLocator, "weight", rhsWeight), lhsWeight, rhsWeight)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "weight", lhsWeight),
+					LocatorUtils.property(thatLocator, "weight", rhsWeight), lhsWeight, rhsWeight)) {
 				return false;
 			}
 		}
@@ -609,7 +642,8 @@ public class MpuElement
 			lhsService = this.getService();
 			String rhsService;
 			rhsService = that.getService();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "service", lhsService), LocatorUtils.property(thatLocator, "service", rhsService), lhsService, rhsService)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "service", lhsService),
+					LocatorUtils.property(thatLocator, "service", rhsService), lhsService, rhsService)) {
 				return false;
 			}
 		}
@@ -618,7 +652,8 @@ public class MpuElement
 			lhsBillingRef1 = this.getBillingRef1();
 			String rhsBillingRef1;
 			rhsBillingRef1 = that.getBillingRef1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef1", lhsBillingRef1), LocatorUtils.property(thatLocator, "billingRef1", rhsBillingRef1), lhsBillingRef1, rhsBillingRef1)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef1", lhsBillingRef1),
+					LocatorUtils.property(thatLocator, "billingRef1", rhsBillingRef1), lhsBillingRef1, rhsBillingRef1)) {
 				return false;
 			}
 		}
@@ -627,7 +662,8 @@ public class MpuElement
 			lhsBillingRef2 = this.getBillingRef2();
 			String rhsBillingRef2;
 			rhsBillingRef2 = that.getBillingRef2();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef2", lhsBillingRef2), LocatorUtils.property(thatLocator, "billingRef2", rhsBillingRef2), lhsBillingRef2, rhsBillingRef2)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef2", lhsBillingRef2),
+					LocatorUtils.property(thatLocator, "billingRef2", rhsBillingRef2), lhsBillingRef2, rhsBillingRef2)) {
 				return false;
 			}
 		}
@@ -636,7 +672,9 @@ public class MpuElement
 			lhsThirdPartyBillTo = this.getThirdPartyBillTo();
 			Integer rhsThirdPartyBillTo;
 			rhsThirdPartyBillTo = that.getThirdPartyBillTo();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "thirdPartyBillTo", lhsThirdPartyBillTo), LocatorUtils.property(thatLocator, "thirdPartyBillTo", rhsThirdPartyBillTo), lhsThirdPartyBillTo, rhsThirdPartyBillTo)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "thirdPartyBillTo", lhsThirdPartyBillTo),
+					LocatorUtils.property(thatLocator, "thirdPartyBillTo", rhsThirdPartyBillTo), lhsThirdPartyBillTo,
+					rhsThirdPartyBillTo)) {
 				return false;
 			}
 		}
@@ -645,7 +683,9 @@ public class MpuElement
 			lhsMailTypeCode = this.getMailTypeCode();
 			String rhsMailTypeCode;
 			rhsMailTypeCode = that.getMailTypeCode();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "mailTypeCode", lhsMailTypeCode), LocatorUtils.property(thatLocator, "mailTypeCode", rhsMailTypeCode), lhsMailTypeCode, rhsMailTypeCode)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "mailTypeCode", lhsMailTypeCode),
+					LocatorUtils.property(thatLocator, "mailTypeCode", rhsMailTypeCode), lhsMailTypeCode,
+					rhsMailTypeCode)) {
 				return false;
 			}
 		}
@@ -654,7 +694,9 @@ public class MpuElement
 			lhsFacilityCode = this.getFacilityCode();
 			String rhsFacilityCode;
 			rhsFacilityCode = that.getFacilityCode();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "facilityCode", lhsFacilityCode), LocatorUtils.property(thatLocator, "facilityCode", rhsFacilityCode), lhsFacilityCode, rhsFacilityCode)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "facilityCode", lhsFacilityCode),
+					LocatorUtils.property(thatLocator, "facilityCode", rhsFacilityCode), lhsFacilityCode,
+					rhsFacilityCode)) {
 				return false;
 			}
 		}
@@ -663,7 +705,9 @@ public class MpuElement
 			lhsExpectedShipDate = this.getExpectedShipDate();
 			String rhsExpectedShipDate;
 			rhsExpectedShipDate = that.getExpectedShipDate();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "expectedShipDate", lhsExpectedShipDate), LocatorUtils.property(thatLocator, "expectedShipDate", rhsExpectedShipDate), lhsExpectedShipDate, rhsExpectedShipDate)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "expectedShipDate", lhsExpectedShipDate),
+					LocatorUtils.property(thatLocator, "expectedShipDate", rhsExpectedShipDate), lhsExpectedShipDate,
+					rhsExpectedShipDate)) {
 				return false;
 			}
 		}
@@ -672,7 +716,8 @@ public class MpuElement
 			lhsImpb = this.getImpb();
 			ImpbElement rhsImpb;
 			rhsImpb = that.getImpb();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "impb", lhsImpb), LocatorUtils.property(thatLocator, "impb", rhsImpb), lhsImpb, rhsImpb)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "impb", lhsImpb),
+					LocatorUtils.property(thatLocator, "impb", rhsImpb), lhsImpb, rhsImpb)) {
 				return false;
 			}
 		}
@@ -681,7 +726,9 @@ public class MpuElement
 			lhsContainerRef1 = this.getContainerRef1();
 			ContainerElement rhsContainerRef1;
 			rhsContainerRef1 = that.getContainerRef1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerRef1", lhsContainerRef1), LocatorUtils.property(thatLocator, "containerRef1", rhsContainerRef1), lhsContainerRef1, rhsContainerRef1)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerRef1", lhsContainerRef1),
+					LocatorUtils.property(thatLocator, "containerRef1", rhsContainerRef1), lhsContainerRef1,
+					rhsContainerRef1)) {
 				return false;
 			}
 		}
@@ -690,7 +737,9 @@ public class MpuElement
 			lhsContainerRef2 = this.getContainerRef2();
 			ContainerElement rhsContainerRef2;
 			rhsContainerRef2 = that.getContainerRef2();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerRef2", lhsContainerRef2), LocatorUtils.property(thatLocator, "containerRef2", rhsContainerRef2), lhsContainerRef2, rhsContainerRef2)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerRef2", lhsContainerRef2),
+					LocatorUtils.property(thatLocator, "containerRef2", rhsContainerRef2), lhsContainerRef2,
+					rhsContainerRef2)) {
 				return false;
 			}
 		}
@@ -699,7 +748,8 @@ public class MpuElement
 			lhsResponse = this.getResponse();
 			MpuResponseElement rhsResponse;
 			rhsResponse = that.getResponse();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "response", lhsResponse), LocatorUtils.property(thatLocator, "response", rhsResponse), lhsResponse, rhsResponse)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "response", lhsResponse),
+					LocatorUtils.property(thatLocator, "response", rhsResponse), lhsResponse, rhsResponse)) {
 				return false;
 			}
 		}

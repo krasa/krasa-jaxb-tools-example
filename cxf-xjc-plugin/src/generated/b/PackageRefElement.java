@@ -1,20 +1,21 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for packageRefElement complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for packageRefElement complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="packageRefElement">
  *   &lt;complexContent>
@@ -27,14 +28,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "packageRefElement", propOrder = {
-		"printFlag",
-		"labelText"
-})
-public class PackageRefElement
-		implements Equals, HashCode {
+@XmlType(name = "packageRefElement", propOrder = { "printFlag", "labelText" })
+public class PackageRefElement implements Equals, HashCode {
 
 	@XmlElement(name = "PrintFlag")
 	protected Boolean printFlag;
@@ -43,9 +42,9 @@ public class PackageRefElement
 
 	/**
 	 * Gets the value of the printFlag property.
-	 *
-	 * @return possible object is
-	 * {@link Boolean }
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
 	 */
 	public Boolean isPrintFlag() {
 		return printFlag;
@@ -53,9 +52,10 @@ public class PackageRefElement
 
 	/**
 	 * Sets the value of the printFlag property.
-	 *
-	 * @param value allowed object is
-	 *              {@link Boolean }
+	 * 
+	 * @param value
+	 *            allowed object is {@link Boolean }
+	 * 
 	 */
 	public void setPrintFlag(Boolean value) {
 		this.printFlag = value;
@@ -63,9 +63,9 @@ public class PackageRefElement
 
 	/**
 	 * Gets the value of the labelText property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getLabelText() {
 		return labelText;
@@ -73,9 +73,10 @@ public class PackageRefElement
 
 	/**
 	 * Sets the value of the labelText property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setLabelText(String value) {
 		this.labelText = value;
@@ -86,12 +87,14 @@ public class PackageRefElement
 		{
 			Boolean thePrintFlag;
 			thePrintFlag = this.isPrintFlag();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "printFlag", thePrintFlag), currentHashCode, thePrintFlag);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "printFlag", thePrintFlag),
+					currentHashCode, thePrintFlag);
 		}
 		{
 			String theLabelText;
 			theLabelText = this.getLabelText();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelText", theLabelText), currentHashCode, theLabelText);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelText", theLabelText),
+					currentHashCode, theLabelText);
 		}
 		return currentHashCode;
 	}
@@ -114,7 +117,8 @@ public class PackageRefElement
 			lhsPrintFlag = this.isPrintFlag();
 			Boolean rhsPrintFlag;
 			rhsPrintFlag = that.isPrintFlag();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "printFlag", lhsPrintFlag), LocatorUtils.property(thatLocator, "printFlag", rhsPrintFlag), lhsPrintFlag, rhsPrintFlag)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "printFlag", lhsPrintFlag),
+					LocatorUtils.property(thatLocator, "printFlag", rhsPrintFlag), lhsPrintFlag, rhsPrintFlag)) {
 				return false;
 			}
 		}
@@ -123,7 +127,8 @@ public class PackageRefElement
 			lhsLabelText = this.getLabelText();
 			String rhsLabelText;
 			rhsLabelText = that.getLabelText();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelText", lhsLabelText), LocatorUtils.property(thatLocator, "labelText", rhsLabelText), lhsLabelText, rhsLabelText)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelText", lhsLabelText),
+					LocatorUtils.property(thatLocator, "labelText", rhsLabelText), lhsLabelText, rhsLabelText)) {
 				return false;
 			}
 		}

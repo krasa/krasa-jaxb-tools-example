@@ -1,19 +1,20 @@
 package a;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for Coffee complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for Coffee complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="Coffee">
  *   &lt;complexContent>
@@ -27,20 +28,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Coffee", propOrder = {
-		"bar"
-})
+@XmlType(name = "Coffee", propOrder = { "bar" })
 public class Coffee implements Equals, HashCode {
 
 	protected String bar;
 
 	/**
 	 * Gets the value of the bar property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getBar() {
 		return bar;
@@ -48,9 +49,10 @@ public class Coffee implements Equals, HashCode {
 
 	/**
 	 * Sets the value of the bar property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setBar(String value) {
 		this.bar = value;
@@ -84,7 +86,8 @@ public class Coffee implements Equals, HashCode {
 			lhsBar = this.getBar();
 			String rhsBar;
 			rhsBar = that.getBar();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "bar", lhsBar), LocatorUtils.property(thatLocator, "bar", rhsBar), lhsBar, rhsBar)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "bar", lhsBar),
+					LocatorUtils.property(thatLocator, "bar", rhsBar), lhsBar, rhsBar)) {
 				return false;
 			}
 		}

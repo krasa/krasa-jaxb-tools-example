@@ -1,9 +1,5 @@
 package a;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.Valid;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
@@ -15,12 +11,18 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for Main complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for Main complex type.
+ * <p>
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * 
  * <pre>
  * &lt;complexType name="Main">
  *   &lt;complexContent>
@@ -44,21 +46,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Main", propOrder = {
-		"numbers",
-		"strings",
-		"unsignedByte",
-		"choices",
-		"complexChoices",
-		"choicesWithMinMax",
-		"complexChoicesWithMinMax",
-		"enumerations",
-		"enumeration",
-		"array",
-		"primitives"
-})
-public class Main
-		implements Equals, HashCode {
+@XmlType(name = "Main", propOrder = { "numbers", "strings", "unsignedByte", "choices", "complexChoices",
+		"choicesWithMinMax", "complexChoicesWithMinMax", "enumerations", "enumeration", "array", "primitives" })
+public class Main implements Equals, HashCode {
 
 	@XmlElement(required = true)
 	@javax.validation.constraints.NotNull
@@ -109,8 +99,7 @@ public class Main
 	/**
 	 * Gets the value of the numbers property.
 	 *
-	 * @return possible object is
-	 * {@link Numbers }
+	 * @return possible object is {@link Numbers }
 	 */
 	public Numbers getNumbers() {
 		return numbers;
@@ -119,8 +108,8 @@ public class Main
 	/**
 	 * Sets the value of the numbers property.
 	 *
-	 * @param value allowed object is
-	 *              {@link Numbers }
+	 * @param value
+	 *            allowed object is {@link Numbers }
 	 */
 	public void setNumbers(Numbers value) {
 		this.numbers = value;
@@ -129,8 +118,7 @@ public class Main
 	/**
 	 * Gets the value of the strings property.
 	 *
-	 * @return possible object is
-	 * {@link Strings }
+	 * @return possible object is {@link Strings }
 	 */
 	public Strings getStrings() {
 		return strings;
@@ -139,8 +127,8 @@ public class Main
 	/**
 	 * Sets the value of the strings property.
 	 *
-	 * @param value allowed object is
-	 *              {@link Strings }
+	 * @param value
+	 *            allowed object is {@link Strings }
 	 */
 	public void setStrings(Strings value) {
 		this.strings = value;
@@ -163,8 +151,7 @@ public class Main
 	/**
 	 * Gets the value of the choices property.
 	 *
-	 * @return possible object is
-	 * {@link Choices }
+	 * @return possible object is {@link Choices }
 	 */
 	public Choices getChoices() {
 		return choices;
@@ -173,8 +160,8 @@ public class Main
 	/**
 	 * Sets the value of the choices property.
 	 *
-	 * @param value allowed object is
-	 *              {@link Choices }
+	 * @param value
+	 *            allowed object is {@link Choices }
 	 */
 	public void setChoices(Choices value) {
 		this.choices = value;
@@ -183,8 +170,7 @@ public class Main
 	/**
 	 * Gets the value of the complexChoices property.
 	 *
-	 * @return possible object is
-	 * {@link ComplexChoices }
+	 * @return possible object is {@link ComplexChoices }
 	 */
 	public ComplexChoices getComplexChoices() {
 		return complexChoices;
@@ -193,8 +179,8 @@ public class Main
 	/**
 	 * Sets the value of the complexChoices property.
 	 *
-	 * @param value allowed object is
-	 *              {@link ComplexChoices }
+	 * @param value
+	 *            allowed object is {@link ComplexChoices }
 	 */
 	public void setComplexChoices(ComplexChoices value) {
 		this.complexChoices = value;
@@ -203,8 +189,7 @@ public class Main
 	/**
 	 * Gets the value of the choicesWithMinMax property.
 	 *
-	 * @return possible object is
-	 * {@link ChoicesWithMinMax }
+	 * @return possible object is {@link ChoicesWithMinMax }
 	 */
 	public ChoicesWithMinMax getChoicesWithMinMax() {
 		return choicesWithMinMax;
@@ -213,8 +198,8 @@ public class Main
 	/**
 	 * Sets the value of the choicesWithMinMax property.
 	 *
-	 * @param value allowed object is
-	 *              {@link ChoicesWithMinMax }
+	 * @param value
+	 *            allowed object is {@link ChoicesWithMinMax }
 	 */
 	public void setChoicesWithMinMax(ChoicesWithMinMax value) {
 		this.choicesWithMinMax = value;
@@ -223,8 +208,7 @@ public class Main
 	/**
 	 * Gets the value of the complexChoicesWithMinMax property.
 	 *
-	 * @return possible object is
-	 * {@link ComplexChoicesWithMinMax }
+	 * @return possible object is {@link ComplexChoicesWithMinMax }
 	 */
 	public ComplexChoicesWithMinMax getComplexChoicesWithMinMax() {
 		return complexChoicesWithMinMax;
@@ -233,8 +217,8 @@ public class Main
 	/**
 	 * Sets the value of the complexChoicesWithMinMax property.
 	 *
-	 * @param value allowed object is
-	 *              {@link ComplexChoicesWithMinMax }
+	 * @param value
+	 *            allowed object is {@link ComplexChoicesWithMinMax }
 	 */
 	public void setComplexChoicesWithMinMax(ComplexChoicesWithMinMax value) {
 		this.complexChoicesWithMinMax = value;
@@ -243,8 +227,7 @@ public class Main
 	/**
 	 * Gets the value of the enumerations property.
 	 *
-	 * @return possible object is
-	 * {@link Enumerations }
+	 * @return possible object is {@link Enumerations }
 	 */
 	public Enumerations getEnumerations() {
 		return enumerations;
@@ -253,8 +236,8 @@ public class Main
 	/**
 	 * Sets the value of the enumerations property.
 	 *
-	 * @param value allowed object is
-	 *              {@link Enumerations }
+	 * @param value
+	 *            allowed object is {@link Enumerations }
 	 */
 	public void setEnumerations(Enumerations value) {
 		this.enumerations = value;
@@ -263,8 +246,7 @@ public class Main
 	/**
 	 * Gets the value of the enumeration property.
 	 *
-	 * @return possible object is
-	 * {@link Enumeration }
+	 * @return possible object is {@link Enumeration }
 	 */
 	public Enumeration getEnumeration() {
 		return enumeration;
@@ -273,8 +255,8 @@ public class Main
 	/**
 	 * Sets the value of the enumeration property.
 	 *
-	 * @param value allowed object is
-	 *              {@link Enumeration }
+	 * @param value
+	 *            allowed object is {@link Enumeration }
 	 */
 	public void setEnumeration(Enumeration value) {
 		this.enumeration = value;
@@ -283,8 +265,7 @@ public class Main
 	/**
 	 * Gets the value of the array property.
 	 *
-	 * @return possible object is
-	 * {@link String }
+	 * @return possible object is {@link String }
 	 */
 	public byte[] getArray() {
 		return array;
@@ -293,8 +274,8 @@ public class Main
 	/**
 	 * Sets the value of the array property.
 	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * @param value
+	 *            allowed object is {@link String }
 	 */
 	public void setArray(byte[] value) {
 		this.array = ((byte[]) value);
@@ -303,8 +284,7 @@ public class Main
 	/**
 	 * Gets the value of the primitives property.
 	 *
-	 * @return possible object is
-	 * {@link Primitives }
+	 * @return possible object is {@link Primitives }
 	 */
 	public Primitives getPrimitives() {
 		return primitives;
@@ -313,8 +293,8 @@ public class Main
 	/**
 	 * Sets the value of the primitives property.
 	 *
-	 * @param value allowed object is
-	 *              {@link Primitives }
+	 * @param value
+	 *            allowed object is {@link Primitives }
 	 */
 	public void setPrimitives(Primitives value) {
 		this.primitives = value;
@@ -325,57 +305,70 @@ public class Main
 		{
 			Numbers theNumbers;
 			theNumbers = this.getNumbers();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "numbers", theNumbers), currentHashCode, theNumbers);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "numbers", theNumbers), currentHashCode,
+					theNumbers);
 		}
 		{
 			Strings theStrings;
 			theStrings = this.getStrings();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "strings", theStrings), currentHashCode, theStrings);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "strings", theStrings), currentHashCode,
+					theStrings);
 		}
 		{
 			Short theUnsignedByte;
 			theUnsignedByte = this.getUnsignedByte();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unsignedByte", theUnsignedByte), currentHashCode, theUnsignedByte);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unsignedByte", theUnsignedByte),
+					currentHashCode, theUnsignedByte);
 		}
 		{
 			Choices theChoices;
 			theChoices = this.getChoices();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "choices", theChoices), currentHashCode, theChoices);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "choices", theChoices), currentHashCode,
+					theChoices);
 		}
 		{
 			ComplexChoices theComplexChoices;
 			theComplexChoices = this.getComplexChoices();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "complexChoices", theComplexChoices), currentHashCode, theComplexChoices);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "complexChoices", theComplexChoices),
+					currentHashCode, theComplexChoices);
 		}
 		{
 			ChoicesWithMinMax theChoicesWithMinMax;
 			theChoicesWithMinMax = this.getChoicesWithMinMax();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "choicesWithMinMax", theChoicesWithMinMax), currentHashCode, theChoicesWithMinMax);
+			currentHashCode = strategy.hashCode(
+					LocatorUtils.property(locator, "choicesWithMinMax", theChoicesWithMinMax), currentHashCode,
+					theChoicesWithMinMax);
 		}
 		{
 			ComplexChoicesWithMinMax theComplexChoicesWithMinMax;
 			theComplexChoicesWithMinMax = this.getComplexChoicesWithMinMax();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "complexChoicesWithMinMax", theComplexChoicesWithMinMax), currentHashCode, theComplexChoicesWithMinMax);
+			currentHashCode = strategy.hashCode(
+					LocatorUtils.property(locator, "complexChoicesWithMinMax", theComplexChoicesWithMinMax),
+					currentHashCode, theComplexChoicesWithMinMax);
 		}
 		{
 			Enumerations theEnumerations;
 			theEnumerations = this.getEnumerations();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumerations", theEnumerations), currentHashCode, theEnumerations);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumerations", theEnumerations),
+					currentHashCode, theEnumerations);
 		}
 		{
 			Enumeration theEnumeration;
 			theEnumeration = this.getEnumeration();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumeration", theEnumeration), currentHashCode, theEnumeration);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumeration", theEnumeration),
+					currentHashCode, theEnumeration);
 		}
 		{
 			byte[] theArray;
 			theArray = this.getArray();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "array", theArray), currentHashCode, theArray);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "array", theArray), currentHashCode,
+					theArray);
 		}
 		{
 			Primitives thePrimitives;
 			thePrimitives = this.getPrimitives();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "primitives", thePrimitives), currentHashCode, thePrimitives);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "primitives", thePrimitives),
+					currentHashCode, thePrimitives);
 		}
 		return currentHashCode;
 	}
@@ -398,7 +391,8 @@ public class Main
 			lhsNumbers = this.getNumbers();
 			Numbers rhsNumbers;
 			rhsNumbers = that.getNumbers();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "numbers", lhsNumbers), LocatorUtils.property(thatLocator, "numbers", rhsNumbers), lhsNumbers, rhsNumbers)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "numbers", lhsNumbers),
+					LocatorUtils.property(thatLocator, "numbers", rhsNumbers), lhsNumbers, rhsNumbers)) {
 				return false;
 			}
 		}
@@ -407,7 +401,8 @@ public class Main
 			lhsStrings = this.getStrings();
 			Strings rhsStrings;
 			rhsStrings = that.getStrings();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "strings", lhsStrings), LocatorUtils.property(thatLocator, "strings", rhsStrings), lhsStrings, rhsStrings)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "strings", lhsStrings),
+					LocatorUtils.property(thatLocator, "strings", rhsStrings), lhsStrings, rhsStrings)) {
 				return false;
 			}
 		}
@@ -416,7 +411,9 @@ public class Main
 			lhsUnsignedByte = this.getUnsignedByte();
 			Short rhsUnsignedByte;
 			rhsUnsignedByte = that.getUnsignedByte();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "unsignedByte", lhsUnsignedByte), LocatorUtils.property(thatLocator, "unsignedByte", rhsUnsignedByte), lhsUnsignedByte, rhsUnsignedByte)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "unsignedByte", lhsUnsignedByte),
+					LocatorUtils.property(thatLocator, "unsignedByte", rhsUnsignedByte), lhsUnsignedByte,
+					rhsUnsignedByte)) {
 				return false;
 			}
 		}
@@ -425,7 +422,8 @@ public class Main
 			lhsChoices = this.getChoices();
 			Choices rhsChoices;
 			rhsChoices = that.getChoices();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "choices", lhsChoices), LocatorUtils.property(thatLocator, "choices", rhsChoices), lhsChoices, rhsChoices)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "choices", lhsChoices),
+					LocatorUtils.property(thatLocator, "choices", rhsChoices), lhsChoices, rhsChoices)) {
 				return false;
 			}
 		}
@@ -434,7 +432,9 @@ public class Main
 			lhsComplexChoices = this.getComplexChoices();
 			ComplexChoices rhsComplexChoices;
 			rhsComplexChoices = that.getComplexChoices();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "complexChoices", lhsComplexChoices), LocatorUtils.property(thatLocator, "complexChoices", rhsComplexChoices), lhsComplexChoices, rhsComplexChoices)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "complexChoices", lhsComplexChoices),
+					LocatorUtils.property(thatLocator, "complexChoices", rhsComplexChoices), lhsComplexChoices,
+					rhsComplexChoices)) {
 				return false;
 			}
 		}
@@ -443,7 +443,9 @@ public class Main
 			lhsChoicesWithMinMax = this.getChoicesWithMinMax();
 			ChoicesWithMinMax rhsChoicesWithMinMax;
 			rhsChoicesWithMinMax = that.getChoicesWithMinMax();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "choicesWithMinMax", lhsChoicesWithMinMax), LocatorUtils.property(thatLocator, "choicesWithMinMax", rhsChoicesWithMinMax), lhsChoicesWithMinMax, rhsChoicesWithMinMax)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "choicesWithMinMax", lhsChoicesWithMinMax),
+					LocatorUtils.property(thatLocator, "choicesWithMinMax", rhsChoicesWithMinMax),
+					lhsChoicesWithMinMax, rhsChoicesWithMinMax)) {
 				return false;
 			}
 		}
@@ -452,7 +454,10 @@ public class Main
 			lhsComplexChoicesWithMinMax = this.getComplexChoicesWithMinMax();
 			ComplexChoicesWithMinMax rhsComplexChoicesWithMinMax;
 			rhsComplexChoicesWithMinMax = that.getComplexChoicesWithMinMax();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "complexChoicesWithMinMax", lhsComplexChoicesWithMinMax), LocatorUtils.property(thatLocator, "complexChoicesWithMinMax", rhsComplexChoicesWithMinMax), lhsComplexChoicesWithMinMax, rhsComplexChoicesWithMinMax)) {
+			if (!strategy.equals(
+					LocatorUtils.property(thisLocator, "complexChoicesWithMinMax", lhsComplexChoicesWithMinMax),
+					LocatorUtils.property(thatLocator, "complexChoicesWithMinMax", rhsComplexChoicesWithMinMax),
+					lhsComplexChoicesWithMinMax, rhsComplexChoicesWithMinMax)) {
 				return false;
 			}
 		}
@@ -461,7 +466,9 @@ public class Main
 			lhsEnumerations = this.getEnumerations();
 			Enumerations rhsEnumerations;
 			rhsEnumerations = that.getEnumerations();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "enumerations", lhsEnumerations), LocatorUtils.property(thatLocator, "enumerations", rhsEnumerations), lhsEnumerations, rhsEnumerations)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "enumerations", lhsEnumerations),
+					LocatorUtils.property(thatLocator, "enumerations", rhsEnumerations), lhsEnumerations,
+					rhsEnumerations)) {
 				return false;
 			}
 		}
@@ -470,7 +477,8 @@ public class Main
 			lhsEnumeration = this.getEnumeration();
 			Enumeration rhsEnumeration;
 			rhsEnumeration = that.getEnumeration();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "enumeration", lhsEnumeration), LocatorUtils.property(thatLocator, "enumeration", rhsEnumeration), lhsEnumeration, rhsEnumeration)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "enumeration", lhsEnumeration),
+					LocatorUtils.property(thatLocator, "enumeration", rhsEnumeration), lhsEnumeration, rhsEnumeration)) {
 				return false;
 			}
 		}
@@ -479,7 +487,8 @@ public class Main
 			lhsArray = this.getArray();
 			byte[] rhsArray;
 			rhsArray = that.getArray();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "array", lhsArray), LocatorUtils.property(thatLocator, "array", rhsArray), lhsArray, rhsArray)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "array", lhsArray),
+					LocatorUtils.property(thatLocator, "array", rhsArray), lhsArray, rhsArray)) {
 				return false;
 			}
 		}
@@ -488,7 +497,8 @@ public class Main
 			lhsPrimitives = this.getPrimitives();
 			Primitives rhsPrimitives;
 			rhsPrimitives = that.getPrimitives();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "primitives", lhsPrimitives), LocatorUtils.property(thatLocator, "primitives", rhsPrimitives), lhsPrimitives, rhsPrimitives)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "primitives", lhsPrimitives),
+					LocatorUtils.property(thatLocator, "primitives", rhsPrimitives), lhsPrimitives, rhsPrimitives)) {
 				return false;
 			}
 		}

@@ -1,21 +1,22 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for impbElement complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for impbElement complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="impbElement">
  *   &lt;complexContent>
@@ -28,14 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "impbElement", propOrder = {
-		"construct",
-		"value"
-})
-public class ImpbElement
-		implements Equals, HashCode {
+@XmlType(name = "impbElement", propOrder = { "construct", "value" })
+public class ImpbElement implements Equals, HashCode {
 
 	@XmlElement(name = "Construct", required = true)
 	@NotNull
@@ -46,9 +45,9 @@ public class ImpbElement
 
 	/**
 	 * Gets the value of the construct property.
-	 *
-	 * @return possible object is
-	 * {@link ImpbConstructValue }
+	 * 
+	 * @return possible object is {@link ImpbConstructValue }
+	 * 
 	 */
 	public ImpbConstructValue getConstruct() {
 		return construct;
@@ -56,9 +55,10 @@ public class ImpbElement
 
 	/**
 	 * Sets the value of the construct property.
-	 *
-	 * @param value allowed object is
-	 *              {@link ImpbConstructValue }
+	 * 
+	 * @param value
+	 *            allowed object is {@link ImpbConstructValue }
+	 * 
 	 */
 	public void setConstruct(ImpbConstructValue value) {
 		this.construct = value;
@@ -66,9 +66,9 @@ public class ImpbElement
 
 	/**
 	 * Gets the value of the value property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getValue() {
 		return value;
@@ -76,9 +76,10 @@ public class ImpbElement
 
 	/**
 	 * Sets the value of the value property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setValue(String value) {
 		this.value = value;
@@ -89,12 +90,14 @@ public class ImpbElement
 		{
 			ImpbConstructValue theConstruct;
 			theConstruct = this.getConstruct();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "construct", theConstruct), currentHashCode, theConstruct);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "construct", theConstruct),
+					currentHashCode, theConstruct);
 		}
 		{
 			String theValue;
 			theValue = this.getValue();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode,
+					theValue);
 		}
 		return currentHashCode;
 	}
@@ -117,7 +120,8 @@ public class ImpbElement
 			lhsConstruct = this.getConstruct();
 			ImpbConstructValue rhsConstruct;
 			rhsConstruct = that.getConstruct();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "construct", lhsConstruct), LocatorUtils.property(thatLocator, "construct", rhsConstruct), lhsConstruct, rhsConstruct)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "construct", lhsConstruct),
+					LocatorUtils.property(thatLocator, "construct", rhsConstruct), lhsConstruct, rhsConstruct)) {
 				return false;
 			}
 		}
@@ -126,7 +130,8 @@ public class ImpbElement
 			lhsValue = this.getValue();
 			String rhsValue;
 			rhsValue = that.getValue();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue),
+					LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
 				return false;
 			}
 		}

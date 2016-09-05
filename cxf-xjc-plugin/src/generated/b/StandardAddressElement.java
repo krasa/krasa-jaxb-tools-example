@@ -1,21 +1,22 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for standardAddressElement complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for standardAddressElement complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="standardAddressElement">
  *   &lt;complexContent>
@@ -34,20 +35,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "standardAddressElement", propOrder = {
-		"name",
-		"firm",
-		"address1",
-		"address2",
-		"city",
-		"state",
-		"zip",
-		"countryCode"
-})
-public class StandardAddressElement
-		implements Equals, HashCode {
+@XmlType(name = "standardAddressElement", propOrder = { "name", "firm", "address1", "address2", "city", "state", "zip",
+		"countryCode" })
+public class StandardAddressElement implements Equals, HashCode {
 
 	@XmlElement(name = "Name")
 	protected String name;
@@ -73,9 +67,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the name property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getName() {
 		return name;
@@ -83,9 +77,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the name property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setName(String value) {
 		this.name = value;
@@ -93,9 +88,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the firm property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getFirm() {
 		return firm;
@@ -103,9 +98,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the firm property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setFirm(String value) {
 		this.firm = value;
@@ -113,9 +109,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the address1 property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getAddress1() {
 		return address1;
@@ -123,9 +119,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the address1 property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setAddress1(String value) {
 		this.address1 = value;
@@ -133,9 +130,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the address2 property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getAddress2() {
 		return address2;
@@ -143,9 +140,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the address2 property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setAddress2(String value) {
 		this.address2 = value;
@@ -153,9 +151,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the city property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getCity() {
 		return city;
@@ -163,9 +161,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the city property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setCity(String value) {
 		this.city = value;
@@ -173,9 +172,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the state property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getState() {
 		return state;
@@ -183,9 +182,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the state property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setState(String value) {
 		this.state = value;
@@ -193,9 +193,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the zip property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getZip() {
 		return zip;
@@ -203,9 +203,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the zip property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setZip(String value) {
 		this.zip = value;
@@ -213,9 +214,9 @@ public class StandardAddressElement
 
 	/**
 	 * Gets the value of the countryCode property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getCountryCode() {
 		return countryCode;
@@ -223,9 +224,10 @@ public class StandardAddressElement
 
 	/**
 	 * Sets the value of the countryCode property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setCountryCode(String value) {
 		this.countryCode = value;
@@ -236,32 +238,38 @@ public class StandardAddressElement
 		{
 			String theName;
 			theName = this.getName();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "name", theName), currentHashCode, theName);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "name", theName), currentHashCode,
+					theName);
 		}
 		{
 			String theFirm;
 			theFirm = this.getFirm();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "firm", theFirm), currentHashCode, theFirm);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "firm", theFirm), currentHashCode,
+					theFirm);
 		}
 		{
 			String theAddress1;
 			theAddress1 = this.getAddress1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address1", theAddress1), currentHashCode, theAddress1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address1", theAddress1),
+					currentHashCode, theAddress1);
 		}
 		{
 			String theAddress2;
 			theAddress2 = this.getAddress2();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address2", theAddress2), currentHashCode, theAddress2);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address2", theAddress2),
+					currentHashCode, theAddress2);
 		}
 		{
 			String theCity;
 			theCity = this.getCity();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "city", theCity), currentHashCode, theCity);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "city", theCity), currentHashCode,
+					theCity);
 		}
 		{
 			String theState;
 			theState = this.getState();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "state", theState), currentHashCode, theState);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "state", theState), currentHashCode,
+					theState);
 		}
 		{
 			String theZip;
@@ -271,7 +279,8 @@ public class StandardAddressElement
 		{
 			String theCountryCode;
 			theCountryCode = this.getCountryCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "countryCode", theCountryCode), currentHashCode, theCountryCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "countryCode", theCountryCode),
+					currentHashCode, theCountryCode);
 		}
 		return currentHashCode;
 	}
@@ -294,7 +303,8 @@ public class StandardAddressElement
 			lhsName = this.getName();
 			String rhsName;
 			rhsName = that.getName();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "name", lhsName), LocatorUtils.property(thatLocator, "name", rhsName), lhsName, rhsName)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "name", lhsName),
+					LocatorUtils.property(thatLocator, "name", rhsName), lhsName, rhsName)) {
 				return false;
 			}
 		}
@@ -303,7 +313,8 @@ public class StandardAddressElement
 			lhsFirm = this.getFirm();
 			String rhsFirm;
 			rhsFirm = that.getFirm();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "firm", lhsFirm), LocatorUtils.property(thatLocator, "firm", rhsFirm), lhsFirm, rhsFirm)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "firm", lhsFirm),
+					LocatorUtils.property(thatLocator, "firm", rhsFirm), lhsFirm, rhsFirm)) {
 				return false;
 			}
 		}
@@ -312,7 +323,8 @@ public class StandardAddressElement
 			lhsAddress1 = this.getAddress1();
 			String rhsAddress1;
 			rhsAddress1 = that.getAddress1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "address1", lhsAddress1), LocatorUtils.property(thatLocator, "address1", rhsAddress1), lhsAddress1, rhsAddress1)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "address1", lhsAddress1),
+					LocatorUtils.property(thatLocator, "address1", rhsAddress1), lhsAddress1, rhsAddress1)) {
 				return false;
 			}
 		}
@@ -321,7 +333,8 @@ public class StandardAddressElement
 			lhsAddress2 = this.getAddress2();
 			String rhsAddress2;
 			rhsAddress2 = that.getAddress2();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "address2", lhsAddress2), LocatorUtils.property(thatLocator, "address2", rhsAddress2), lhsAddress2, rhsAddress2)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "address2", lhsAddress2),
+					LocatorUtils.property(thatLocator, "address2", rhsAddress2), lhsAddress2, rhsAddress2)) {
 				return false;
 			}
 		}
@@ -330,7 +343,8 @@ public class StandardAddressElement
 			lhsCity = this.getCity();
 			String rhsCity;
 			rhsCity = that.getCity();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "city", lhsCity), LocatorUtils.property(thatLocator, "city", rhsCity), lhsCity, rhsCity)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "city", lhsCity),
+					LocatorUtils.property(thatLocator, "city", rhsCity), lhsCity, rhsCity)) {
 				return false;
 			}
 		}
@@ -339,7 +353,8 @@ public class StandardAddressElement
 			lhsState = this.getState();
 			String rhsState;
 			rhsState = that.getState();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "state", lhsState), LocatorUtils.property(thatLocator, "state", rhsState), lhsState, rhsState)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "state", lhsState),
+					LocatorUtils.property(thatLocator, "state", rhsState), lhsState, rhsState)) {
 				return false;
 			}
 		}
@@ -348,7 +363,8 @@ public class StandardAddressElement
 			lhsZip = this.getZip();
 			String rhsZip;
 			rhsZip = that.getZip();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "zip", lhsZip), LocatorUtils.property(thatLocator, "zip", rhsZip), lhsZip, rhsZip)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "zip", lhsZip),
+					LocatorUtils.property(thatLocator, "zip", rhsZip), lhsZip, rhsZip)) {
 				return false;
 			}
 		}
@@ -357,7 +373,8 @@ public class StandardAddressElement
 			lhsCountryCode = this.getCountryCode();
 			String rhsCountryCode;
 			rhsCountryCode = that.getCountryCode();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "countryCode", lhsCountryCode), LocatorUtils.property(thatLocator, "countryCode", rhsCountryCode), lhsCountryCode, rhsCountryCode)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "countryCode", lhsCountryCode),
+					LocatorUtils.property(thatLocator, "countryCode", rhsCountryCode), lhsCountryCode, rhsCountryCode)) {
 				return false;
 			}
 		}

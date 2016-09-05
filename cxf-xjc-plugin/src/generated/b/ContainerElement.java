@@ -1,21 +1,22 @@
 package b;
 
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 /**
- * <p>Java class for containerElement complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for containerElement complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="containerElement">
  *   &lt;complexContent>
@@ -28,14 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "containerElement", propOrder = {
-		"type",
-		"containerId"
-})
-public class ContainerElement
-		implements Equals, HashCode {
+@XmlType(name = "containerElement", propOrder = { "type", "containerId" })
+public class ContainerElement implements Equals, HashCode {
 
 	@XmlElement(name = "Type", required = true)
 	@NotNull
@@ -46,9 +45,9 @@ public class ContainerElement
 
 	/**
 	 * Gets the value of the type property.
-	 *
-	 * @return possible object is
-	 * {@link ContainerTypeValue }
+	 * 
+	 * @return possible object is {@link ContainerTypeValue }
+	 * 
 	 */
 	public ContainerTypeValue getType() {
 		return type;
@@ -56,9 +55,10 @@ public class ContainerElement
 
 	/**
 	 * Sets the value of the type property.
-	 *
-	 * @param value allowed object is
-	 *              {@link ContainerTypeValue }
+	 * 
+	 * @param value
+	 *            allowed object is {@link ContainerTypeValue }
+	 * 
 	 */
 	public void setType(ContainerTypeValue value) {
 		this.type = value;
@@ -66,9 +66,9 @@ public class ContainerElement
 
 	/**
 	 * Gets the value of the containerId property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getContainerId() {
 		return containerId;
@@ -76,9 +76,10 @@ public class ContainerElement
 
 	/**
 	 * Sets the value of the containerId property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setContainerId(String value) {
 		this.containerId = value;
@@ -89,12 +90,14 @@ public class ContainerElement
 		{
 			ContainerTypeValue theType;
 			theType = this.getType();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "type", theType), currentHashCode, theType);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "type", theType), currentHashCode,
+					theType);
 		}
 		{
 			String theContainerId;
 			theContainerId = this.getContainerId();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerId", theContainerId), currentHashCode, theContainerId);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerId", theContainerId),
+					currentHashCode, theContainerId);
 		}
 		return currentHashCode;
 	}
@@ -117,7 +120,8 @@ public class ContainerElement
 			lhsType = this.getType();
 			ContainerTypeValue rhsType;
 			rhsType = that.getType();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "type", lhsType), LocatorUtils.property(thatLocator, "type", rhsType), lhsType, rhsType)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "type", lhsType),
+					LocatorUtils.property(thatLocator, "type", rhsType), lhsType, rhsType)) {
 				return false;
 			}
 		}
@@ -126,7 +130,8 @@ public class ContainerElement
 			lhsContainerId = this.getContainerId();
 			String rhsContainerId;
 			rhsContainerId = that.getContainerId();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerId", lhsContainerId), LocatorUtils.property(thatLocator, "containerId", rhsContainerId), lhsContainerId, rhsContainerId)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerId", lhsContainerId),
+					LocatorUtils.property(thatLocator, "containerId", rhsContainerId), lhsContainerId, rhsContainerId)) {
 				return false;
 			}
 		}

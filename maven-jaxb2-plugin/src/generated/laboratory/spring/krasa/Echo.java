@@ -1,10 +1,5 @@
 package laboratory.spring.krasa;
 
-import a.Main;
-import org.jvnet.jaxb2_commons.lang.*;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
-import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -13,12 +8,19 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
+
+import a.Main;
 
 /**
- * <p>Java class for Echo complex type.
- * <p/>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p/>
+ * <p>
+ * Java class for Echo complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="Echo">
  *   &lt;complexContent>
@@ -31,14 +33,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Echo", propOrder = {
-		"message",
-		"main"
-})
-public class Echo
-		implements Equals, HashCode {
+@XmlType(name = "Echo", propOrder = { "message", "main" })
+public class Echo implements Equals, HashCode {
 
 	@XmlElement(name = "Message", required = true)
 	@NotNull
@@ -51,9 +51,9 @@ public class Echo
 
 	/**
 	 * Gets the value of the message property.
-	 *
-	 * @return possible object is
-	 * {@link String }
+	 * 
+	 * @return possible object is {@link String }
+	 * 
 	 */
 	public String getMessage() {
 		return message;
@@ -61,9 +61,10 @@ public class Echo
 
 	/**
 	 * Sets the value of the message property.
-	 *
-	 * @param value allowed object is
-	 *              {@link String }
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
 	 */
 	public void setMessage(String value) {
 		this.message = value;
@@ -71,9 +72,9 @@ public class Echo
 
 	/**
 	 * Gets the value of the main property.
-	 *
-	 * @return possible object is
-	 * {@link Main }
+	 * 
+	 * @return possible object is {@link Main }
+	 * 
 	 */
 	public Main getMain() {
 		return main;
@@ -81,9 +82,10 @@ public class Echo
 
 	/**
 	 * Sets the value of the main property.
-	 *
-	 * @param value allowed object is
-	 *              {@link Main }
+	 * 
+	 * @param value
+	 *            allowed object is {@link Main }
+	 * 
 	 */
 	public void setMain(Main value) {
 		this.main = value;
@@ -94,12 +96,14 @@ public class Echo
 		{
 			String theMessage;
 			theMessage = this.getMessage();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "message", theMessage), currentHashCode, theMessage);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "message", theMessage), currentHashCode,
+					theMessage);
 		}
 		{
 			Main theMain;
 			theMain = this.getMain();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "main", theMain), currentHashCode, theMain);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "main", theMain), currentHashCode,
+					theMain);
 		}
 		return currentHashCode;
 	}
@@ -122,7 +126,8 @@ public class Echo
 			lhsMessage = this.getMessage();
 			String rhsMessage;
 			rhsMessage = that.getMessage();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "message", lhsMessage), LocatorUtils.property(thatLocator, "message", rhsMessage), lhsMessage, rhsMessage)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "message", lhsMessage),
+					LocatorUtils.property(thatLocator, "message", rhsMessage), lhsMessage, rhsMessage)) {
 				return false;
 			}
 		}
@@ -131,7 +136,8 @@ public class Echo
 			lhsMain = this.getMain();
 			Main rhsMain;
 			rhsMain = that.getMain();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "main", lhsMain), LocatorUtils.property(thatLocator, "main", rhsMain), lhsMain, rhsMain)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "main", lhsMain),
+					LocatorUtils.property(thatLocator, "main", rhsMain), lhsMain, rhsMain)) {
 				return false;
 			}
 		}
