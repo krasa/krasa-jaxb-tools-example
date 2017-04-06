@@ -1,4 +1,3 @@
-
 package a;
 
 import javax.validation.constraints.NotNull;

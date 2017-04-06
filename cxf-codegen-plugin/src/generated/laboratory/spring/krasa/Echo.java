@@ -1,4 +1,3 @@
-
 package laboratory.spring.krasa;
 
 import javax.validation.Valid;
