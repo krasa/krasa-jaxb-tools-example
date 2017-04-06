@@ -142,7 +142,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link Main }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link Main }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "a", name = "main")
@@ -151,7 +151,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "a", name = "Tea", scope = ChoicesWithMinMax.class)
@@ -160,7 +160,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "a", name = "Coffee", scope = ChoicesWithMinMax.class)

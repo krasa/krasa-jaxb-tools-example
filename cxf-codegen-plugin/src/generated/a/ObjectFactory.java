@@ -30,51 +30,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ChoicesWithMinMax }
-	 * 
-	 */
-	public ChoicesWithMinMax createChoicesWithMinMax() {
-		return new ChoicesWithMinMax();
-	}
-
-	/**
-	 * Create an instance of {@link Enumeration }
-	 * 
-	 */
-	public Enumeration createEnumeration() {
-		return new Enumeration();
-	}
-
-	/**
 	 * Create an instance of {@link Choices }
 	 * 
 	 */
 	public Choices createChoices() {
 		return new Choices();
-	}
-
-	/**
-	 * Create an instance of {@link Tea }
-	 * 
-	 */
-	public Tea createTea() {
-		return new Tea();
-	}
-
-	/**
-	 * Create an instance of {@link ComplexChoices }
-	 * 
-	 */
-	public ComplexChoices createComplexChoices() {
-		return new ComplexChoices();
-	}
-
-	/**
-	 * Create an instance of {@link Dates }
-	 * 
-	 */
-	public Dates createDates() {
-		return new Dates();
 	}
 
 	/**
@@ -86,11 +46,51 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link Tea }
+	 * 
+	 */
+	public Tea createTea() {
+		return new Tea();
+	}
+
+	/**
+	 * Create an instance of {@link NumberWithCode }
+	 * 
+	 */
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
+	}
+
+	/**
+	 * Create an instance of {@link ChoicesWithMinMax }
+	 * 
+	 */
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link Coffee }
+	 * 
+	 */
+	public Coffee createCoffee() {
+		return new Coffee();
+	}
+
+	/**
 	 * Create an instance of {@link Numbers }
 	 * 
 	 */
 	public Numbers createNumbers() {
 		return new Numbers();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoices }
+	 * 
+	 */
+	public ComplexChoices createComplexChoices() {
+		return new ComplexChoices();
 	}
 
 	/**
@@ -110,19 +110,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Coffee }
+	 * Create an instance of {@link Enumeration }
 	 * 
 	 */
-	public Coffee createCoffee() {
-		return new Coffee();
-	}
-
-	/**
-	 * Create an instance of {@link NumberWithCode }
-	 * 
-	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
+	public Enumeration createEnumeration() {
+		return new Enumeration();
 	}
 
 	/**
@@ -142,7 +134,15 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link Main }{@code >}
+	 * Create an instance of {@link Dates }
+	 * 
+	 */
+	public Dates createDates() {
+		return new Dates();
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link Main }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "a", name = "main")
@@ -151,7 +151,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "a", name = "Tea", scope = ChoicesWithMinMax.class)
@@ -160,7 +160,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "a", name = "Coffee", scope = ChoicesWithMinMax.class)

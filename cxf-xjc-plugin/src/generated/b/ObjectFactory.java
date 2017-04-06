@@ -38,38 +38,6 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link PackageRefElement }
-	 * 
-	 */
-	public PackageRefElement createPackageRefElement() {
-		return new PackageRefElement();
-	}
-
-	/**
-	 * Create an instance of {@link StandardAddressElement }
-	 * 
-	 */
-	public StandardAddressElement createStandardAddressElement() {
-		return new StandardAddressElement();
-	}
-
-	/**
-	 * Create an instance of {@link MpuResponseElement }
-	 * 
-	 */
-	public MpuResponseElement createMpuResponseElement() {
-		return new MpuResponseElement();
-	}
-
-	/**
-	 * Create an instance of {@link ContainerElement }
-	 * 
-	 */
-	public ContainerElement createContainerElement() {
-		return new ContainerElement();
-	}
-
-	/**
 	 * Create an instance of {@link EncodeRequest }
 	 * 
 	 */
@@ -86,43 +54,19 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link WeightElement }
+	 * 
+	 */
+	public WeightElement createWeightElement() {
+		return new WeightElement();
+	}
+
+	/**
 	 * Create an instance of {@link LabelDetailElement }
 	 * 
 	 */
 	public LabelDetailElement createLabelDetailElement() {
 		return new LabelDetailElement();
-	}
-
-	/**
-	 * Create an instance of {@link AbstractRequest }
-	 * 
-	 */
-	public AbstractRequest createAbstractRequest() {
-		return new AbstractRequest();
-	}
-
-	/**
-	 * Create an instance of {@link EncodeRequest.MpuList }
-	 * 
-	 */
-	public EncodeRequest.MpuList createEncodeRequestMpuList() {
-		return new EncodeRequest.MpuList();
-	}
-
-	/**
-	 * Create an instance of {@link MpuResponseElement.ErrorList }
-	 * 
-	 */
-	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
-		return new MpuResponseElement.ErrorList();
-	}
-
-	/**
-	 * Create an instance of {@link MpuElement }
-	 * 
-	 */
-	public MpuElement createMpuElement() {
-		return new MpuElement();
 	}
 
 	/**
@@ -134,6 +78,22 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link EncodeRequest.MpuList }
+	 * 
+	 */
+	public EncodeRequest.MpuList createEncodeRequestMpuList() {
+		return new EncodeRequest.MpuList();
+	}
+
+	/**
+	 * Create an instance of {@link ContainerElement }
+	 * 
+	 */
+	public ContainerElement createContainerElement() {
+		return new ContainerElement();
+	}
+
+	/**
 	 * Create an instance of {@link AddressElement }
 	 * 
 	 */
@@ -142,15 +102,55 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link WeightElement }
+	 * Create an instance of {@link PackageRefElement }
 	 * 
 	 */
-	public WeightElement createWeightElement() {
-		return new WeightElement();
+	public PackageRefElement createPackageRefElement() {
+		return new PackageRefElement();
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link MpuResponseElement }{@code >}
+	 * Create an instance of {@link MpuElement }
+	 * 
+	 */
+	public MpuElement createMpuElement() {
+		return new MpuElement();
+	}
+
+	/**
+	 * Create an instance of {@link StandardAddressElement }
+	 * 
+	 */
+	public StandardAddressElement createStandardAddressElement() {
+		return new StandardAddressElement();
+	}
+
+	/**
+	 * Create an instance of {@link AbstractRequest }
+	 * 
+	 */
+	public AbstractRequest createAbstractRequest() {
+		return new AbstractRequest();
+	}
+
+	/**
+	 * Create an instance of {@link MpuResponseElement.ErrorList }
+	 * 
+	 */
+	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
+		return new MpuResponseElement.ErrorList();
+	}
+
+	/**
+	 * Create an instance of {@link MpuResponseElement }
+	 * 
+	 */
+	public MpuResponseElement createMpuResponseElement() {
+		return new MpuResponseElement();
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link MpuResponseElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "Response")
@@ -159,7 +159,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link EncodeRequest }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link EncodeRequest }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "EncodeRequest")
@@ -168,7 +168,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link FreeFormAddressElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link FreeFormAddressElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "FreeFormAddress")
@@ -178,7 +178,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link StandardAddressElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link StandardAddressElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "StandardAddress")
@@ -188,7 +188,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link ContainerElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link ContainerElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "Container")
@@ -197,7 +197,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link MpuElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link MpuElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "Mpu")
@@ -206,7 +206,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link AddressElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link AddressElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "Address")
@@ -215,7 +215,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link ImpbElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link ImpbElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "Impb")
@@ -224,7 +224,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link LabelDetailElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link LabelDetailElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "LabelDetail")
@@ -233,7 +233,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link PackageRefElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link PackageRefElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "PackageRef")
@@ -242,7 +242,7 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link WeightElement }{@code >}
+	 * Create an instance of {@link JAXBElement }{@code <}{@link WeightElement }{@code >}}
 	 * 
 	 */
 	@XmlElementDecl(namespace = "", name = "Weight")
