@@ -1,5 +1,7 @@
 package a;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -8,7 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 
 /**
  * <p>
@@ -36,8 +37,9 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Choices", propOrder = { "tea", "coffee" })
-public class Choices implements Equals, HashCode {
+public class Choices implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlElement(name = "Tea")
 	protected String tea;
 	@XmlElement(name = "Coffee")

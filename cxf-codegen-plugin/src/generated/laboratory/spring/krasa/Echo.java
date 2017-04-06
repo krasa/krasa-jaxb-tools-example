@@ -1,5 +1,7 @@
 package laboratory.spring.krasa;
 
+import java.io.Serializable;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -13,7 +15,6 @@ import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 import a.Main;
-
 
 /**
  * <p>
@@ -39,8 +40,9 @@ import a.Main;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Echo", propOrder = { "message", "main" })
-public class Echo implements Equals, HashCode {
+public class Echo implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlElement(name = "Message", required = true)
 	@NotNull
 	@Size(min = 0, max = 1024)

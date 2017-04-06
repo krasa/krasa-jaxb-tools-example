@@ -1,5 +1,6 @@
 package a;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,6 @@ import javax.xml.bind.annotation.*;
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 
 /**
  * <p>
@@ -37,11 +37,12 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ComplexChoicesWithMinMax", propOrder = { "teaOrCoffee" })
-public class ComplexChoicesWithMinMax implements Equals, HashCode {
+public class ComplexChoicesWithMinMax implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlElements({ @XmlElement(name = "Tea", type = Tea.class), @XmlElement(name = "Coffee", type = Coffee.class) })
 	@Size(min = 1, max = 2)
-	protected List<Object> teaOrCoffee;
+	protected List<Serializable> teaOrCoffee;
 
 	/**
 	 * Gets the value of the teaOrCoffee property.
@@ -64,9 +65,9 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 	 * 
 	 * 
 	 */
-	public List<Object> getTeaOrCoffee() {
+	public List<Serializable> getTeaOrCoffee() {
 		if (teaOrCoffee == null) {
-			teaOrCoffee = new ArrayList<Object>();
+			teaOrCoffee = new ArrayList<Serializable>();
 		}
 		return this.teaOrCoffee;
 	}
@@ -74,7 +75,7 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = 1;
 		{
-			List<Object> theTeaOrCoffee;
+			List<Serializable> theTeaOrCoffee;
 			theTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee()
 					: null);
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "teaOrCoffee", theTeaOrCoffee),
@@ -98,10 +99,10 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 		}
 		final ComplexChoicesWithMinMax that = ((ComplexChoicesWithMinMax) object);
 		{
-			List<Object> lhsTeaOrCoffee;
+			List<Serializable> lhsTeaOrCoffee;
 			lhsTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee()
 					: null);
-			List<Object> rhsTeaOrCoffee;
+			List<Serializable> rhsTeaOrCoffee;
 			rhsTeaOrCoffee = (((that.teaOrCoffee != null) && (!that.teaOrCoffee.isEmpty())) ? that.getTeaOrCoffee()
 					: null);
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "teaOrCoffee", lhsTeaOrCoffee),

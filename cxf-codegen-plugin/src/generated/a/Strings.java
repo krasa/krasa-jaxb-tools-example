@@ -1,5 +1,6 @@
 package a;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 
 /**
  * <p>
@@ -45,8 +45,9 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Strings", propOrder = { "faxNumber", "pattern", "idType", "genericString", "maxLength", "minLength",
 		"someCollection" })
-public class Strings implements Equals, HashCode {
+public class Strings implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlElement(required = true)
 	@NotNull
 	@Pattern(regexp = "[0-9]")

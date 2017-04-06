@@ -1,5 +1,6 @@
 package a;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,6 @@ import javax.xml.bind.annotation.*;
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 
 /**
  * <p>
@@ -37,8 +37,9 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ChoicesWithMinMax", propOrder = { "teaOrCoffee" })
-public class ChoicesWithMinMax implements Equals, HashCode {
+public class ChoicesWithMinMax implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlElementRefs({ @XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class),
 			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class) })
 	protected List<JAXBElement<String>> teaOrCoffee;

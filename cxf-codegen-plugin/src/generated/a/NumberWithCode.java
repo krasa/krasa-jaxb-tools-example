@@ -1,12 +1,13 @@
 package a;
 
+import java.io.Serializable;
+
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.*;
 
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 
 /**
  * <p>
@@ -29,8 +30,9 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NumberWithCode", propOrder = { "value" })
-public class NumberWithCode implements Equals, HashCode {
+public class NumberWithCode implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlValue
 	@Size(min = 1, max = 5)
 	protected String value;

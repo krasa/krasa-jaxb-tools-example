@@ -1,5 +1,7 @@
 package a;
 
+import java.io.Serializable;
+
 import javax.validation.Valid;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
@@ -14,7 +16,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 
 /**
  * <p>
@@ -50,8 +51,9 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Main", propOrder = { "numbers", "strings", "unsignedByte", "choices", "complexChoices",
 		"choicesWithMinMax", "complexChoicesWithMinMax", "enumerations", "enumeration", "array", "primitives" })
-public class Main implements Equals, HashCode {
+public class Main implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlElement(required = true)
 	@javax.validation.constraints.NotNull
 	@Valid

@@ -1,5 +1,7 @@
 package a;
 
+import java.io.Serializable;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,7 +12,6 @@ import javax.xml.bind.annotation.XmlType;
 import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
-
 
 /**
  * <p>
@@ -41,8 +42,9 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Enumeration", propOrder = { "foo" })
-public class Enumeration implements Equals, HashCode {
+public class Enumeration implements Serializable, Equals, HashCode {
 
+	private final static long serialVersionUID = 1L;
 	@XmlElement(required = true)
 	@NotNull
 	@Pattern(regexp = "N05")
