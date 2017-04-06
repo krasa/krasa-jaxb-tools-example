@@ -10,6 +10,7 @@ import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
+
 /**
  * <p>
  * Java class for ComplexChoicesWithMinMax complex type.
@@ -38,7 +39,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "ComplexChoicesWithMinMax", propOrder = { "teaOrCoffee" })
 public class ComplexChoicesWithMinMax implements Equals, HashCode {
 
-	@XmlElements({ @XmlElement(name = "Coffee", type = Coffee.class), @XmlElement(name = "Tea", type = Tea.class) })
+	@XmlElements({ @XmlElement(name = "Tea", type = Tea.class), @XmlElement(name = "Coffee", type = Coffee.class) })
 	@Size(min = 1, max = 2)
 	protected List<Object> teaOrCoffee;
 
@@ -59,7 +60,7 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 	 * 
 	 * 
 	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Coffee } {@link Tea }
+	 * Objects of the following type(s) are allowed in the list {@link Tea } {@link Coffee }
 	 * 
 	 * 
 	 */

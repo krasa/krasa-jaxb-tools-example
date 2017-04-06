@@ -10,6 +10,7 @@ import org.jvnet.jaxb2_commons.lang.*;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
+
 /**
  * <p>
  * Java class for ChoicesWithMinMax complex type.
@@ -38,8 +39,8 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "ChoicesWithMinMax", propOrder = { "teaOrCoffee" })
 public class ChoicesWithMinMax implements Equals, HashCode {
 
-	@XmlElementRefs({ @XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class),
-			@XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class) })
+	@XmlElementRefs({ @XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class),
+			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class) })
 	protected List<JAXBElement<String>> teaOrCoffee;
 
 	/**

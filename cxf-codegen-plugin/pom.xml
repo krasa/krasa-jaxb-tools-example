@@ -63,7 +63,8 @@
                                     <extraargs>
                                         <extraarg>-verbose</extraarg>
                                         <extraarg>-frontend</extraarg>
-                                        <extraarg>jaxws21</extraarg>
+                                        <extraarg>krasa</extraarg>
+                                        <extraarg>-xjc-XJsr303Annotations:generateServiceValidationAnnotations=InOut</extraarg>
                                         <extraarg>-b</extraarg>
                                         <extraarg>${project.parent.basedir}/wsdl/jaxws-Hello.xml</extraarg>
                                         <extraarg>-xjc-XReplacePrimitives</extraarg>

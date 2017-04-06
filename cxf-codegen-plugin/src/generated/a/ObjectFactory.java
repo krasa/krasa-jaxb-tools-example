@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 
+
 /**
  * This object contains factory methods for each Java content interface and Java element interface generated in the a
  * package.
@@ -30,11 +31,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Choices }
+	 * Create an instance of {@link Primitives }
 	 * 
 	 */
-	public Choices createChoices() {
-		return new Choices();
+	public Primitives createPrimitives() {
+		return new Primitives();
 	}
 
 	/**
@@ -46,35 +47,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Tea }
+	 * Create an instance of {@link Main }
 	 * 
 	 */
-	public Tea createTea() {
-		return new Tea();
-	}
-
-	/**
-	 * Create an instance of {@link NumberWithCode }
-	 * 
-	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
-	}
-
-	/**
-	 * Create an instance of {@link ChoicesWithMinMax }
-	 * 
-	 */
-	public ChoicesWithMinMax createChoicesWithMinMax() {
-		return new ChoicesWithMinMax();
-	}
-
-	/**
-	 * Create an instance of {@link Coffee }
-	 * 
-	 */
-	public Coffee createCoffee() {
-		return new Coffee();
+	public Main createMain() {
+		return new Main();
 	}
 
 	/**
@@ -86,27 +63,19 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ComplexChoices }
+	 * Create an instance of {@link Dates }
 	 * 
 	 */
-	public ComplexChoices createComplexChoices() {
-		return new ComplexChoices();
+	public Dates createDates() {
+		return new Dates();
 	}
 
 	/**
-	 * Create an instance of {@link Enumerations }
+	 * Create an instance of {@link Tea }
 	 * 
 	 */
-	public Enumerations createEnumerations() {
-		return new Enumerations();
-	}
-
-	/**
-	 * Create an instance of {@link Primitives }
-	 * 
-	 */
-	public Primitives createPrimitives() {
-		return new Primitives();
+	public Tea createTea() {
+		return new Tea();
 	}
 
 	/**
@@ -118,6 +87,22 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link NumberWithCode }
+	 * 
+	 */
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoices }
+	 * 
+	 */
+	public ComplexChoices createComplexChoices() {
+		return new ComplexChoices();
+	}
+
+	/**
 	 * Create an instance of {@link ComplexChoicesWithMinMax }
 	 * 
 	 */
@@ -126,19 +111,35 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Main }
+	 * Create an instance of {@link Choices }
 	 * 
 	 */
-	public Main createMain() {
-		return new Main();
+	public Choices createChoices() {
+		return new Choices();
 	}
 
 	/**
-	 * Create an instance of {@link Dates }
+	 * Create an instance of {@link Coffee }
 	 * 
 	 */
-	public Dates createDates() {
-		return new Dates();
+	public Coffee createCoffee() {
+		return new Coffee();
+	}
+
+	/**
+	 * Create an instance of {@link ChoicesWithMinMax }
+	 * 
+	 */
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link Enumerations }
+	 * 
+	 */
+	public Enumerations createEnumerations() {
+		return new Enumerations();
 	}
 
 	/**
