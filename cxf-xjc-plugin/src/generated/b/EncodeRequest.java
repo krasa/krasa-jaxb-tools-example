@@ -181,9 +181,8 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 		{
 			java.lang.Boolean theRejectAllOnError;
 			theRejectAllOnError = this.isRejectAllOnError();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "rejectAllOnError", theRejectAllOnError), currentHashCode,
-					theRejectAllOnError);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "rejectAllOnError", theRejectAllOnError),
+					currentHashCode, theRejectAllOnError);
 		}
 		{
 			EncodeRequest.MpuList theMpuList;
@@ -199,7 +198,8 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof EncodeRequest)) {
 			return false;
 		}
@@ -236,7 +236,8 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 			java.lang.Boolean rhsHaltOnError;
 			rhsHaltOnError = that.isHaltOnError();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "haltOnError", lhsHaltOnError),
-					LocatorUtils.property(thatLocator, "haltOnError", rhsHaltOnError), lhsHaltOnError, rhsHaltOnError)) {
+					LocatorUtils.property(thatLocator, "haltOnError", rhsHaltOnError), lhsHaltOnError,
+					rhsHaltOnError)) {
 				return false;
 			}
 		}

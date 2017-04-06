@@ -85,7 +85,8 @@ public class ChoicesWithMinMax implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof ChoicesWithMinMax)) {
 			return false;
 		}
@@ -101,7 +102,8 @@ public class ChoicesWithMinMax implements Equals, HashCode {
 			rhsTeaOrCoffee = (((that.teaOrCoffee != null) && (!that.teaOrCoffee.isEmpty())) ? that.getTeaOrCoffee()
 					: null);
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "teaOrCoffee", lhsTeaOrCoffee),
-					LocatorUtils.property(thatLocator, "teaOrCoffee", rhsTeaOrCoffee), lhsTeaOrCoffee, rhsTeaOrCoffee)) {
+					LocatorUtils.property(thatLocator, "teaOrCoffee", rhsTeaOrCoffee), lhsTeaOrCoffee,
+					rhsTeaOrCoffee)) {
 				return false;
 			}
 		}

@@ -378,7 +378,8 @@ public class Main implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof Main)) {
 			return false;
 		}
@@ -444,8 +445,8 @@ public class Main implements Equals, HashCode {
 			ChoicesWithMinMax rhsChoicesWithMinMax;
 			rhsChoicesWithMinMax = that.getChoicesWithMinMax();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "choicesWithMinMax", lhsChoicesWithMinMax),
-					LocatorUtils.property(thatLocator, "choicesWithMinMax", rhsChoicesWithMinMax),
-					lhsChoicesWithMinMax, rhsChoicesWithMinMax)) {
+					LocatorUtils.property(thatLocator, "choicesWithMinMax", rhsChoicesWithMinMax), lhsChoicesWithMinMax,
+					rhsChoicesWithMinMax)) {
 				return false;
 			}
 		}
@@ -478,7 +479,8 @@ public class Main implements Equals, HashCode {
 			Enumeration rhsEnumeration;
 			rhsEnumeration = that.getEnumeration();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "enumeration", lhsEnumeration),
-					LocatorUtils.property(thatLocator, "enumeration", rhsEnumeration), lhsEnumeration, rhsEnumeration)) {
+					LocatorUtils.property(thatLocator, "enumeration", rhsEnumeration), lhsEnumeration,
+					rhsEnumeration)) {
 				return false;
 			}
 		}

@@ -373,9 +373,8 @@ public class LabelDetailElement implements Equals, HashCode {
 		{
 			AddressElement theCorrectedAddress;
 			theCorrectedAddress = this.getCorrectedAddress();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "correctedAddress", theCorrectedAddress), currentHashCode,
-					theCorrectedAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "correctedAddress", theCorrectedAddress),
+					currentHashCode, theCorrectedAddress);
 		}
 		{
 			String theMailTypeCode;
@@ -405,9 +404,8 @@ public class LabelDetailElement implements Equals, HashCode {
 		{
 			String theOutboundSortCode;
 			theOutboundSortCode = this.getOutboundSortCode();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "outboundSortCode", theOutboundSortCode), currentHashCode,
-					theOutboundSortCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "outboundSortCode", theOutboundSortCode),
+					currentHashCode, theOutboundSortCode);
 		}
 		{
 			String theSortingSetupVersion;
@@ -449,7 +447,8 @@ public class LabelDetailElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof LabelDetailElement)) {
 			return false;
 		}

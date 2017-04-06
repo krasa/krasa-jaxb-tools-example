@@ -290,7 +290,8 @@ public class StandardAddressElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof StandardAddressElement)) {
 			return false;
 		}
@@ -374,7 +375,8 @@ public class StandardAddressElement implements Equals, HashCode {
 			String rhsCountryCode;
 			rhsCountryCode = that.getCountryCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "countryCode", lhsCountryCode),
-					LocatorUtils.property(thatLocator, "countryCode", rhsCountryCode), lhsCountryCode, rhsCountryCode)) {
+					LocatorUtils.property(thatLocator, "countryCode", rhsCountryCode), lhsCountryCode,
+					rhsCountryCode)) {
 				return false;
 			}
 		}

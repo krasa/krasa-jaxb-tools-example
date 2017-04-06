@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <wsdl:definitions name="Hello" xmlns:m="http://krasa.spring.laboratory/" xmlns:a="a"
-				  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-				  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-				  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
-				  targetNamespace="http://krasa.spring.laboratory/">
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  targetNamespace="http://krasa.spring.laboratory/">
 
 
-	<wsdl:types>
-		<xsd:schema targetNamespace="http://krasa.spring.laboratory/" xmlns:a="a">
-			<xsd:import schemaLocation="../schema/a.xsd" namespace="a"/>
-			<xsd:complexType name="Echo">
-				<xsd:sequence>
-					<xsd:element name="Message" type="m:genericString" maxOccurs="1" minOccurs="1"/>
-					<xsd:element name="main" type="a:Main" maxOccurs="1" minOccurs="1"/>
-				</xsd:sequence>
-			</xsd:complexType>
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://krasa.spring.laboratory/" xmlns:a="a">
+            <xsd:import schemaLocation="../schema/a.xsd" namespace="a"/>
+            <xsd:complexType name="Echo">
+                <xsd:sequence>
+                    <xsd:element name="Message" type="m:genericString" maxOccurs="1" minOccurs="1"/>
+                    <xsd:element name="main" type="a:Main" maxOccurs="1" minOccurs="1"/>
+                </xsd:sequence>
+            </xsd:complexType>
 
-			<xsd:complexType name="EchoResponse">
-				<xsd:sequence>
-					<xsd:element name="OriginalMessage" type="m:genericString" maxOccurs="1" minOccurs="1">
-					</xsd:element>
-				</xsd:sequence>
-			</xsd:complexType>
+            <xsd:complexType name="EchoResponse">
+                <xsd:sequence>
+                    <xsd:element name="OriginalMessage" type="m:genericString" maxOccurs="1" minOccurs="1">
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
 
-			<xsd:simpleType name="genericString">
-				<xsd:restriction base="xsd:string">
-					<xsd:minLength value="0"/>
-					<xsd:maxLength value="1024"/>
-				</xsd:restriction>
-			</xsd:simpleType>
-		</xsd:schema>
-	</wsdl:types>
-
-
-	<!-- Message Definitions. -->
-
-	<wsdl:message name="Echo">
-		<wsdl:part name="parameters" type="m:Echo"/>
-	</wsdl:message>
-	<wsdl:message name="EchoResponse">
-		<wsdl:part name="parameters" type="m:EchoResponse"/>
-	</wsdl:message>
+            <xsd:simpleType name="genericString">
+                <xsd:restriction base="xsd:string">
+                    <xsd:minLength value="0"/>
+                    <xsd:maxLength value="1024"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:schema>
+    </wsdl:types>
 
 
-	<!-- Port Definitions -->
+    <!-- Message Definitions. -->
 
-	<wsdl:portType name="Hello">
-
-		<wsdl:operation name="Echo">
-			<wsdl:input name="Echo" message="m:Echo"/>
-			<wsdl:output name="EchoResponse" message="m:EchoResponse"/>
-		</wsdl:operation>
-
-	</wsdl:portType>
+    <wsdl:message name="Echo">
+        <wsdl:part name="parameters" type="m:Echo"/>
+    </wsdl:message>
+    <wsdl:message name="EchoResponse">
+        <wsdl:part name="parameters" type="m:EchoResponse"/>
+    </wsdl:message>
 
 
-	<!-- Binding Definitions. -->
+    <!-- Port Definitions -->
 
-	<wsdl:binding name="HelloSOAP" type="m:Hello">
-		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-		<wsdl:operation name="Echo">
-			<soap:operation soapAction=""/>
-			<wsdl:input>
-				<soap:body use="literal" namespace="http://krasa.spring.laboratory/"/>
-			</wsdl:input>
-			<wsdl:output>
-				<soap:body use="literal" namespace="http://krasa.spring.laboratory/"/>
-			</wsdl:output>
-		</wsdl:operation>
+    <wsdl:portType name="Hello">
 
-	</wsdl:binding>
+        <wsdl:operation name="Echo">
+            <wsdl:input name="Echo" message="m:Echo"/>
+            <wsdl:output name="EchoResponse" message="m:EchoResponse"/>
+        </wsdl:operation>
+
+    </wsdl:portType>
 
 
-	<!-- Service Definitions. -->
+    <!-- Binding Definitions. -->
 
-	<wsdl:service name="Hello">
-		<wsdl:port binding="m:HelloSOAP" name="HelloSOAP">
-			<soap:address location="http://localhost:8080/hello"/>
-		</wsdl:port>
-	</wsdl:service>
+    <wsdl:binding name="HelloSOAP" type="m:Hello">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Echo">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal" namespace="http://krasa.spring.laboratory/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" namespace="http://krasa.spring.laboratory/"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+    </wsdl:binding>
+
+
+    <!-- Service Definitions. -->
+
+    <wsdl:service name="Hello">
+        <wsdl:port binding="m:HelloSOAP" name="HelloSOAP">
+            <soap:address location="http://localhost:8080/hello"/>
+        </wsdl:port>
+    </wsdl:service>
 </wsdl:definitions>
 

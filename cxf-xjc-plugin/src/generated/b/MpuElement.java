@@ -467,9 +467,8 @@ public class MpuElement implements Equals, HashCode {
 		{
 			AddressElement theConsigneeAddress;
 			theConsigneeAddress = this.getConsigneeAddress();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "consigneeAddress", theConsigneeAddress), currentHashCode,
-					theConsigneeAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "consigneeAddress", theConsigneeAddress),
+					currentHashCode, theConsigneeAddress);
 		}
 		{
 			AddressElement theReturnAddress;
@@ -511,9 +510,8 @@ public class MpuElement implements Equals, HashCode {
 		{
 			Integer theThirdPartyBillTo;
 			theThirdPartyBillTo = this.getThirdPartyBillTo();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "thirdPartyBillTo", theThirdPartyBillTo), currentHashCode,
-					theThirdPartyBillTo);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "thirdPartyBillTo", theThirdPartyBillTo),
+					currentHashCode, theThirdPartyBillTo);
 		}
 		{
 			String theMailTypeCode;
@@ -530,9 +528,8 @@ public class MpuElement implements Equals, HashCode {
 		{
 			String theExpectedShipDate;
 			theExpectedShipDate = this.getExpectedShipDate();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "expectedShipDate", theExpectedShipDate), currentHashCode,
-					theExpectedShipDate);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "expectedShipDate", theExpectedShipDate),
+					currentHashCode, theExpectedShipDate);
 		}
 		{
 			ImpbElement theImpb;
@@ -566,7 +563,8 @@ public class MpuElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof MpuElement)) {
 			return false;
 		}
@@ -653,7 +651,8 @@ public class MpuElement implements Equals, HashCode {
 			String rhsBillingRef1;
 			rhsBillingRef1 = that.getBillingRef1();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef1", lhsBillingRef1),
-					LocatorUtils.property(thatLocator, "billingRef1", rhsBillingRef1), lhsBillingRef1, rhsBillingRef1)) {
+					LocatorUtils.property(thatLocator, "billingRef1", rhsBillingRef1), lhsBillingRef1,
+					rhsBillingRef1)) {
 				return false;
 			}
 		}
@@ -663,7 +662,8 @@ public class MpuElement implements Equals, HashCode {
 			String rhsBillingRef2;
 			rhsBillingRef2 = that.getBillingRef2();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef2", lhsBillingRef2),
-					LocatorUtils.property(thatLocator, "billingRef2", rhsBillingRef2), lhsBillingRef2, rhsBillingRef2)) {
+					LocatorUtils.property(thatLocator, "billingRef2", rhsBillingRef2), lhsBillingRef2,
+					rhsBillingRef2)) {
 				return false;
 			}
 		}

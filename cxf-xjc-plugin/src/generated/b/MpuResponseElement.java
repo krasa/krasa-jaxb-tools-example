@@ -236,7 +236,8 @@ public class MpuResponseElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof MpuResponseElement)) {
 			return false;
 		}
@@ -260,7 +261,8 @@ public class MpuResponseElement implements Equals, HashCode {
 			LabelDetailElement rhsLabelDetail;
 			rhsLabelDetail = that.getLabelDetail();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelDetail", lhsLabelDetail),
-					LocatorUtils.property(thatLocator, "labelDetail", rhsLabelDetail), lhsLabelDetail, rhsLabelDetail)) {
+					LocatorUtils.property(thatLocator, "labelDetail", rhsLabelDetail), lhsLabelDetail,
+					rhsLabelDetail)) {
 				return false;
 			}
 		}

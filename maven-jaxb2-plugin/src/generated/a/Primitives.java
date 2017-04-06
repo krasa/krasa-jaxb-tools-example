@@ -183,7 +183,8 @@ public class Primitives implements Equals, HashCode {
 		{
 			Integer theInt;
 			theInt = this.getInt();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_int", theInt), currentHashCode, theInt);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_int", theInt), currentHashCode,
+					theInt);
 		}
 		{
 			Long theLong;
@@ -194,8 +195,8 @@ public class Primitives implements Equals, HashCode {
 		{
 			Boolean theBoolean;
 			theBoolean = this.isBoolean();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_boolean", theBoolean),
-					currentHashCode, theBoolean);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_boolean", theBoolean), currentHashCode,
+					theBoolean);
 		}
 		{
 			Double theDouble;
@@ -229,7 +230,8 @@ public class Primitives implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof Primitives)) {
 			return false;
 		}

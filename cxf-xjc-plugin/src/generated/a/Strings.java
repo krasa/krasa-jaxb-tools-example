@@ -259,8 +259,8 @@ public class Strings implements Equals, HashCode {
 		}
 		{
 			List<Object> theSomeCollection;
-			theSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection()
-					: null);
+			theSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty()))
+					? this.getSomeCollection() : null);
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "someCollection", theSomeCollection),
 					currentHashCode, theSomeCollection);
 		}
@@ -272,7 +272,8 @@ public class Strings implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof Strings)) {
 			return false;
 		}
@@ -343,11 +344,11 @@ public class Strings implements Equals, HashCode {
 		}
 		{
 			List<Object> lhsSomeCollection;
-			lhsSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection()
-					: null);
+			lhsSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty()))
+					? this.getSomeCollection() : null);
 			List<Object> rhsSomeCollection;
-			rhsSomeCollection = (((that.someCollection != null) && (!that.someCollection.isEmpty())) ? that.getSomeCollection()
-					: null);
+			rhsSomeCollection = (((that.someCollection != null) && (!that.someCollection.isEmpty()))
+					? that.getSomeCollection() : null);
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "someCollection", lhsSomeCollection),
 					LocatorUtils.property(thatLocator, "someCollection", rhsSomeCollection), lhsSomeCollection,
 					rhsSomeCollection)) {

@@ -107,7 +107,8 @@ public class ContainerElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
+			EqualsStrategy strategy) {
 		if (!(object instanceof ContainerElement)) {
 			return false;
 		}
@@ -131,7 +132,8 @@ public class ContainerElement implements Equals, HashCode {
 			String rhsContainerId;
 			rhsContainerId = that.getContainerId();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerId", lhsContainerId),
-					LocatorUtils.property(thatLocator, "containerId", rhsContainerId), lhsContainerId, rhsContainerId)) {
+					LocatorUtils.property(thatLocator, "containerId", rhsContainerId), lhsContainerId,
+					rhsContainerId)) {
 				return false;
 			}
 		}
