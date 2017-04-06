@@ -38,35 +38,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link MpuResponseElement }
+	 * Create an instance of {@link FreeFormAddressElement }
 	 * 
 	 */
-	public MpuResponseElement createMpuResponseElement() {
-		return new MpuResponseElement();
-	}
-
-	/**
-	 * Create an instance of {@link WeightElement }
-	 * 
-	 */
-	public WeightElement createWeightElement() {
-		return new WeightElement();
-	}
-
-	/**
-	 * Create an instance of {@link EncodeRequest }
-	 * 
-	 */
-	public EncodeRequest createEncodeRequest() {
-		return new EncodeRequest();
-	}
-
-	/**
-	 * Create an instance of {@link PackageRefElement }
-	 * 
-	 */
-	public PackageRefElement createPackageRefElement() {
-		return new PackageRefElement();
+	public FreeFormAddressElement createFreeFormAddressElement() {
+		return new FreeFormAddressElement();
 	}
 
 	/**
@@ -78,19 +54,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link AddressElement }
+	 * Create an instance of {@link PackageRefElement }
 	 * 
 	 */
-	public AddressElement createAddressElement() {
-		return new AddressElement();
-	}
-
-	/**
-	 * Create an instance of {@link MpuResponseElement.ErrorList }
-	 * 
-	 */
-	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
-		return new MpuResponseElement.ErrorList();
+	public PackageRefElement createPackageRefElement() {
+		return new PackageRefElement();
 	}
 
 	/**
@@ -102,14 +70,6 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link MpuElement }
-	 * 
-	 */
-	public MpuElement createMpuElement() {
-		return new MpuElement();
-	}
-
-	/**
 	 * Create an instance of {@link LabelDetailElement }
 	 * 
 	 */
@@ -118,19 +78,19 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ContainerElement }
+	 * Create an instance of {@link EncodeRequest }
 	 * 
 	 */
-	public ContainerElement createContainerElement() {
-		return new ContainerElement();
+	public EncodeRequest createEncodeRequest() {
+		return new EncodeRequest();
 	}
 
 	/**
-	 * Create an instance of {@link FreeFormAddressElement }
+	 * Create an instance of {@link MpuResponseElement }
 	 * 
 	 */
-	public FreeFormAddressElement createFreeFormAddressElement() {
-		return new FreeFormAddressElement();
+	public MpuResponseElement createMpuResponseElement() {
+		return new MpuResponseElement();
 	}
 
 	/**
@@ -147,6 +107,46 @@ public class ObjectFactory {
 	 */
 	public EncodeRequest.MpuList createEncodeRequestMpuList() {
 		return new EncodeRequest.MpuList();
+	}
+
+	/**
+	 * Create an instance of {@link MpuElement }
+	 * 
+	 */
+	public MpuElement createMpuElement() {
+		return new MpuElement();
+	}
+
+	/**
+	 * Create an instance of {@link AddressElement }
+	 * 
+	 */
+	public AddressElement createAddressElement() {
+		return new AddressElement();
+	}
+
+	/**
+	 * Create an instance of {@link WeightElement }
+	 * 
+	 */
+	public WeightElement createWeightElement() {
+		return new WeightElement();
+	}
+
+	/**
+	 * Create an instance of {@link ContainerElement }
+	 * 
+	 */
+	public ContainerElement createContainerElement() {
+		return new ContainerElement();
+	}
+
+	/**
+	 * Create an instance of {@link MpuResponseElement.ErrorList }
+	 * 
+	 */
+	public MpuResponseElement.ErrorList createMpuResponseElementErrorList() {
+		return new MpuResponseElement.ErrorList();
 	}
 
 	/**

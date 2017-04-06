@@ -30,99 +30,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Tea }
-	 * 
-	 */
-	public Tea createTea() {
-		return new Tea();
-	}
-
-	/**
-	 * Create an instance of {@link Main }
-	 * 
-	 */
-	public Main createMain() {
-		return new Main();
-	}
-
-	/**
-	 * Create an instance of {@link Enumeration }
-	 * 
-	 */
-	public Enumeration createEnumeration() {
-		return new Enumeration();
-	}
-
-	/**
-	 * Create an instance of {@link Dates }
-	 * 
-	 */
-	public Dates createDates() {
-		return new Dates();
-	}
-
-	/**
-	 * Create an instance of {@link Numbers }
-	 * 
-	 */
-	public Numbers createNumbers() {
-		return new Numbers();
-	}
-
-	/**
 	 * Create an instance of {@link ComplexChoices }
 	 * 
 	 */
 	public ComplexChoices createComplexChoices() {
 		return new ComplexChoices();
-	}
-
-	/**
-	 * Create an instance of {@link ChoicesWithMinMax }
-	 * 
-	 */
-	public ChoicesWithMinMax createChoicesWithMinMax() {
-		return new ChoicesWithMinMax();
-	}
-
-	/**
-	 * Create an instance of {@link ComplexChoicesWithMinMax }
-	 * 
-	 */
-	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
-		return new ComplexChoicesWithMinMax();
-	}
-
-	/**
-	 * Create an instance of {@link Primitives }
-	 * 
-	 */
-	public Primitives createPrimitives() {
-		return new Primitives();
-	}
-
-	/**
-	 * Create an instance of {@link Enumerations }
-	 * 
-	 */
-	public Enumerations createEnumerations() {
-		return new Enumerations();
-	}
-
-	/**
-	 * Create an instance of {@link Coffee }
-	 * 
-	 */
-	public Coffee createCoffee() {
-		return new Coffee();
-	}
-
-	/**
-	 * Create an instance of {@link NumberWithCode }
-	 * 
-	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
 	}
 
 	/**
@@ -134,11 +46,99 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link Numbers }
+	 * 
+	 */
+	public Numbers createNumbers() {
+		return new Numbers();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoicesWithMinMax }
+	 * 
+	 */
+	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
+		return new ComplexChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link Enumeration }
+	 * 
+	 */
+	public Enumeration createEnumeration() {
+		return new Enumeration();
+	}
+
+	/**
+	 * Create an instance of {@link ChoicesWithMinMax }
+	 * 
+	 */
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link Enumerations }
+	 * 
+	 */
+	public Enumerations createEnumerations() {
+		return new Enumerations();
+	}
+
+	/**
+	 * Create an instance of {@link Tea }
+	 * 
+	 */
+	public Tea createTea() {
+		return new Tea();
+	}
+
+	/**
+	 * Create an instance of {@link Primitives }
+	 * 
+	 */
+	public Primitives createPrimitives() {
+		return new Primitives();
+	}
+
+	/**
+	 * Create an instance of {@link Main }
+	 * 
+	 */
+	public Main createMain() {
+		return new Main();
+	}
+
+	/**
+	 * Create an instance of {@link Coffee }
+	 * 
+	 */
+	public Coffee createCoffee() {
+		return new Coffee();
+	}
+
+	/**
 	 * Create an instance of {@link Choices }
 	 * 
 	 */
 	public Choices createChoices() {
 		return new Choices();
+	}
+
+	/**
+	 * Create an instance of {@link Dates }
+	 * 
+	 */
+	public Dates createDates() {
+		return new Dates();
+	}
+
+	/**
+	 * Create an instance of {@link NumberWithCode }
+	 * 
+	 */
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
 	}
 
 	/**

@@ -89,6 +89,7 @@
     <xsd:simpleType name="pattern">
         <xsd:restriction base="xsd:string">
             <xsd:pattern value="[0-9]"/>
+            <xsd:pattern value="[a-z]"/>
         </xsd:restriction>
     </xsd:simpleType>
 

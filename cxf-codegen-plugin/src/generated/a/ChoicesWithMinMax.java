@@ -40,8 +40,8 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 public class ChoicesWithMinMax implements Serializable, Equals, HashCode {
 
 	private final static long serialVersionUID = 1L;
-	@XmlElementRefs({ @XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class),
-			@XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class) })
+	@XmlElementRefs({ @XmlElementRef(name = "Coffee", namespace = "a", type = JAXBElement.class),
+			@XmlElementRef(name = "Tea", namespace = "a", type = JAXBElement.class) })
 	protected List<JAXBElement<String>> teaOrCoffee;
 
 	/**

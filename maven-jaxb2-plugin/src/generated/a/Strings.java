@@ -52,7 +52,7 @@ public class Strings implements Equals, HashCode {
 	protected String faxNumber;
 	@XmlElement(required = true)
 	@NotNull
-	@Pattern(regexp = "[0-9]")
+	@Pattern(regexp = "([0-9])|([a-z])")
 	protected String pattern;
 	@XmlElement(required = true)
 	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
