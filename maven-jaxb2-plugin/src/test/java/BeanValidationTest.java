@@ -24,5 +24,9 @@ public class BeanValidationTest {
 		}
 
 		assertTrue(validate.size() == 0);
+
+		bean.setMultiplePatternsWithBase("C");
+		validate = validator.validate(bean);
+		assertTrue(validate.size() == 1);
 	}
 }

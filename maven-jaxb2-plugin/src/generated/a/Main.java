@@ -1,8 +1,10 @@
+
 package a;
 
 import javax.validation.Valid;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -27,6 +29,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="multiplePatternsWithBase" type="{a}patternList" minOccurs="0"/>
  *         &lt;element name="numbers" type="{a}Numbers"/>
  *         &lt;element name="strings" type="{a}Strings"/>
  *         &lt;element name="unsignedByte" type="{a}unsignedByte"/>
@@ -47,10 +50,12 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Main", propOrder = { "numbers", "strings", "unsignedByte", "choices", "complexChoices", "choicesWithMinMax", "complexChoicesWithMinMax",
-		"enumerations", "enumeration", "array", "primitives" })
+@XmlType(name = "Main", propOrder = { "multiplePatternsWithBase", "numbers", "strings", "unsignedByte", "choices", "complexChoices", "choicesWithMinMax",
+		"complexChoicesWithMinMax", "enumerations", "enumeration", "array", "primitives" })
 public class Main implements Equals, HashCode {
 
+	@Pattern.List({ @Pattern(regexp = "[A-Z]"), @Pattern(regexp = "([0-9])|([A-B])") })
+	protected String multiplePatternsWithBase;
 	@XmlElement(required = true)
 	@javax.validation.constraints.NotNull
 	@Valid
@@ -96,6 +101,27 @@ public class Main implements Equals, HashCode {
 	@javax.validation.constraints.NotNull
 	@Valid
 	protected Primitives primitives;
+
+	/**
+	 * Gets the value of the multiplePatternsWithBase property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getMultiplePatternsWithBase() {
+		return multiplePatternsWithBase;
+	}
+
+	/**
+	 * Sets the value of the multiplePatternsWithBase property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setMultiplePatternsWithBase(String value) {
+		this.multiplePatternsWithBase = value;
+	}
 
 	/**
 	 * Gets the value of the numbers property.
@@ -326,6 +352,12 @@ public class Main implements Equals, HashCode {
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = 1;
 		{
+			String theMultiplePatternsWithBase;
+			theMultiplePatternsWithBase = this.getMultiplePatternsWithBase();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "multiplePatternsWithBase", theMultiplePatternsWithBase), currentHashCode,
+					theMultiplePatternsWithBase);
+		}
+		{
 			Numbers theNumbers;
 			theNumbers = this.getNumbers();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "numbers", theNumbers), currentHashCode, theNumbers);
@@ -398,6 +430,17 @@ public class Main implements Equals, HashCode {
 			return true;
 		}
 		final Main that = ((Main) object);
+		{
+			String lhsMultiplePatternsWithBase;
+			lhsMultiplePatternsWithBase = this.getMultiplePatternsWithBase();
+			String rhsMultiplePatternsWithBase;
+			rhsMultiplePatternsWithBase = that.getMultiplePatternsWithBase();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "multiplePatternsWithBase", lhsMultiplePatternsWithBase),
+					LocatorUtils.property(thatLocator, "multiplePatternsWithBase", rhsMultiplePatternsWithBase), lhsMultiplePatternsWithBase,
+					rhsMultiplePatternsWithBase)) {
+				return false;
+			}
+		}
 		{
 			Numbers lhsNumbers;
 			lhsNumbers = this.getNumbers();

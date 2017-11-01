@@ -1,3 +1,4 @@
+
 package laboratory.spring.krasa;
 
 import javax.validation.constraints.NotNull;

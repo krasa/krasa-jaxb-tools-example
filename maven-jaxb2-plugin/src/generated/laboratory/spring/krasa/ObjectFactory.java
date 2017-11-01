@@ -1,3 +1,4 @@
+
 package laboratory.spring.krasa;
 
 import javax.xml.bind.annotation.XmlRegistry;

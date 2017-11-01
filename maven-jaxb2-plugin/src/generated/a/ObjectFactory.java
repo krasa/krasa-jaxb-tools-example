@@ -1,3 +1,4 @@
+
 package a;
 
 import javax.xml.bind.JAXBElement;
@@ -18,6 +19,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+	private final static QName _PatternElement_QNAME = new QName("a", "patternElement");
 	private final static QName _Main_QNAME = new QName("a", "main");
 	private final static QName _ChoicesWithMinMaxTea_QNAME = new QName("a", "Tea");
 	private final static QName _ChoicesWithMinMaxCoffee_QNAME = new QName("a", "Coffee");
@@ -27,6 +29,14 @@ public class ObjectFactory {
 	 * 
 	 */
 	public ObjectFactory() {
+	}
+
+	/**
+	 * Create an instance of {@link PatternElement }
+	 * 
+	 */
+	public PatternElement createPatternElement() {
+		return new PatternElement();
 	}
 
 	/**
@@ -139,6 +149,15 @@ public class ObjectFactory {
 	 */
 	public Enumerations createEnumerations() {
 		return new Enumerations();
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link PatternElement }{@code >}}
+	 * 
+	 */
+	@XmlElementDecl(namespace = "a", name = "patternElement")
+	public JAXBElement<PatternElement> createPatternElement(PatternElement value) {
+		return new JAXBElement<PatternElement>(_PatternElement_QNAME, PatternElement.class, null, value);
 	}
 
 	/**

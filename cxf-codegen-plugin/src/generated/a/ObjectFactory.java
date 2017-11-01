@@ -1,3 +1,4 @@
+
 package a;
 
 import javax.xml.bind.JAXBElement;
@@ -18,6 +19,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+	private final static QName _PatternElement_QNAME = new QName("a", "patternElement");
 	private final static QName _Main_QNAME = new QName("a", "main");
 	private final static QName _ChoicesWithMinMaxTea_QNAME = new QName("a", "Tea");
 	private final static QName _ChoicesWithMinMaxCoffee_QNAME = new QName("a", "Coffee");
@@ -30,35 +32,19 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ComplexChoices }
+	 * Create an instance of {@link PatternElement }
 	 * 
 	 */
-	public ComplexChoices createComplexChoices() {
-		return new ComplexChoices();
+	public PatternElement createPatternElement() {
+		return new PatternElement();
 	}
 
 	/**
-	 * Create an instance of {@link Strings }
+	 * Create an instance of {@link Tea }
 	 * 
 	 */
-	public Strings createStrings() {
-		return new Strings();
-	}
-
-	/**
-	 * Create an instance of {@link Numbers }
-	 * 
-	 */
-	public Numbers createNumbers() {
-		return new Numbers();
-	}
-
-	/**
-	 * Create an instance of {@link ComplexChoicesWithMinMax }
-	 * 
-	 */
-	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
-		return new ComplexChoicesWithMinMax();
+	public Tea createTea() {
+		return new Tea();
 	}
 
 	/**
@@ -78,43 +64,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Enumerations }
+	 * Create an instance of {@link NumberWithCode }
 	 * 
 	 */
-	public Enumerations createEnumerations() {
-		return new Enumerations();
-	}
-
-	/**
-	 * Create an instance of {@link Tea }
-	 * 
-	 */
-	public Tea createTea() {
-		return new Tea();
-	}
-
-	/**
-	 * Create an instance of {@link Primitives }
-	 * 
-	 */
-	public Primitives createPrimitives() {
-		return new Primitives();
-	}
-
-	/**
-	 * Create an instance of {@link Main }
-	 * 
-	 */
-	public Main createMain() {
-		return new Main();
-	}
-
-	/**
-	 * Create an instance of {@link Coffee }
-	 * 
-	 */
-	public Coffee createCoffee() {
-		return new Coffee();
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
 	}
 
 	/**
@@ -134,11 +88,76 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link NumberWithCode }
+	 * Create an instance of {@link Enumerations }
 	 * 
 	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
+	public Enumerations createEnumerations() {
+		return new Enumerations();
+	}
+
+	/**
+	 * Create an instance of {@link Primitives }
+	 * 
+	 */
+	public Primitives createPrimitives() {
+		return new Primitives();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoices }
+	 * 
+	 */
+	public ComplexChoices createComplexChoices() {
+		return new ComplexChoices();
+	}
+
+	/**
+	 * Create an instance of {@link Main }
+	 * 
+	 */
+	public Main createMain() {
+		return new Main();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoicesWithMinMax }
+	 * 
+	 */
+	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
+		return new ComplexChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link Numbers }
+	 * 
+	 */
+	public Numbers createNumbers() {
+		return new Numbers();
+	}
+
+	/**
+	 * Create an instance of {@link Coffee }
+	 * 
+	 */
+	public Coffee createCoffee() {
+		return new Coffee();
+	}
+
+	/**
+	 * Create an instance of {@link Strings }
+	 * 
+	 */
+	public Strings createStrings() {
+		return new Strings();
+	}
+
+	/**
+	 * Create an instance of {@link JAXBElement }{@code <}{@link PatternElement }{@code >}}
+	 * 
+	 */
+	@XmlElementDecl(namespace = "a", name = "patternElement")
+	public JAXBElement<PatternElement> createPatternElement(PatternElement value) {
+		return new JAXBElement<PatternElement>(_PatternElement_QNAME, PatternElement.class, null, value);
 	}
 
 	/**

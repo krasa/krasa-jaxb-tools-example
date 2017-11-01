@@ -1,3 +1,4 @@
+
 package laboratory.spring.krasa;
 
 import javax.xml.bind.annotation.XmlRegistry;
@@ -24,19 +25,19 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Echo }
-	 * 
-	 */
-	public Echo createEcho() {
-		return new Echo();
-	}
-
-	/**
 	 * Create an instance of {@link EchoResponse }
 	 * 
 	 */
 	public EchoResponse createEchoResponse() {
 		return new EchoResponse();
+	}
+
+	/**
+	 * Create an instance of {@link Echo }
+	 * 
+	 */
+	public Echo createEcho() {
+		return new Echo();
 	}
 
 }

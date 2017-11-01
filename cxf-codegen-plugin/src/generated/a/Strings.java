@@ -1,8 +1,8 @@
+
 package a;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -60,7 +60,7 @@ public class Strings implements Serializable, Equals, HashCode {
 	@XmlID
 	@NotNull
 	@Size(max = 100)
-	@Pattern(regexp = "[[_:A-Za-z]-[:]][[-._:A-Za-z0-9]-[:]]*")
+	@Pattern.List({ @Pattern(regexp = "[[_:A-Za-z]-[:]][[-._:A-Za-z0-9]-[:]]*"), @Pattern(regexp = "[[_:A-Za-z]-[:]][[-._:A-Za-z0-9]-[:]]*") })
 	protected String idType;
 	@XmlElement(required = true)
 	@NotNull
@@ -77,7 +77,7 @@ public class Strings implements Serializable, Equals, HashCode {
 	@XmlElement(required = true)
 	@NotNull
 	@Size(min = 1)
-	protected List<Object> someCollection;
+	protected java.util.List<Object> someCollection;
 
 	/**
 	 * Gets the value of the faxNumber property.
@@ -226,7 +226,7 @@ public class Strings implements Serializable, Equals, HashCode {
 	 * 
 	 * 
 	 */
-	public List<Object> getSomeCollection() {
+	public java.util.List<Object> getSomeCollection() {
 		if (someCollection == null) {
 			someCollection = new ArrayList<Object>();
 		}
@@ -266,7 +266,7 @@ public class Strings implements Serializable, Equals, HashCode {
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minLength", theMinLength), currentHashCode, theMinLength);
 		}
 		{
-			List<Object> theSomeCollection;
+			java.util.List<Object> theSomeCollection;
 			theSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection() : null);
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "someCollection", theSomeCollection), currentHashCode, theSomeCollection);
 		}
@@ -347,9 +347,9 @@ public class Strings implements Serializable, Equals, HashCode {
 			}
 		}
 		{
-			List<Object> lhsSomeCollection;
+			java.util.List<Object> lhsSomeCollection;
 			lhsSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection() : null);
-			List<Object> rhsSomeCollection;
+			java.util.List<Object> rhsSomeCollection;
 			rhsSomeCollection = (((that.someCollection != null) && (!that.someCollection.isEmpty())) ? that.getSomeCollection() : null);
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "someCollection", lhsSomeCollection),
 					LocatorUtils.property(thatLocator, "someCollection", rhsSomeCollection), lhsSomeCollection, rhsSomeCollection)) {
