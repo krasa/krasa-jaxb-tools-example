@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
 
     <properties>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <krasa-jaxb-tools.version>1.6-SNAPSHOT</krasa-jaxb-tools.version>
         <krasa-jaxb-tools-example.version>0.5-SNAPSHOT</krasa-jaxb-tools-example.version>
 
