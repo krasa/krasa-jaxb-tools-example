@@ -163,32 +163,27 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 		{
 			Integer theCustomerId;
 			theCustomerId = this.getCustomerId();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "customerId", theCustomerId),
-					currentHashCode, theCustomerId);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "customerId", theCustomerId), currentHashCode, theCustomerId);
 		}
 		{
 			String theBatchRef;
 			theBatchRef = this.getBatchRef();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "batchRef", theBatchRef),
-					currentHashCode, theBatchRef);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "batchRef", theBatchRef), currentHashCode, theBatchRef);
 		}
 		{
 			java.lang.Boolean theHaltOnError;
 			theHaltOnError = this.isHaltOnError();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "haltOnError", theHaltOnError),
-					currentHashCode, theHaltOnError);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "haltOnError", theHaltOnError), currentHashCode, theHaltOnError);
 		}
 		{
 			java.lang.Boolean theRejectAllOnError;
 			theRejectAllOnError = this.isRejectAllOnError();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "rejectAllOnError", theRejectAllOnError),
-					currentHashCode, theRejectAllOnError);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "rejectAllOnError", theRejectAllOnError), currentHashCode, theRejectAllOnError);
 		}
 		{
 			EncodeRequest.MpuList theMpuList;
 			theMpuList = this.getMpuList();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpuList", theMpuList), currentHashCode,
-					theMpuList);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpuList", theMpuList), currentHashCode, theMpuList);
 		}
 		return currentHashCode;
 	}
@@ -198,8 +193,7 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof EncodeRequest)) {
 			return false;
 		}
@@ -225,8 +219,8 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 			lhsBatchRef = this.getBatchRef();
 			String rhsBatchRef;
 			rhsBatchRef = that.getBatchRef();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "batchRef", lhsBatchRef),
-					LocatorUtils.property(thatLocator, "batchRef", rhsBatchRef), lhsBatchRef, rhsBatchRef)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "batchRef", lhsBatchRef), LocatorUtils.property(thatLocator, "batchRef", rhsBatchRef),
+					lhsBatchRef, rhsBatchRef)) {
 				return false;
 			}
 		}
@@ -236,8 +230,7 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 			java.lang.Boolean rhsHaltOnError;
 			rhsHaltOnError = that.isHaltOnError();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "haltOnError", lhsHaltOnError),
-					LocatorUtils.property(thatLocator, "haltOnError", rhsHaltOnError), lhsHaltOnError,
-					rhsHaltOnError)) {
+					LocatorUtils.property(thatLocator, "haltOnError", rhsHaltOnError), lhsHaltOnError, rhsHaltOnError)) {
 				return false;
 			}
 		}
@@ -247,8 +240,7 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 			java.lang.Boolean rhsRejectAllOnError;
 			rhsRejectAllOnError = that.isRejectAllOnError();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "rejectAllOnError", lhsRejectAllOnError),
-					LocatorUtils.property(thatLocator, "rejectAllOnError", rhsRejectAllOnError), lhsRejectAllOnError,
-					rhsRejectAllOnError)) {
+					LocatorUtils.property(thatLocator, "rejectAllOnError", rhsRejectAllOnError), lhsRejectAllOnError, rhsRejectAllOnError)) {
 				return false;
 			}
 		}
@@ -257,8 +249,8 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 			lhsMpuList = this.getMpuList();
 			EncodeRequest.MpuList rhsMpuList;
 			rhsMpuList = that.getMpuList();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "mpuList", lhsMpuList),
-					LocatorUtils.property(thatLocator, "mpuList", rhsMpuList), lhsMpuList, rhsMpuList)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "mpuList", lhsMpuList), LocatorUtils.property(thatLocator, "mpuList", rhsMpuList),
+					lhsMpuList, rhsMpuList)) {
 				return false;
 			}
 		}
@@ -304,9 +296,9 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 		 * Gets the value of the mpu property.
 		 * 
 		 * <p>
-		 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you
-		 * make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE>
-		 * method for the mpu property.
+		 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the
+		 * returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the mpu
+		 * property.
 		 * 
 		 * <p>
 		 * For example, to add a new item, do as follows:
@@ -333,8 +325,7 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 			{
 				List<MpuElement> theMpu;
 				theMpu = (((this.mpu != null) && (!this.mpu.isEmpty())) ? this.getMpu() : null);
-				currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpu", theMpu), currentHashCode,
-						theMpu);
+				currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mpu", theMpu), currentHashCode, theMpu);
 			}
 			return currentHashCode;
 		}
@@ -344,8 +335,7 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 			return this.hashCode(null, strategy);
 		}
 
-		public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-				EqualsStrategy strategy) {
+		public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 			if (!(object instanceof EncodeRequest.MpuList)) {
 				return false;
 			}
@@ -358,8 +348,7 @@ public class EncodeRequest extends AbstractRequest implements Equals, HashCode {
 				lhsMpu = (((this.mpu != null) && (!this.mpu.isEmpty())) ? this.getMpu() : null);
 				List<MpuElement> rhsMpu;
 				rhsMpu = (((that.mpu != null) && (!that.mpu.isEmpty())) ? that.getMpu() : null);
-				if (!strategy.equals(LocatorUtils.property(thisLocator, "mpu", lhsMpu),
-						LocatorUtils.property(thatLocator, "mpu", rhsMpu), lhsMpu, rhsMpu)) {
+				if (!strategy.equals(LocatorUtils.property(thisLocator, "mpu", lhsMpu), LocatorUtils.property(thatLocator, "mpu", rhsMpu), lhsMpu, rhsMpu)) {
 					return false;
 				}
 			}

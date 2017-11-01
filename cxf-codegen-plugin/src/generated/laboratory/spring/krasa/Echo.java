@@ -99,14 +99,12 @@ public class Echo implements Serializable, Equals, HashCode {
 		{
 			String theMessage;
 			theMessage = this.getMessage();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "message", theMessage), currentHashCode,
-					theMessage);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "message", theMessage), currentHashCode, theMessage);
 		}
 		{
 			Main theMain;
 			theMain = this.getMain();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "main", theMain), currentHashCode,
-					theMain);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "main", theMain), currentHashCode, theMain);
 		}
 		return currentHashCode;
 	}
@@ -116,8 +114,7 @@ public class Echo implements Serializable, Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof Echo)) {
 			return false;
 		}
@@ -130,8 +127,8 @@ public class Echo implements Serializable, Equals, HashCode {
 			lhsMessage = this.getMessage();
 			String rhsMessage;
 			rhsMessage = that.getMessage();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "message", lhsMessage),
-					LocatorUtils.property(thatLocator, "message", rhsMessage), lhsMessage, rhsMessage)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "message", lhsMessage), LocatorUtils.property(thatLocator, "message", rhsMessage),
+					lhsMessage, rhsMessage)) {
 				return false;
 			}
 		}
@@ -140,8 +137,7 @@ public class Echo implements Serializable, Equals, HashCode {
 			lhsMain = this.getMain();
 			Main rhsMain;
 			rhsMain = that.getMain();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "main", lhsMain),
-					LocatorUtils.property(thatLocator, "main", rhsMain), lhsMain, rhsMain)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "main", lhsMain), LocatorUtils.property(thatLocator, "main", rhsMain), lhsMain, rhsMain)) {
 				return false;
 			}
 		}

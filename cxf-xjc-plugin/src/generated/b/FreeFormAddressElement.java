@@ -185,38 +185,32 @@ public class FreeFormAddressElement implements Equals, HashCode {
 		{
 			String theLine1;
 			theLine1 = this.getLine1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line1", theLine1), currentHashCode,
-					theLine1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line1", theLine1), currentHashCode, theLine1);
 		}
 		{
 			String theLine2;
 			theLine2 = this.getLine2();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line2", theLine2), currentHashCode,
-					theLine2);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line2", theLine2), currentHashCode, theLine2);
 		}
 		{
 			String theLine3;
 			theLine3 = this.getLine3();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line3", theLine3), currentHashCode,
-					theLine3);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line3", theLine3), currentHashCode, theLine3);
 		}
 		{
 			String theLine4;
 			theLine4 = this.getLine4();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line4", theLine4), currentHashCode,
-					theLine4);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line4", theLine4), currentHashCode, theLine4);
 		}
 		{
 			String theLine5;
 			theLine5 = this.getLine5();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line5", theLine5), currentHashCode,
-					theLine5);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line5", theLine5), currentHashCode, theLine5);
 		}
 		{
 			String theLine6;
 			theLine6 = this.getLine6();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line6", theLine6), currentHashCode,
-					theLine6);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "line6", theLine6), currentHashCode, theLine6);
 		}
 		return currentHashCode;
 	}
@@ -226,8 +220,7 @@ public class FreeFormAddressElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof FreeFormAddressElement)) {
 			return false;
 		}
@@ -240,8 +233,8 @@ public class FreeFormAddressElement implements Equals, HashCode {
 			lhsLine1 = this.getLine1();
 			String rhsLine1;
 			rhsLine1 = that.getLine1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "line1", lhsLine1),
-					LocatorUtils.property(thatLocator, "line1", rhsLine1), lhsLine1, rhsLine1)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "line1", lhsLine1), LocatorUtils.property(thatLocator, "line1", rhsLine1), lhsLine1,
+					rhsLine1)) {
 				return false;
 			}
 		}
@@ -250,8 +243,8 @@ public class FreeFormAddressElement implements Equals, HashCode {
 			lhsLine2 = this.getLine2();
 			String rhsLine2;
 			rhsLine2 = that.getLine2();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "line2", lhsLine2),
-					LocatorUtils.property(thatLocator, "line2", rhsLine2), lhsLine2, rhsLine2)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "line2", lhsLine2), LocatorUtils.property(thatLocator, "line2", rhsLine2), lhsLine2,
+					rhsLine2)) {
 				return false;
 			}
 		}
@@ -260,8 +253,8 @@ public class FreeFormAddressElement implements Equals, HashCode {
 			lhsLine3 = this.getLine3();
 			String rhsLine3;
 			rhsLine3 = that.getLine3();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "line3", lhsLine3),
-					LocatorUtils.property(thatLocator, "line3", rhsLine3), lhsLine3, rhsLine3)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "line3", lhsLine3), LocatorUtils.property(thatLocator, "line3", rhsLine3), lhsLine3,
+					rhsLine3)) {
 				return false;
 			}
 		}
@@ -270,8 +263,8 @@ public class FreeFormAddressElement implements Equals, HashCode {
 			lhsLine4 = this.getLine4();
 			String rhsLine4;
 			rhsLine4 = that.getLine4();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "line4", lhsLine4),
-					LocatorUtils.property(thatLocator, "line4", rhsLine4), lhsLine4, rhsLine4)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "line4", lhsLine4), LocatorUtils.property(thatLocator, "line4", rhsLine4), lhsLine4,
+					rhsLine4)) {
 				return false;
 			}
 		}
@@ -280,8 +273,8 @@ public class FreeFormAddressElement implements Equals, HashCode {
 			lhsLine5 = this.getLine5();
 			String rhsLine5;
 			rhsLine5 = that.getLine5();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "line5", lhsLine5),
-					LocatorUtils.property(thatLocator, "line5", rhsLine5), lhsLine5, rhsLine5)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "line5", lhsLine5), LocatorUtils.property(thatLocator, "line5", rhsLine5), lhsLine5,
+					rhsLine5)) {
 				return false;
 			}
 		}
@@ -290,8 +283,8 @@ public class FreeFormAddressElement implements Equals, HashCode {
 			lhsLine6 = this.getLine6();
 			String rhsLine6;
 			rhsLine6 = that.getLine6();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "line6", lhsLine6),
-					LocatorUtils.property(thatLocator, "line6", rhsLine6), lhsLine6, rhsLine6)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "line6", lhsLine6), LocatorUtils.property(thatLocator, "line6", rhsLine6), lhsLine6,
+					rhsLine6)) {
 				return false;
 			}
 		}

@@ -39,8 +39,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "standardAddressElement", propOrder = { "name", "firm", "address1", "address2", "city", "state", "zip",
-		"countryCode" })
+@XmlType(name = "standardAddressElement", propOrder = { "name", "firm", "address1", "address2", "city", "state", "zip", "countryCode" })
 public class StandardAddressElement implements Equals, HashCode {
 
 	@XmlElement(name = "Name")
@@ -238,38 +237,32 @@ public class StandardAddressElement implements Equals, HashCode {
 		{
 			String theName;
 			theName = this.getName();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "name", theName), currentHashCode,
-					theName);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "name", theName), currentHashCode, theName);
 		}
 		{
 			String theFirm;
 			theFirm = this.getFirm();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "firm", theFirm), currentHashCode,
-					theFirm);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "firm", theFirm), currentHashCode, theFirm);
 		}
 		{
 			String theAddress1;
 			theAddress1 = this.getAddress1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address1", theAddress1),
-					currentHashCode, theAddress1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address1", theAddress1), currentHashCode, theAddress1);
 		}
 		{
 			String theAddress2;
 			theAddress2 = this.getAddress2();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address2", theAddress2),
-					currentHashCode, theAddress2);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address2", theAddress2), currentHashCode, theAddress2);
 		}
 		{
 			String theCity;
 			theCity = this.getCity();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "city", theCity), currentHashCode,
-					theCity);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "city", theCity), currentHashCode, theCity);
 		}
 		{
 			String theState;
 			theState = this.getState();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "state", theState), currentHashCode,
-					theState);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "state", theState), currentHashCode, theState);
 		}
 		{
 			String theZip;
@@ -279,8 +272,7 @@ public class StandardAddressElement implements Equals, HashCode {
 		{
 			String theCountryCode;
 			theCountryCode = this.getCountryCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "countryCode", theCountryCode),
-					currentHashCode, theCountryCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "countryCode", theCountryCode), currentHashCode, theCountryCode);
 		}
 		return currentHashCode;
 	}
@@ -290,8 +282,7 @@ public class StandardAddressElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof StandardAddressElement)) {
 			return false;
 		}
@@ -304,8 +295,7 @@ public class StandardAddressElement implements Equals, HashCode {
 			lhsName = this.getName();
 			String rhsName;
 			rhsName = that.getName();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "name", lhsName),
-					LocatorUtils.property(thatLocator, "name", rhsName), lhsName, rhsName)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "name", lhsName), LocatorUtils.property(thatLocator, "name", rhsName), lhsName, rhsName)) {
 				return false;
 			}
 		}
@@ -314,8 +304,7 @@ public class StandardAddressElement implements Equals, HashCode {
 			lhsFirm = this.getFirm();
 			String rhsFirm;
 			rhsFirm = that.getFirm();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "firm", lhsFirm),
-					LocatorUtils.property(thatLocator, "firm", rhsFirm), lhsFirm, rhsFirm)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "firm", lhsFirm), LocatorUtils.property(thatLocator, "firm", rhsFirm), lhsFirm, rhsFirm)) {
 				return false;
 			}
 		}
@@ -324,8 +313,8 @@ public class StandardAddressElement implements Equals, HashCode {
 			lhsAddress1 = this.getAddress1();
 			String rhsAddress1;
 			rhsAddress1 = that.getAddress1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "address1", lhsAddress1),
-					LocatorUtils.property(thatLocator, "address1", rhsAddress1), lhsAddress1, rhsAddress1)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "address1", lhsAddress1), LocatorUtils.property(thatLocator, "address1", rhsAddress1),
+					lhsAddress1, rhsAddress1)) {
 				return false;
 			}
 		}
@@ -334,8 +323,8 @@ public class StandardAddressElement implements Equals, HashCode {
 			lhsAddress2 = this.getAddress2();
 			String rhsAddress2;
 			rhsAddress2 = that.getAddress2();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "address2", lhsAddress2),
-					LocatorUtils.property(thatLocator, "address2", rhsAddress2), lhsAddress2, rhsAddress2)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "address2", lhsAddress2), LocatorUtils.property(thatLocator, "address2", rhsAddress2),
+					lhsAddress2, rhsAddress2)) {
 				return false;
 			}
 		}
@@ -344,8 +333,7 @@ public class StandardAddressElement implements Equals, HashCode {
 			lhsCity = this.getCity();
 			String rhsCity;
 			rhsCity = that.getCity();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "city", lhsCity),
-					LocatorUtils.property(thatLocator, "city", rhsCity), lhsCity, rhsCity)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "city", lhsCity), LocatorUtils.property(thatLocator, "city", rhsCity), lhsCity, rhsCity)) {
 				return false;
 			}
 		}
@@ -354,8 +342,8 @@ public class StandardAddressElement implements Equals, HashCode {
 			lhsState = this.getState();
 			String rhsState;
 			rhsState = that.getState();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "state", lhsState),
-					LocatorUtils.property(thatLocator, "state", rhsState), lhsState, rhsState)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "state", lhsState), LocatorUtils.property(thatLocator, "state", rhsState), lhsState,
+					rhsState)) {
 				return false;
 			}
 		}
@@ -364,8 +352,7 @@ public class StandardAddressElement implements Equals, HashCode {
 			lhsZip = this.getZip();
 			String rhsZip;
 			rhsZip = that.getZip();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "zip", lhsZip),
-					LocatorUtils.property(thatLocator, "zip", rhsZip), lhsZip, rhsZip)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "zip", lhsZip), LocatorUtils.property(thatLocator, "zip", rhsZip), lhsZip, rhsZip)) {
 				return false;
 			}
 		}
@@ -375,8 +362,7 @@ public class StandardAddressElement implements Equals, HashCode {
 			String rhsCountryCode;
 			rhsCountryCode = that.getCountryCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "countryCode", lhsCountryCode),
-					LocatorUtils.property(thatLocator, "countryCode", rhsCountryCode), lhsCountryCode,
-					rhsCountryCode)) {
+					LocatorUtils.property(thatLocator, "countryCode", rhsCountryCode), lhsCountryCode, rhsCountryCode)) {
 				return false;
 			}
 		}

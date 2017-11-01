@@ -63,8 +63,7 @@ public class Dates implements Equals, HashCode {
 		{
 			XMLGregorianCalendar theDate1;
 			theDate1 = this.getDate1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "date1", theDate1), currentHashCode,
-					theDate1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "date1", theDate1), currentHashCode, theDate1);
 		}
 		return currentHashCode;
 	}
@@ -74,8 +73,7 @@ public class Dates implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof Dates)) {
 			return false;
 		}
@@ -88,8 +86,8 @@ public class Dates implements Equals, HashCode {
 			lhsDate1 = this.getDate1();
 			XMLGregorianCalendar rhsDate1;
 			rhsDate1 = that.getDate1();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "date1", lhsDate1),
-					LocatorUtils.property(thatLocator, "date1", rhsDate1), lhsDate1, rhsDate1)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "date1", lhsDate1), LocatorUtils.property(thatLocator, "date1", rhsDate1), lhsDate1,
+					rhsDate1)) {
 				return false;
 			}
 		}

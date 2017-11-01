@@ -173,8 +173,7 @@ public class ObjectFactory {
 	 */
 	@XmlElementDecl(namespace = "", name = "FreeFormAddress")
 	public JAXBElement<FreeFormAddressElement> createFreeFormAddress(FreeFormAddressElement value) {
-		return new JAXBElement<FreeFormAddressElement>(_FreeFormAddress_QNAME, FreeFormAddressElement.class, null,
-				value);
+		return new JAXBElement<FreeFormAddressElement>(_FreeFormAddress_QNAME, FreeFormAddressElement.class, null, value);
 	}
 
 	/**
@@ -183,8 +182,7 @@ public class ObjectFactory {
 	 */
 	@XmlElementDecl(namespace = "", name = "StandardAddress")
 	public JAXBElement<StandardAddressElement> createStandardAddress(StandardAddressElement value) {
-		return new JAXBElement<StandardAddressElement>(_StandardAddress_QNAME, StandardAddressElement.class, null,
-				value);
+		return new JAXBElement<StandardAddressElement>(_StandardAddress_QNAME, StandardAddressElement.class, null, value);
 	}
 
 	/**

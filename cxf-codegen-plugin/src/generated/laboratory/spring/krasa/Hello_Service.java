@@ -25,8 +25,7 @@ public class Hello_Service extends Service {
 		try {
 			url = new URL("file:/F:/workspace/_projekty/Github/krasa-jaxb-tools-example/wsdl/Hello.wsdl");
 		} catch (MalformedURLException e) {
-			java.util.logging.Logger.getLogger(Hello_Service.class.getName()).log(java.util.logging.Level.INFO,
-					"Can not initialize the default wsdl from {0}",
+			java.util.logging.Logger.getLogger(Hello_Service.class.getName()).log(java.util.logging.Level.INFO, "Can not initialize the default wsdl from {0}",
 					"file:/F:/workspace/_projekty/Github/krasa-jaxb-tools-example/wsdl/Hello.wsdl");
 		}
 		WSDL_LOCATION = url;
@@ -56,8 +55,8 @@ public class Hello_Service extends Service {
 	/**
 	 * 
 	 * @param features
-	 *            A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy. Supported features not in
-	 *            the <code>features</code> parameter will have their default values.
+	 *            A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy. Supported features not in the
+	 *            <code>features</code> parameter will have their default values.
 	 * @return returns Hello
 	 */
 	@WebEndpoint(name = "HelloSOAP")

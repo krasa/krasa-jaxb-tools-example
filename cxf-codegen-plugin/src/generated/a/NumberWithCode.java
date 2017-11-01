@@ -86,14 +86,12 @@ public class NumberWithCode implements Serializable, Equals, HashCode {
 		{
 			String theValue;
 			theValue = this.getValue();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode,
-					theValue);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
 		}
 		{
 			String theCode;
 			theCode = this.getCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "code", theCode), currentHashCode,
-					theCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "code", theCode), currentHashCode, theCode);
 		}
 		return currentHashCode;
 	}
@@ -103,8 +101,7 @@ public class NumberWithCode implements Serializable, Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof NumberWithCode)) {
 			return false;
 		}
@@ -117,8 +114,8 @@ public class NumberWithCode implements Serializable, Equals, HashCode {
 			lhsValue = this.getValue();
 			String rhsValue;
 			rhsValue = that.getValue();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue),
-					LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue,
+					rhsValue)) {
 				return false;
 			}
 		}
@@ -127,8 +124,7 @@ public class NumberWithCode implements Serializable, Equals, HashCode {
 			lhsCode = this.getCode();
 			String rhsCode;
 			rhsCode = that.getCode();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "code", lhsCode),
-					LocatorUtils.property(thatLocator, "code", rhsCode), lhsCode, rhsCode)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "code", lhsCode), LocatorUtils.property(thatLocator, "code", rhsCode), lhsCode, rhsCode)) {
 				return false;
 			}
 		}

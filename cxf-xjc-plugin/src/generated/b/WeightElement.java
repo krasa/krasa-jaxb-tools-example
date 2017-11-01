@@ -92,14 +92,12 @@ public class WeightElement implements Equals, HashCode {
 		{
 			WeightUnitValue theUnit;
 			theUnit = this.getUnit();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unit", theUnit), currentHashCode,
-					theUnit);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unit", theUnit), currentHashCode, theUnit);
 		}
 		{
 			BigDecimal theValue;
 			theValue = this.getValue();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode,
-					theValue);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
 		}
 		return currentHashCode;
 	}
@@ -109,8 +107,7 @@ public class WeightElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof WeightElement)) {
 			return false;
 		}
@@ -123,8 +120,7 @@ public class WeightElement implements Equals, HashCode {
 			lhsUnit = this.getUnit();
 			WeightUnitValue rhsUnit;
 			rhsUnit = that.getUnit();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "unit", lhsUnit),
-					LocatorUtils.property(thatLocator, "unit", rhsUnit), lhsUnit, rhsUnit)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "unit", lhsUnit), LocatorUtils.property(thatLocator, "unit", rhsUnit), lhsUnit, rhsUnit)) {
 				return false;
 			}
 		}
@@ -133,8 +129,8 @@ public class WeightElement implements Equals, HashCode {
 			lhsValue = this.getValue();
 			BigDecimal rhsValue;
 			rhsValue = that.getValue();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue),
-					LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue,
+					rhsValue)) {
 				return false;
 			}
 		}

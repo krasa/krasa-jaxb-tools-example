@@ -94,8 +94,7 @@ public class Choices implements Equals, HashCode {
 		{
 			String theCoffee;
 			theCoffee = this.getCoffee();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "coffee", theCoffee), currentHashCode,
-					theCoffee);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "coffee", theCoffee), currentHashCode, theCoffee);
 		}
 		return currentHashCode;
 	}
@@ -105,8 +104,7 @@ public class Choices implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof Choices)) {
 			return false;
 		}
@@ -119,8 +117,7 @@ public class Choices implements Equals, HashCode {
 			lhsTea = this.getTea();
 			String rhsTea;
 			rhsTea = that.getTea();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "tea", lhsTea),
-					LocatorUtils.property(thatLocator, "tea", rhsTea), lhsTea, rhsTea)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "tea", lhsTea), LocatorUtils.property(thatLocator, "tea", rhsTea), lhsTea, rhsTea)) {
 				return false;
 			}
 		}
@@ -129,8 +126,8 @@ public class Choices implements Equals, HashCode {
 			lhsCoffee = this.getCoffee();
 			String rhsCoffee;
 			rhsCoffee = that.getCoffee();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "coffee", lhsCoffee),
-					LocatorUtils.property(thatLocator, "coffee", rhsCoffee), lhsCoffee, rhsCoffee)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "coffee", lhsCoffee), LocatorUtils.property(thatLocator, "coffee", rhsCoffee), lhsCoffee,
+					rhsCoffee)) {
 				return false;
 			}
 		}

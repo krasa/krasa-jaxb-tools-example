@@ -49,8 +49,8 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Main", propOrder = { "numbers", "strings", "unsignedByte", "choices", "complexChoices",
-		"choicesWithMinMax", "complexChoicesWithMinMax", "enumerations", "enumeration", "array", "primitives" })
+@XmlType(name = "Main", propOrder = { "numbers", "strings", "unsignedByte", "choices", "complexChoices", "choicesWithMinMax", "complexChoicesWithMinMax",
+		"enumerations", "enumeration", "array", "primitives" })
 public class Main implements Serializable, Equals, HashCode {
 
 	private final static long serialVersionUID = 1L;
@@ -331,70 +331,59 @@ public class Main implements Serializable, Equals, HashCode {
 		{
 			Numbers theNumbers;
 			theNumbers = this.getNumbers();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "numbers", theNumbers), currentHashCode,
-					theNumbers);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "numbers", theNumbers), currentHashCode, theNumbers);
 		}
 		{
 			Strings theStrings;
 			theStrings = this.getStrings();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "strings", theStrings), currentHashCode,
-					theStrings);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "strings", theStrings), currentHashCode, theStrings);
 		}
 		{
 			Short theUnsignedByte;
 			theUnsignedByte = this.getUnsignedByte();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unsignedByte", theUnsignedByte),
-					currentHashCode, theUnsignedByte);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "unsignedByte", theUnsignedByte), currentHashCode, theUnsignedByte);
 		}
 		{
 			Choices theChoices;
 			theChoices = this.getChoices();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "choices", theChoices), currentHashCode,
-					theChoices);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "choices", theChoices), currentHashCode, theChoices);
 		}
 		{
 			ComplexChoices theComplexChoices;
 			theComplexChoices = this.getComplexChoices();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "complexChoices", theComplexChoices),
-					currentHashCode, theComplexChoices);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "complexChoices", theComplexChoices), currentHashCode, theComplexChoices);
 		}
 		{
 			ChoicesWithMinMax theChoicesWithMinMax;
 			theChoicesWithMinMax = this.getChoicesWithMinMax();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "choicesWithMinMax", theChoicesWithMinMax), currentHashCode,
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "choicesWithMinMax", theChoicesWithMinMax), currentHashCode,
 					theChoicesWithMinMax);
 		}
 		{
 			ComplexChoicesWithMinMax theComplexChoicesWithMinMax;
 			theComplexChoicesWithMinMax = this.getComplexChoicesWithMinMax();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "complexChoicesWithMinMax", theComplexChoicesWithMinMax),
-					currentHashCode, theComplexChoicesWithMinMax);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "complexChoicesWithMinMax", theComplexChoicesWithMinMax), currentHashCode,
+					theComplexChoicesWithMinMax);
 		}
 		{
 			Enumerations theEnumerations;
 			theEnumerations = this.getEnumerations();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumerations", theEnumerations),
-					currentHashCode, theEnumerations);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumerations", theEnumerations), currentHashCode, theEnumerations);
 		}
 		{
 			Enumeration theEnumeration;
 			theEnumeration = this.getEnumeration();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumeration", theEnumeration),
-					currentHashCode, theEnumeration);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "enumeration", theEnumeration), currentHashCode, theEnumeration);
 		}
 		{
 			byte[] theArray;
 			theArray = this.getArray();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "array", theArray), currentHashCode,
-					theArray);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "array", theArray), currentHashCode, theArray);
 		}
 		{
 			Primitives thePrimitives;
 			thePrimitives = this.getPrimitives();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "primitives", thePrimitives),
-					currentHashCode, thePrimitives);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "primitives", thePrimitives), currentHashCode, thePrimitives);
 		}
 		return currentHashCode;
 	}
@@ -404,8 +393,7 @@ public class Main implements Serializable, Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof Main)) {
 			return false;
 		}
@@ -418,8 +406,8 @@ public class Main implements Serializable, Equals, HashCode {
 			lhsNumbers = this.getNumbers();
 			Numbers rhsNumbers;
 			rhsNumbers = that.getNumbers();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "numbers", lhsNumbers),
-					LocatorUtils.property(thatLocator, "numbers", rhsNumbers), lhsNumbers, rhsNumbers)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "numbers", lhsNumbers), LocatorUtils.property(thatLocator, "numbers", rhsNumbers),
+					lhsNumbers, rhsNumbers)) {
 				return false;
 			}
 		}
@@ -428,8 +416,8 @@ public class Main implements Serializable, Equals, HashCode {
 			lhsStrings = this.getStrings();
 			Strings rhsStrings;
 			rhsStrings = that.getStrings();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "strings", lhsStrings),
-					LocatorUtils.property(thatLocator, "strings", rhsStrings), lhsStrings, rhsStrings)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "strings", lhsStrings), LocatorUtils.property(thatLocator, "strings", rhsStrings),
+					lhsStrings, rhsStrings)) {
 				return false;
 			}
 		}
@@ -439,8 +427,7 @@ public class Main implements Serializable, Equals, HashCode {
 			Short rhsUnsignedByte;
 			rhsUnsignedByte = that.getUnsignedByte();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "unsignedByte", lhsUnsignedByte),
-					LocatorUtils.property(thatLocator, "unsignedByte", rhsUnsignedByte), lhsUnsignedByte,
-					rhsUnsignedByte)) {
+					LocatorUtils.property(thatLocator, "unsignedByte", rhsUnsignedByte), lhsUnsignedByte, rhsUnsignedByte)) {
 				return false;
 			}
 		}
@@ -449,8 +436,8 @@ public class Main implements Serializable, Equals, HashCode {
 			lhsChoices = this.getChoices();
 			Choices rhsChoices;
 			rhsChoices = that.getChoices();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "choices", lhsChoices),
-					LocatorUtils.property(thatLocator, "choices", rhsChoices), lhsChoices, rhsChoices)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "choices", lhsChoices), LocatorUtils.property(thatLocator, "choices", rhsChoices),
+					lhsChoices, rhsChoices)) {
 				return false;
 			}
 		}
@@ -460,8 +447,7 @@ public class Main implements Serializable, Equals, HashCode {
 			ComplexChoices rhsComplexChoices;
 			rhsComplexChoices = that.getComplexChoices();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "complexChoices", lhsComplexChoices),
-					LocatorUtils.property(thatLocator, "complexChoices", rhsComplexChoices), lhsComplexChoices,
-					rhsComplexChoices)) {
+					LocatorUtils.property(thatLocator, "complexChoices", rhsComplexChoices), lhsComplexChoices, rhsComplexChoices)) {
 				return false;
 			}
 		}
@@ -471,8 +457,7 @@ public class Main implements Serializable, Equals, HashCode {
 			ChoicesWithMinMax rhsChoicesWithMinMax;
 			rhsChoicesWithMinMax = that.getChoicesWithMinMax();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "choicesWithMinMax", lhsChoicesWithMinMax),
-					LocatorUtils.property(thatLocator, "choicesWithMinMax", rhsChoicesWithMinMax), lhsChoicesWithMinMax,
-					rhsChoicesWithMinMax)) {
+					LocatorUtils.property(thatLocator, "choicesWithMinMax", rhsChoicesWithMinMax), lhsChoicesWithMinMax, rhsChoicesWithMinMax)) {
 				return false;
 			}
 		}
@@ -481,10 +466,9 @@ public class Main implements Serializable, Equals, HashCode {
 			lhsComplexChoicesWithMinMax = this.getComplexChoicesWithMinMax();
 			ComplexChoicesWithMinMax rhsComplexChoicesWithMinMax;
 			rhsComplexChoicesWithMinMax = that.getComplexChoicesWithMinMax();
-			if (!strategy.equals(
-					LocatorUtils.property(thisLocator, "complexChoicesWithMinMax", lhsComplexChoicesWithMinMax),
-					LocatorUtils.property(thatLocator, "complexChoicesWithMinMax", rhsComplexChoicesWithMinMax),
-					lhsComplexChoicesWithMinMax, rhsComplexChoicesWithMinMax)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "complexChoicesWithMinMax", lhsComplexChoicesWithMinMax),
+					LocatorUtils.property(thatLocator, "complexChoicesWithMinMax", rhsComplexChoicesWithMinMax), lhsComplexChoicesWithMinMax,
+					rhsComplexChoicesWithMinMax)) {
 				return false;
 			}
 		}
@@ -494,8 +478,7 @@ public class Main implements Serializable, Equals, HashCode {
 			Enumerations rhsEnumerations;
 			rhsEnumerations = that.getEnumerations();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "enumerations", lhsEnumerations),
-					LocatorUtils.property(thatLocator, "enumerations", rhsEnumerations), lhsEnumerations,
-					rhsEnumerations)) {
+					LocatorUtils.property(thatLocator, "enumerations", rhsEnumerations), lhsEnumerations, rhsEnumerations)) {
 				return false;
 			}
 		}
@@ -505,8 +488,7 @@ public class Main implements Serializable, Equals, HashCode {
 			Enumeration rhsEnumeration;
 			rhsEnumeration = that.getEnumeration();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "enumeration", lhsEnumeration),
-					LocatorUtils.property(thatLocator, "enumeration", rhsEnumeration), lhsEnumeration,
-					rhsEnumeration)) {
+					LocatorUtils.property(thatLocator, "enumeration", rhsEnumeration), lhsEnumeration, rhsEnumeration)) {
 				return false;
 			}
 		}
@@ -515,8 +497,8 @@ public class Main implements Serializable, Equals, HashCode {
 			lhsArray = this.getArray();
 			byte[] rhsArray;
 			rhsArray = that.getArray();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "array", lhsArray),
-					LocatorUtils.property(thatLocator, "array", rhsArray), lhsArray, rhsArray)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "array", lhsArray), LocatorUtils.property(thatLocator, "array", rhsArray), lhsArray,
+					rhsArray)) {
 				return false;
 			}
 		}

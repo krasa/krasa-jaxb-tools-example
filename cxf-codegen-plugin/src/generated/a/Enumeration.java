@@ -86,8 +86,7 @@ public class Enumeration implements Serializable, Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof Enumeration)) {
 			return false;
 		}
@@ -100,8 +99,7 @@ public class Enumeration implements Serializable, Equals, HashCode {
 			lhsFoo = this.getFoo();
 			String rhsFoo;
 			rhsFoo = that.getFoo();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "foo", lhsFoo),
-					LocatorUtils.property(thatLocator, "foo", rhsFoo), lhsFoo, rhsFoo)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "foo", lhsFoo), LocatorUtils.property(thatLocator, "foo", rhsFoo), lhsFoo, rhsFoo)) {
 				return false;
 			}
 		}

@@ -67,8 +67,7 @@ public class EchoResponse implements Equals, HashCode {
 		{
 			String theOriginalMessage;
 			theOriginalMessage = this.getOriginalMessage();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "originalMessage", theOriginalMessage),
-					currentHashCode, theOriginalMessage);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "originalMessage", theOriginalMessage), currentHashCode, theOriginalMessage);
 		}
 		return currentHashCode;
 	}
@@ -78,8 +77,7 @@ public class EchoResponse implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof EchoResponse)) {
 			return false;
 		}
@@ -93,8 +91,7 @@ public class EchoResponse implements Equals, HashCode {
 			String rhsOriginalMessage;
 			rhsOriginalMessage = that.getOriginalMessage();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "originalMessage", lhsOriginalMessage),
-					LocatorUtils.property(thatLocator, "originalMessage", rhsOriginalMessage), lhsOriginalMessage,
-					rhsOriginalMessage)) {
+					LocatorUtils.property(thatLocator, "originalMessage", rhsOriginalMessage), lhsOriginalMessage, rhsOriginalMessage)) {
 				return false;
 			}
 		}

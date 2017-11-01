@@ -42,8 +42,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Strings", propOrder = { "faxNumber", "pattern", "idType", "genericString", "maxLength", "minLength",
-		"someCollection" })
+@XmlType(name = "Strings", propOrder = { "faxNumber", "pattern", "idType", "genericString", "maxLength", "minLength", "someCollection" })
 public class Strings implements Equals, HashCode {
 
 	@XmlElement(required = true)
@@ -208,9 +207,9 @@ public class Strings implements Equals, HashCode {
 	 * Gets the value of the someCollection property.
 	 * 
 	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to
-	 * the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for
-	 * the someCollection property.
+	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the
+	 * returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the
+	 * someCollection property.
 	 * 
 	 * <p>
 	 * For example, to add a new item, do as follows:
@@ -237,45 +236,37 @@ public class Strings implements Equals, HashCode {
 		{
 			String theFaxNumber;
 			theFaxNumber = this.getFaxNumber();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "faxNumber", theFaxNumber),
-					currentHashCode, theFaxNumber);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "faxNumber", theFaxNumber), currentHashCode, theFaxNumber);
 		}
 		{
 			String thePattern;
 			thePattern = this.getPattern();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "pattern", thePattern), currentHashCode,
-					thePattern);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "pattern", thePattern), currentHashCode, thePattern);
 		}
 		{
 			String theIdType;
 			theIdType = this.getIdType();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "idType", theIdType), currentHashCode,
-					theIdType);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "idType", theIdType), currentHashCode, theIdType);
 		}
 		{
 			String theGenericString;
 			theGenericString = this.getGenericString();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "genericString", theGenericString),
-					currentHashCode, theGenericString);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "genericString", theGenericString), currentHashCode, theGenericString);
 		}
 		{
 			String theMaxLength;
 			theMaxLength = this.getMaxLength();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "maxLength", theMaxLength),
-					currentHashCode, theMaxLength);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "maxLength", theMaxLength), currentHashCode, theMaxLength);
 		}
 		{
 			String theMinLength;
 			theMinLength = this.getMinLength();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minLength", theMinLength),
-					currentHashCode, theMinLength);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "minLength", theMinLength), currentHashCode, theMinLength);
 		}
 		{
 			List<Object> theSomeCollection;
-			theSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty()))
-					? this.getSomeCollection() : null);
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "someCollection", theSomeCollection),
-					currentHashCode, theSomeCollection);
+			theSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection() : null);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "someCollection", theSomeCollection), currentHashCode, theSomeCollection);
 		}
 		return currentHashCode;
 	}
@@ -285,8 +276,7 @@ public class Strings implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof Strings)) {
 			return false;
 		}
@@ -299,8 +289,8 @@ public class Strings implements Equals, HashCode {
 			lhsFaxNumber = this.getFaxNumber();
 			String rhsFaxNumber;
 			rhsFaxNumber = that.getFaxNumber();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "faxNumber", lhsFaxNumber),
-					LocatorUtils.property(thatLocator, "faxNumber", rhsFaxNumber), lhsFaxNumber, rhsFaxNumber)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "faxNumber", lhsFaxNumber), LocatorUtils.property(thatLocator, "faxNumber", rhsFaxNumber),
+					lhsFaxNumber, rhsFaxNumber)) {
 				return false;
 			}
 		}
@@ -309,8 +299,8 @@ public class Strings implements Equals, HashCode {
 			lhsPattern = this.getPattern();
 			String rhsPattern;
 			rhsPattern = that.getPattern();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "pattern", lhsPattern),
-					LocatorUtils.property(thatLocator, "pattern", rhsPattern), lhsPattern, rhsPattern)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "pattern", lhsPattern), LocatorUtils.property(thatLocator, "pattern", rhsPattern),
+					lhsPattern, rhsPattern)) {
 				return false;
 			}
 		}
@@ -319,8 +309,8 @@ public class Strings implements Equals, HashCode {
 			lhsIdType = this.getIdType();
 			String rhsIdType;
 			rhsIdType = that.getIdType();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "idType", lhsIdType),
-					LocatorUtils.property(thatLocator, "idType", rhsIdType), lhsIdType, rhsIdType)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "idType", lhsIdType), LocatorUtils.property(thatLocator, "idType", rhsIdType), lhsIdType,
+					rhsIdType)) {
 				return false;
 			}
 		}
@@ -330,8 +320,7 @@ public class Strings implements Equals, HashCode {
 			String rhsGenericString;
 			rhsGenericString = that.getGenericString();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "genericString", lhsGenericString),
-					LocatorUtils.property(thatLocator, "genericString", rhsGenericString), lhsGenericString,
-					rhsGenericString)) {
+					LocatorUtils.property(thatLocator, "genericString", rhsGenericString), lhsGenericString, rhsGenericString)) {
 				return false;
 			}
 		}
@@ -340,8 +329,8 @@ public class Strings implements Equals, HashCode {
 			lhsMaxLength = this.getMaxLength();
 			String rhsMaxLength;
 			rhsMaxLength = that.getMaxLength();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "maxLength", lhsMaxLength),
-					LocatorUtils.property(thatLocator, "maxLength", rhsMaxLength), lhsMaxLength, rhsMaxLength)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "maxLength", lhsMaxLength), LocatorUtils.property(thatLocator, "maxLength", rhsMaxLength),
+					lhsMaxLength, rhsMaxLength)) {
 				return false;
 			}
 		}
@@ -350,21 +339,18 @@ public class Strings implements Equals, HashCode {
 			lhsMinLength = this.getMinLength();
 			String rhsMinLength;
 			rhsMinLength = that.getMinLength();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "minLength", lhsMinLength),
-					LocatorUtils.property(thatLocator, "minLength", rhsMinLength), lhsMinLength, rhsMinLength)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "minLength", lhsMinLength), LocatorUtils.property(thatLocator, "minLength", rhsMinLength),
+					lhsMinLength, rhsMinLength)) {
 				return false;
 			}
 		}
 		{
 			List<Object> lhsSomeCollection;
-			lhsSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty()))
-					? this.getSomeCollection() : null);
+			lhsSomeCollection = (((this.someCollection != null) && (!this.someCollection.isEmpty())) ? this.getSomeCollection() : null);
 			List<Object> rhsSomeCollection;
-			rhsSomeCollection = (((that.someCollection != null) && (!that.someCollection.isEmpty()))
-					? that.getSomeCollection() : null);
+			rhsSomeCollection = (((that.someCollection != null) && (!that.someCollection.isEmpty())) ? that.getSomeCollection() : null);
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "someCollection", lhsSomeCollection),
-					LocatorUtils.property(thatLocator, "someCollection", rhsSomeCollection), lhsSomeCollection,
-					rhsSomeCollection)) {
+					LocatorUtils.property(thatLocator, "someCollection", rhsSomeCollection), lhsSomeCollection, rhsSomeCollection)) {
 				return false;
 			}
 		}

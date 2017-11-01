@@ -48,9 +48,9 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "mpuElement", propOrder = { "packageId", "packageRef", "consigneeAddress", "returnAddress",
-		"orderedProductCode", "weight", "service", "billingRef1", "billingRef2", "thirdPartyBillTo", "mailTypeCode",
-		"facilityCode", "expectedShipDate", "impb", "containerRef1", "containerRef2", "response" })
+@XmlType(name = "mpuElement", propOrder = { "packageId", "packageRef", "consigneeAddress", "returnAddress", "orderedProductCode", "weight", "service",
+		"billingRef1", "billingRef2", "thirdPartyBillTo", "mailTypeCode", "facilityCode", "expectedShipDate", "impb", "containerRef1", "containerRef2",
+		"response" })
 public class MpuElement implements Equals, HashCode {
 
 	@XmlElement(name = "PackageId")
@@ -455,105 +455,88 @@ public class MpuElement implements Equals, HashCode {
 		{
 			String thePackageId;
 			thePackageId = this.getPackageId();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageId", thePackageId),
-					currentHashCode, thePackageId);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageId", thePackageId), currentHashCode, thePackageId);
 		}
 		{
 			PackageRefElement thePackageRef;
 			thePackageRef = this.getPackageRef();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageRef", thePackageRef),
-					currentHashCode, thePackageRef);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "packageRef", thePackageRef), currentHashCode, thePackageRef);
 		}
 		{
 			AddressElement theConsigneeAddress;
 			theConsigneeAddress = this.getConsigneeAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "consigneeAddress", theConsigneeAddress),
-					currentHashCode, theConsigneeAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "consigneeAddress", theConsigneeAddress), currentHashCode, theConsigneeAddress);
 		}
 		{
 			AddressElement theReturnAddress;
 			theReturnAddress = this.getReturnAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "returnAddress", theReturnAddress),
-					currentHashCode, theReturnAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "returnAddress", theReturnAddress), currentHashCode, theReturnAddress);
 		}
 		{
 			String theOrderedProductCode;
 			theOrderedProductCode = this.getOrderedProductCode();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "orderedProductCode", theOrderedProductCode), currentHashCode,
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "orderedProductCode", theOrderedProductCode), currentHashCode,
 					theOrderedProductCode);
 		}
 		{
 			WeightElement theWeight;
 			theWeight = this.getWeight();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "weight", theWeight), currentHashCode,
-					theWeight);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "weight", theWeight), currentHashCode, theWeight);
 		}
 		{
 			String theService;
 			theService = this.getService();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "service", theService), currentHashCode,
-					theService);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "service", theService), currentHashCode, theService);
 		}
 		{
 			String theBillingRef1;
 			theBillingRef1 = this.getBillingRef1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef1", theBillingRef1),
-					currentHashCode, theBillingRef1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef1", theBillingRef1), currentHashCode, theBillingRef1);
 		}
 		{
 			String theBillingRef2;
 			theBillingRef2 = this.getBillingRef2();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef2", theBillingRef2),
-					currentHashCode, theBillingRef2);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "billingRef2", theBillingRef2), currentHashCode, theBillingRef2);
 		}
 		{
 			Integer theThirdPartyBillTo;
 			theThirdPartyBillTo = this.getThirdPartyBillTo();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "thirdPartyBillTo", theThirdPartyBillTo),
-					currentHashCode, theThirdPartyBillTo);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "thirdPartyBillTo", theThirdPartyBillTo), currentHashCode, theThirdPartyBillTo);
 		}
 		{
 			String theMailTypeCode;
 			theMailTypeCode = this.getMailTypeCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailTypeCode", theMailTypeCode),
-					currentHashCode, theMailTypeCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailTypeCode", theMailTypeCode), currentHashCode, theMailTypeCode);
 		}
 		{
 			String theFacilityCode;
 			theFacilityCode = this.getFacilityCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "facilityCode", theFacilityCode),
-					currentHashCode, theFacilityCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "facilityCode", theFacilityCode), currentHashCode, theFacilityCode);
 		}
 		{
 			String theExpectedShipDate;
 			theExpectedShipDate = this.getExpectedShipDate();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "expectedShipDate", theExpectedShipDate),
-					currentHashCode, theExpectedShipDate);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "expectedShipDate", theExpectedShipDate), currentHashCode, theExpectedShipDate);
 		}
 		{
 			ImpbElement theImpb;
 			theImpb = this.getImpb();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "impb", theImpb), currentHashCode,
-					theImpb);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "impb", theImpb), currentHashCode, theImpb);
 		}
 		{
 			ContainerElement theContainerRef1;
 			theContainerRef1 = this.getContainerRef1();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef1", theContainerRef1),
-					currentHashCode, theContainerRef1);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef1", theContainerRef1), currentHashCode, theContainerRef1);
 		}
 		{
 			ContainerElement theContainerRef2;
 			theContainerRef2 = this.getContainerRef2();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef2", theContainerRef2),
-					currentHashCode, theContainerRef2);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerRef2", theContainerRef2), currentHashCode, theContainerRef2);
 		}
 		{
 			MpuResponseElement theResponse;
 			theResponse = this.getResponse();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "response", theResponse),
-					currentHashCode, theResponse);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "response", theResponse), currentHashCode, theResponse);
 		}
 		return currentHashCode;
 	}
@@ -563,8 +546,7 @@ public class MpuElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof MpuElement)) {
 			return false;
 		}
@@ -577,8 +559,8 @@ public class MpuElement implements Equals, HashCode {
 			lhsPackageId = this.getPackageId();
 			String rhsPackageId;
 			rhsPackageId = that.getPackageId();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "packageId", lhsPackageId),
-					LocatorUtils.property(thatLocator, "packageId", rhsPackageId), lhsPackageId, rhsPackageId)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "packageId", lhsPackageId), LocatorUtils.property(thatLocator, "packageId", rhsPackageId),
+					lhsPackageId, rhsPackageId)) {
 				return false;
 			}
 		}
@@ -598,8 +580,7 @@ public class MpuElement implements Equals, HashCode {
 			AddressElement rhsConsigneeAddress;
 			rhsConsigneeAddress = that.getConsigneeAddress();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "consigneeAddress", lhsConsigneeAddress),
-					LocatorUtils.property(thatLocator, "consigneeAddress", rhsConsigneeAddress), lhsConsigneeAddress,
-					rhsConsigneeAddress)) {
+					LocatorUtils.property(thatLocator, "consigneeAddress", rhsConsigneeAddress), lhsConsigneeAddress, rhsConsigneeAddress)) {
 				return false;
 			}
 		}
@@ -609,8 +590,7 @@ public class MpuElement implements Equals, HashCode {
 			AddressElement rhsReturnAddress;
 			rhsReturnAddress = that.getReturnAddress();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "returnAddress", lhsReturnAddress),
-					LocatorUtils.property(thatLocator, "returnAddress", rhsReturnAddress), lhsReturnAddress,
-					rhsReturnAddress)) {
+					LocatorUtils.property(thatLocator, "returnAddress", rhsReturnAddress), lhsReturnAddress, rhsReturnAddress)) {
 				return false;
 			}
 		}
@@ -620,8 +600,7 @@ public class MpuElement implements Equals, HashCode {
 			String rhsOrderedProductCode;
 			rhsOrderedProductCode = that.getOrderedProductCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "orderedProductCode", lhsOrderedProductCode),
-					LocatorUtils.property(thatLocator, "orderedProductCode", rhsOrderedProductCode),
-					lhsOrderedProductCode, rhsOrderedProductCode)) {
+					LocatorUtils.property(thatLocator, "orderedProductCode", rhsOrderedProductCode), lhsOrderedProductCode, rhsOrderedProductCode)) {
 				return false;
 			}
 		}
@@ -630,8 +609,8 @@ public class MpuElement implements Equals, HashCode {
 			lhsWeight = this.getWeight();
 			WeightElement rhsWeight;
 			rhsWeight = that.getWeight();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "weight", lhsWeight),
-					LocatorUtils.property(thatLocator, "weight", rhsWeight), lhsWeight, rhsWeight)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "weight", lhsWeight), LocatorUtils.property(thatLocator, "weight", rhsWeight), lhsWeight,
+					rhsWeight)) {
 				return false;
 			}
 		}
@@ -640,8 +619,8 @@ public class MpuElement implements Equals, HashCode {
 			lhsService = this.getService();
 			String rhsService;
 			rhsService = that.getService();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "service", lhsService),
-					LocatorUtils.property(thatLocator, "service", rhsService), lhsService, rhsService)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "service", lhsService), LocatorUtils.property(thatLocator, "service", rhsService),
+					lhsService, rhsService)) {
 				return false;
 			}
 		}
@@ -651,8 +630,7 @@ public class MpuElement implements Equals, HashCode {
 			String rhsBillingRef1;
 			rhsBillingRef1 = that.getBillingRef1();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef1", lhsBillingRef1),
-					LocatorUtils.property(thatLocator, "billingRef1", rhsBillingRef1), lhsBillingRef1,
-					rhsBillingRef1)) {
+					LocatorUtils.property(thatLocator, "billingRef1", rhsBillingRef1), lhsBillingRef1, rhsBillingRef1)) {
 				return false;
 			}
 		}
@@ -662,8 +640,7 @@ public class MpuElement implements Equals, HashCode {
 			String rhsBillingRef2;
 			rhsBillingRef2 = that.getBillingRef2();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "billingRef2", lhsBillingRef2),
-					LocatorUtils.property(thatLocator, "billingRef2", rhsBillingRef2), lhsBillingRef2,
-					rhsBillingRef2)) {
+					LocatorUtils.property(thatLocator, "billingRef2", rhsBillingRef2), lhsBillingRef2, rhsBillingRef2)) {
 				return false;
 			}
 		}
@@ -673,8 +650,7 @@ public class MpuElement implements Equals, HashCode {
 			Integer rhsThirdPartyBillTo;
 			rhsThirdPartyBillTo = that.getThirdPartyBillTo();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "thirdPartyBillTo", lhsThirdPartyBillTo),
-					LocatorUtils.property(thatLocator, "thirdPartyBillTo", rhsThirdPartyBillTo), lhsThirdPartyBillTo,
-					rhsThirdPartyBillTo)) {
+					LocatorUtils.property(thatLocator, "thirdPartyBillTo", rhsThirdPartyBillTo), lhsThirdPartyBillTo, rhsThirdPartyBillTo)) {
 				return false;
 			}
 		}
@@ -684,8 +660,7 @@ public class MpuElement implements Equals, HashCode {
 			String rhsMailTypeCode;
 			rhsMailTypeCode = that.getMailTypeCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "mailTypeCode", lhsMailTypeCode),
-					LocatorUtils.property(thatLocator, "mailTypeCode", rhsMailTypeCode), lhsMailTypeCode,
-					rhsMailTypeCode)) {
+					LocatorUtils.property(thatLocator, "mailTypeCode", rhsMailTypeCode), lhsMailTypeCode, rhsMailTypeCode)) {
 				return false;
 			}
 		}
@@ -695,8 +670,7 @@ public class MpuElement implements Equals, HashCode {
 			String rhsFacilityCode;
 			rhsFacilityCode = that.getFacilityCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "facilityCode", lhsFacilityCode),
-					LocatorUtils.property(thatLocator, "facilityCode", rhsFacilityCode), lhsFacilityCode,
-					rhsFacilityCode)) {
+					LocatorUtils.property(thatLocator, "facilityCode", rhsFacilityCode), lhsFacilityCode, rhsFacilityCode)) {
 				return false;
 			}
 		}
@@ -706,8 +680,7 @@ public class MpuElement implements Equals, HashCode {
 			String rhsExpectedShipDate;
 			rhsExpectedShipDate = that.getExpectedShipDate();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "expectedShipDate", lhsExpectedShipDate),
-					LocatorUtils.property(thatLocator, "expectedShipDate", rhsExpectedShipDate), lhsExpectedShipDate,
-					rhsExpectedShipDate)) {
+					LocatorUtils.property(thatLocator, "expectedShipDate", rhsExpectedShipDate), lhsExpectedShipDate, rhsExpectedShipDate)) {
 				return false;
 			}
 		}
@@ -716,8 +689,7 @@ public class MpuElement implements Equals, HashCode {
 			lhsImpb = this.getImpb();
 			ImpbElement rhsImpb;
 			rhsImpb = that.getImpb();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "impb", lhsImpb),
-					LocatorUtils.property(thatLocator, "impb", rhsImpb), lhsImpb, rhsImpb)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "impb", lhsImpb), LocatorUtils.property(thatLocator, "impb", rhsImpb), lhsImpb, rhsImpb)) {
 				return false;
 			}
 		}
@@ -727,8 +699,7 @@ public class MpuElement implements Equals, HashCode {
 			ContainerElement rhsContainerRef1;
 			rhsContainerRef1 = that.getContainerRef1();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerRef1", lhsContainerRef1),
-					LocatorUtils.property(thatLocator, "containerRef1", rhsContainerRef1), lhsContainerRef1,
-					rhsContainerRef1)) {
+					LocatorUtils.property(thatLocator, "containerRef1", rhsContainerRef1), lhsContainerRef1, rhsContainerRef1)) {
 				return false;
 			}
 		}
@@ -738,8 +709,7 @@ public class MpuElement implements Equals, HashCode {
 			ContainerElement rhsContainerRef2;
 			rhsContainerRef2 = that.getContainerRef2();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerRef2", lhsContainerRef2),
-					LocatorUtils.property(thatLocator, "containerRef2", rhsContainerRef2), lhsContainerRef2,
-					rhsContainerRef2)) {
+					LocatorUtils.property(thatLocator, "containerRef2", rhsContainerRef2), lhsContainerRef2, rhsContainerRef2)) {
 				return false;
 			}
 		}
@@ -748,8 +718,8 @@ public class MpuElement implements Equals, HashCode {
 			lhsResponse = this.getResponse();
 			MpuResponseElement rhsResponse;
 			rhsResponse = that.getResponse();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "response", lhsResponse),
-					LocatorUtils.property(thatLocator, "response", rhsResponse), lhsResponse, rhsResponse)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "response", lhsResponse), LocatorUtils.property(thatLocator, "response", rhsResponse),
+					lhsResponse, rhsResponse)) {
 				return false;
 			}
 		}

@@ -87,14 +87,12 @@ public class AddressElement implements Equals, HashCode {
 		{
 			FreeFormAddressElement theFreeFormAddress;
 			theFreeFormAddress = this.getFreeFormAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "freeFormAddress", theFreeFormAddress),
-					currentHashCode, theFreeFormAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "freeFormAddress", theFreeFormAddress), currentHashCode, theFreeFormAddress);
 		}
 		{
 			StandardAddressElement theStandardAddress;
 			theStandardAddress = this.getStandardAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "standardAddress", theStandardAddress),
-					currentHashCode, theStandardAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "standardAddress", theStandardAddress), currentHashCode, theStandardAddress);
 		}
 		return currentHashCode;
 	}
@@ -104,8 +102,7 @@ public class AddressElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof AddressElement)) {
 			return false;
 		}
@@ -119,8 +116,7 @@ public class AddressElement implements Equals, HashCode {
 			FreeFormAddressElement rhsFreeFormAddress;
 			rhsFreeFormAddress = that.getFreeFormAddress();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "freeFormAddress", lhsFreeFormAddress),
-					LocatorUtils.property(thatLocator, "freeFormAddress", rhsFreeFormAddress), lhsFreeFormAddress,
-					rhsFreeFormAddress)) {
+					LocatorUtils.property(thatLocator, "freeFormAddress", rhsFreeFormAddress), lhsFreeFormAddress, rhsFreeFormAddress)) {
 				return false;
 			}
 		}
@@ -130,8 +126,7 @@ public class AddressElement implements Equals, HashCode {
 			StandardAddressElement rhsStandardAddress;
 			rhsStandardAddress = that.getStandardAddress();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "standardAddress", lhsStandardAddress),
-					LocatorUtils.property(thatLocator, "standardAddress", rhsStandardAddress), lhsStandardAddress,
-					rhsStandardAddress)) {
+					LocatorUtils.property(thatLocator, "standardAddress", rhsStandardAddress), lhsStandardAddress, rhsStandardAddress)) {
 				return false;
 			}
 		}

@@ -46,9 +46,9 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 	 * Gets the value of the teaOrCoffee property.
 	 * 
 	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to
-	 * the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for
-	 * the teaOrCoffee property.
+	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the
+	 * returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the
+	 * teaOrCoffee property.
 	 * 
 	 * <p>
 	 * For example, to add a new item, do as follows:
@@ -74,10 +74,8 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 		int currentHashCode = 1;
 		{
 			List<Object> theTeaOrCoffee;
-			theTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee()
-					: null);
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "teaOrCoffee", theTeaOrCoffee),
-					currentHashCode, theTeaOrCoffee);
+			theTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee() : null);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "teaOrCoffee", theTeaOrCoffee), currentHashCode, theTeaOrCoffee);
 		}
 		return currentHashCode;
 	}
@@ -87,8 +85,7 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof ComplexChoicesWithMinMax)) {
 			return false;
 		}
@@ -98,14 +95,11 @@ public class ComplexChoicesWithMinMax implements Equals, HashCode {
 		final ComplexChoicesWithMinMax that = ((ComplexChoicesWithMinMax) object);
 		{
 			List<Object> lhsTeaOrCoffee;
-			lhsTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee()
-					: null);
+			lhsTeaOrCoffee = (((this.teaOrCoffee != null) && (!this.teaOrCoffee.isEmpty())) ? this.getTeaOrCoffee() : null);
 			List<Object> rhsTeaOrCoffee;
-			rhsTeaOrCoffee = (((that.teaOrCoffee != null) && (!that.teaOrCoffee.isEmpty())) ? that.getTeaOrCoffee()
-					: null);
+			rhsTeaOrCoffee = (((that.teaOrCoffee != null) && (!that.teaOrCoffee.isEmpty())) ? that.getTeaOrCoffee() : null);
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "teaOrCoffee", lhsTeaOrCoffee),
-					LocatorUtils.property(thatLocator, "teaOrCoffee", rhsTeaOrCoffee), lhsTeaOrCoffee,
-					rhsTeaOrCoffee)) {
+					LocatorUtils.property(thatLocator, "teaOrCoffee", rhsTeaOrCoffee), lhsTeaOrCoffee, rhsTeaOrCoffee)) {
 				return false;
 			}
 		}

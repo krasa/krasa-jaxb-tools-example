@@ -90,14 +90,12 @@ public class ImpbElement implements Equals, HashCode {
 		{
 			ImpbConstructValue theConstruct;
 			theConstruct = this.getConstruct();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "construct", theConstruct),
-					currentHashCode, theConstruct);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "construct", theConstruct), currentHashCode, theConstruct);
 		}
 		{
 			String theValue;
 			theValue = this.getValue();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode,
-					theValue);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "value", theValue), currentHashCode, theValue);
 		}
 		return currentHashCode;
 	}
@@ -107,8 +105,7 @@ public class ImpbElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof ImpbElement)) {
 			return false;
 		}
@@ -121,8 +118,8 @@ public class ImpbElement implements Equals, HashCode {
 			lhsConstruct = this.getConstruct();
 			ImpbConstructValue rhsConstruct;
 			rhsConstruct = that.getConstruct();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "construct", lhsConstruct),
-					LocatorUtils.property(thatLocator, "construct", rhsConstruct), lhsConstruct, rhsConstruct)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "construct", lhsConstruct), LocatorUtils.property(thatLocator, "construct", rhsConstruct),
+					lhsConstruct, rhsConstruct)) {
 				return false;
 			}
 		}
@@ -131,8 +128,8 @@ public class ImpbElement implements Equals, HashCode {
 			lhsValue = this.getValue();
 			String rhsValue;
 			rhsValue = that.getValue();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue),
-					LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue, rhsValue)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "value", lhsValue), LocatorUtils.property(thatLocator, "value", rhsValue), lhsValue,
+					rhsValue)) {
 				return false;
 			}
 		}

@@ -49,8 +49,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "mpuResponseElement", propOrder = { "errorList", "labelDetail", "labelZpl", "labelImage", "mailItemId",
-		"delconFromImpb" })
+@XmlType(name = "mpuResponseElement", propOrder = { "errorList", "labelDetail", "labelZpl", "labelImage", "mailItemId", "delconFromImpb" })
 public class MpuResponseElement implements Equals, HashCode {
 
 	@XmlElement(name = "ErrorList")
@@ -195,38 +194,32 @@ public class MpuResponseElement implements Equals, HashCode {
 		{
 			MpuResponseElement.ErrorList theErrorList;
 			theErrorList = this.getErrorList();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "errorList", theErrorList),
-					currentHashCode, theErrorList);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "errorList", theErrorList), currentHashCode, theErrorList);
 		}
 		{
 			LabelDetailElement theLabelDetail;
 			theLabelDetail = this.getLabelDetail();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelDetail", theLabelDetail),
-					currentHashCode, theLabelDetail);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelDetail", theLabelDetail), currentHashCode, theLabelDetail);
 		}
 		{
 			String theLabelZpl;
 			theLabelZpl = this.getLabelZpl();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelZpl", theLabelZpl),
-					currentHashCode, theLabelZpl);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelZpl", theLabelZpl), currentHashCode, theLabelZpl);
 		}
 		{
 			byte[] theLabelImage;
 			theLabelImage = this.getLabelImage();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelImage", theLabelImage),
-					currentHashCode, theLabelImage);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelImage", theLabelImage), currentHashCode, theLabelImage);
 		}
 		{
 			String theMailItemId;
 			theMailItemId = this.getMailItemId();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailItemId", theMailItemId),
-					currentHashCode, theMailItemId);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailItemId", theMailItemId), currentHashCode, theMailItemId);
 		}
 		{
 			String theDelconFromImpb;
 			theDelconFromImpb = this.getDelconFromImpb();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "delconFromImpb", theDelconFromImpb),
-					currentHashCode, theDelconFromImpb);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "delconFromImpb", theDelconFromImpb), currentHashCode, theDelconFromImpb);
 		}
 		return currentHashCode;
 	}
@@ -236,8 +229,7 @@ public class MpuResponseElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof MpuResponseElement)) {
 			return false;
 		}
@@ -250,8 +242,8 @@ public class MpuResponseElement implements Equals, HashCode {
 			lhsErrorList = this.getErrorList();
 			MpuResponseElement.ErrorList rhsErrorList;
 			rhsErrorList = that.getErrorList();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "errorList", lhsErrorList),
-					LocatorUtils.property(thatLocator, "errorList", rhsErrorList), lhsErrorList, rhsErrorList)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "errorList", lhsErrorList), LocatorUtils.property(thatLocator, "errorList", rhsErrorList),
+					lhsErrorList, rhsErrorList)) {
 				return false;
 			}
 		}
@@ -261,8 +253,7 @@ public class MpuResponseElement implements Equals, HashCode {
 			LabelDetailElement rhsLabelDetail;
 			rhsLabelDetail = that.getLabelDetail();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelDetail", lhsLabelDetail),
-					LocatorUtils.property(thatLocator, "labelDetail", rhsLabelDetail), lhsLabelDetail,
-					rhsLabelDetail)) {
+					LocatorUtils.property(thatLocator, "labelDetail", rhsLabelDetail), lhsLabelDetail, rhsLabelDetail)) {
 				return false;
 			}
 		}
@@ -271,8 +262,8 @@ public class MpuResponseElement implements Equals, HashCode {
 			lhsLabelZpl = this.getLabelZpl();
 			String rhsLabelZpl;
 			rhsLabelZpl = that.getLabelZpl();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelZpl", lhsLabelZpl),
-					LocatorUtils.property(thatLocator, "labelZpl", rhsLabelZpl), lhsLabelZpl, rhsLabelZpl)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelZpl", lhsLabelZpl), LocatorUtils.property(thatLocator, "labelZpl", rhsLabelZpl),
+					lhsLabelZpl, rhsLabelZpl)) {
 				return false;
 			}
 		}
@@ -302,8 +293,7 @@ public class MpuResponseElement implements Equals, HashCode {
 			String rhsDelconFromImpb;
 			rhsDelconFromImpb = that.getDelconFromImpb();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "delconFromImpb", lhsDelconFromImpb),
-					LocatorUtils.property(thatLocator, "delconFromImpb", rhsDelconFromImpb), lhsDelconFromImpb,
-					rhsDelconFromImpb)) {
+					LocatorUtils.property(thatLocator, "delconFromImpb", rhsDelconFromImpb), lhsDelconFromImpb, rhsDelconFromImpb)) {
 				return false;
 			}
 		}
@@ -347,9 +337,9 @@ public class MpuResponseElement implements Equals, HashCode {
 		 * Gets the value of the error property.
 		 * 
 		 * <p>
-		 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you
-		 * make to the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE>
-		 * method for the error property.
+		 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the
+		 * returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the
+		 * error property.
 		 * 
 		 * <p>
 		 * For example, to add a new item, do as follows:
@@ -376,8 +366,7 @@ public class MpuResponseElement implements Equals, HashCode {
 			{
 				List<String> theError;
 				theError = (((this.error != null) && (!this.error.isEmpty())) ? this.getError() : null);
-				currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "error", theError), currentHashCode,
-						theError);
+				currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "error", theError), currentHashCode, theError);
 			}
 			return currentHashCode;
 		}
@@ -387,8 +376,7 @@ public class MpuResponseElement implements Equals, HashCode {
 			return this.hashCode(null, strategy);
 		}
 
-		public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-				EqualsStrategy strategy) {
+		public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 			if (!(object instanceof MpuResponseElement.ErrorList)) {
 				return false;
 			}
@@ -401,8 +389,8 @@ public class MpuResponseElement implements Equals, HashCode {
 				lhsError = (((this.error != null) && (!this.error.isEmpty())) ? this.getError() : null);
 				List<String> rhsError;
 				rhsError = (((that.error != null) && (!that.error.isEmpty())) ? that.getError() : null);
-				if (!strategy.equals(LocatorUtils.property(thisLocator, "error", lhsError),
-						LocatorUtils.property(thatLocator, "error", rhsError), lhsError, rhsError)) {
+				if (!strategy.equals(LocatorUtils.property(thisLocator, "error", lhsError), LocatorUtils.property(thatLocator, "error", rhsError), lhsError,
+						rhsError)) {
 					return false;
 				}
 			}

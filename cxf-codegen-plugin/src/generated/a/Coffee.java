@@ -76,8 +76,7 @@ public class Coffee implements Serializable, Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof Coffee)) {
 			return false;
 		}
@@ -90,8 +89,7 @@ public class Coffee implements Serializable, Equals, HashCode {
 			lhsBar = this.getBar();
 			String rhsBar;
 			rhsBar = that.getBar();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "bar", lhsBar),
-					LocatorUtils.property(thatLocator, "bar", rhsBar), lhsBar, rhsBar)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "bar", lhsBar), LocatorUtils.property(thatLocator, "bar", rhsBar), lhsBar, rhsBar)) {
 				return false;
 			}
 		}

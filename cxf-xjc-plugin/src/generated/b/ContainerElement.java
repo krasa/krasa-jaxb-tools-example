@@ -90,14 +90,12 @@ public class ContainerElement implements Equals, HashCode {
 		{
 			ContainerTypeValue theType;
 			theType = this.getType();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "type", theType), currentHashCode,
-					theType);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "type", theType), currentHashCode, theType);
 		}
 		{
 			String theContainerId;
 			theContainerId = this.getContainerId();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerId", theContainerId),
-					currentHashCode, theContainerId);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "containerId", theContainerId), currentHashCode, theContainerId);
 		}
 		return currentHashCode;
 	}
@@ -107,8 +105,7 @@ public class ContainerElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof ContainerElement)) {
 			return false;
 		}
@@ -121,8 +118,7 @@ public class ContainerElement implements Equals, HashCode {
 			lhsType = this.getType();
 			ContainerTypeValue rhsType;
 			rhsType = that.getType();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "type", lhsType),
-					LocatorUtils.property(thatLocator, "type", rhsType), lhsType, rhsType)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "type", lhsType), LocatorUtils.property(thatLocator, "type", rhsType), lhsType, rhsType)) {
 				return false;
 			}
 		}
@@ -132,8 +128,7 @@ public class ContainerElement implements Equals, HashCode {
 			String rhsContainerId;
 			rhsContainerId = that.getContainerId();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "containerId", lhsContainerId),
-					LocatorUtils.property(thatLocator, "containerId", rhsContainerId), lhsContainerId,
-					rhsContainerId)) {
+					LocatorUtils.property(thatLocator, "containerId", rhsContainerId), lhsContainerId, rhsContainerId)) {
 				return false;
 			}
 		}

@@ -44,9 +44,8 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "labelDetailElement", propOrder = { "impb", "serviceTypeCode", "correctedAddress", "mailTypeCode",
-		"shipperAddress", "inboundSortCode", "intendedReceivingFacility", "outboundSortCode", "sortingSetupVersion",
-		"zipPlus4", "serviceLevel", "orderedProductCode", "mailBanner" })
+@XmlType(name = "labelDetailElement", propOrder = { "impb", "serviceTypeCode", "correctedAddress", "mailTypeCode", "shipperAddress", "inboundSortCode",
+		"intendedReceivingFacility", "outboundSortCode", "sortingSetupVersion", "zipPlus4", "serviceLevel", "orderedProductCode", "mailBanner" })
 public class LabelDetailElement implements Equals, HashCode {
 
 	@XmlElement(name = "Impb")
@@ -361,83 +360,70 @@ public class LabelDetailElement implements Equals, HashCode {
 		{
 			ImpbElement theImpb;
 			theImpb = this.getImpb();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "impb", theImpb), currentHashCode,
-					theImpb);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "impb", theImpb), currentHashCode, theImpb);
 		}
 		{
 			String theServiceTypeCode;
 			theServiceTypeCode = this.getServiceTypeCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "serviceTypeCode", theServiceTypeCode),
-					currentHashCode, theServiceTypeCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "serviceTypeCode", theServiceTypeCode), currentHashCode, theServiceTypeCode);
 		}
 		{
 			AddressElement theCorrectedAddress;
 			theCorrectedAddress = this.getCorrectedAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "correctedAddress", theCorrectedAddress),
-					currentHashCode, theCorrectedAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "correctedAddress", theCorrectedAddress), currentHashCode, theCorrectedAddress);
 		}
 		{
 			String theMailTypeCode;
 			theMailTypeCode = this.getMailTypeCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailTypeCode", theMailTypeCode),
-					currentHashCode, theMailTypeCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailTypeCode", theMailTypeCode), currentHashCode, theMailTypeCode);
 		}
 		{
 			AddressElement theShipperAddress;
 			theShipperAddress = this.getShipperAddress();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "shipperAddress", theShipperAddress),
-					currentHashCode, theShipperAddress);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "shipperAddress", theShipperAddress), currentHashCode, theShipperAddress);
 		}
 		{
 			String theInboundSortCode;
 			theInboundSortCode = this.getInboundSortCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "inboundSortCode", theInboundSortCode),
-					currentHashCode, theInboundSortCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "inboundSortCode", theInboundSortCode), currentHashCode, theInboundSortCode);
 		}
 		{
 			String theIntendedReceivingFacility;
 			theIntendedReceivingFacility = this.getIntendedReceivingFacility();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "intendedReceivingFacility", theIntendedReceivingFacility),
-					currentHashCode, theIntendedReceivingFacility);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "intendedReceivingFacility", theIntendedReceivingFacility), currentHashCode,
+					theIntendedReceivingFacility);
 		}
 		{
 			String theOutboundSortCode;
 			theOutboundSortCode = this.getOutboundSortCode();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "outboundSortCode", theOutboundSortCode),
-					currentHashCode, theOutboundSortCode);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "outboundSortCode", theOutboundSortCode), currentHashCode, theOutboundSortCode);
 		}
 		{
 			String theSortingSetupVersion;
 			theSortingSetupVersion = this.getSortingSetupVersion();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "sortingSetupVersion", theSortingSetupVersion), currentHashCode,
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "sortingSetupVersion", theSortingSetupVersion), currentHashCode,
 					theSortingSetupVersion);
 		}
 		{
 			String theZipPlus4;
 			theZipPlus4 = this.getZipPlus4();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "zipPlus4", theZipPlus4),
-					currentHashCode, theZipPlus4);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "zipPlus4", theZipPlus4), currentHashCode, theZipPlus4);
 		}
 		{
 			String theServiceLevel;
 			theServiceLevel = this.getServiceLevel();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "serviceLevel", theServiceLevel),
-					currentHashCode, theServiceLevel);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "serviceLevel", theServiceLevel), currentHashCode, theServiceLevel);
 		}
 		{
 			String theOrderedProductCode;
 			theOrderedProductCode = this.getOrderedProductCode();
-			currentHashCode = strategy.hashCode(
-					LocatorUtils.property(locator, "orderedProductCode", theOrderedProductCode), currentHashCode,
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "orderedProductCode", theOrderedProductCode), currentHashCode,
 					theOrderedProductCode);
 		}
 		{
 			String theMailBanner;
 			theMailBanner = this.getMailBanner();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailBanner", theMailBanner),
-					currentHashCode, theMailBanner);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "mailBanner", theMailBanner), currentHashCode, theMailBanner);
 		}
 		return currentHashCode;
 	}
@@ -447,8 +433,7 @@ public class LabelDetailElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof LabelDetailElement)) {
 			return false;
 		}
@@ -461,8 +446,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			lhsImpb = this.getImpb();
 			ImpbElement rhsImpb;
 			rhsImpb = that.getImpb();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "impb", lhsImpb),
-					LocatorUtils.property(thatLocator, "impb", rhsImpb), lhsImpb, rhsImpb)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "impb", lhsImpb), LocatorUtils.property(thatLocator, "impb", rhsImpb), lhsImpb, rhsImpb)) {
 				return false;
 			}
 		}
@@ -472,8 +456,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			String rhsServiceTypeCode;
 			rhsServiceTypeCode = that.getServiceTypeCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "serviceTypeCode", lhsServiceTypeCode),
-					LocatorUtils.property(thatLocator, "serviceTypeCode", rhsServiceTypeCode), lhsServiceTypeCode,
-					rhsServiceTypeCode)) {
+					LocatorUtils.property(thatLocator, "serviceTypeCode", rhsServiceTypeCode), lhsServiceTypeCode, rhsServiceTypeCode)) {
 				return false;
 			}
 		}
@@ -483,8 +466,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			AddressElement rhsCorrectedAddress;
 			rhsCorrectedAddress = that.getCorrectedAddress();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "correctedAddress", lhsCorrectedAddress),
-					LocatorUtils.property(thatLocator, "correctedAddress", rhsCorrectedAddress), lhsCorrectedAddress,
-					rhsCorrectedAddress)) {
+					LocatorUtils.property(thatLocator, "correctedAddress", rhsCorrectedAddress), lhsCorrectedAddress, rhsCorrectedAddress)) {
 				return false;
 			}
 		}
@@ -494,8 +476,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			String rhsMailTypeCode;
 			rhsMailTypeCode = that.getMailTypeCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "mailTypeCode", lhsMailTypeCode),
-					LocatorUtils.property(thatLocator, "mailTypeCode", rhsMailTypeCode), lhsMailTypeCode,
-					rhsMailTypeCode)) {
+					LocatorUtils.property(thatLocator, "mailTypeCode", rhsMailTypeCode), lhsMailTypeCode, rhsMailTypeCode)) {
 				return false;
 			}
 		}
@@ -505,8 +486,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			AddressElement rhsShipperAddress;
 			rhsShipperAddress = that.getShipperAddress();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "shipperAddress", lhsShipperAddress),
-					LocatorUtils.property(thatLocator, "shipperAddress", rhsShipperAddress), lhsShipperAddress,
-					rhsShipperAddress)) {
+					LocatorUtils.property(thatLocator, "shipperAddress", rhsShipperAddress), lhsShipperAddress, rhsShipperAddress)) {
 				return false;
 			}
 		}
@@ -516,8 +496,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			String rhsInboundSortCode;
 			rhsInboundSortCode = that.getInboundSortCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "inboundSortCode", lhsInboundSortCode),
-					LocatorUtils.property(thatLocator, "inboundSortCode", rhsInboundSortCode), lhsInboundSortCode,
-					rhsInboundSortCode)) {
+					LocatorUtils.property(thatLocator, "inboundSortCode", rhsInboundSortCode), lhsInboundSortCode, rhsInboundSortCode)) {
 				return false;
 			}
 		}
@@ -526,10 +505,9 @@ public class LabelDetailElement implements Equals, HashCode {
 			lhsIntendedReceivingFacility = this.getIntendedReceivingFacility();
 			String rhsIntendedReceivingFacility;
 			rhsIntendedReceivingFacility = that.getIntendedReceivingFacility();
-			if (!strategy.equals(
-					LocatorUtils.property(thisLocator, "intendedReceivingFacility", lhsIntendedReceivingFacility),
-					LocatorUtils.property(thatLocator, "intendedReceivingFacility", rhsIntendedReceivingFacility),
-					lhsIntendedReceivingFacility, rhsIntendedReceivingFacility)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "intendedReceivingFacility", lhsIntendedReceivingFacility),
+					LocatorUtils.property(thatLocator, "intendedReceivingFacility", rhsIntendedReceivingFacility), lhsIntendedReceivingFacility,
+					rhsIntendedReceivingFacility)) {
 				return false;
 			}
 		}
@@ -539,8 +517,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			String rhsOutboundSortCode;
 			rhsOutboundSortCode = that.getOutboundSortCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "outboundSortCode", lhsOutboundSortCode),
-					LocatorUtils.property(thatLocator, "outboundSortCode", rhsOutboundSortCode), lhsOutboundSortCode,
-					rhsOutboundSortCode)) {
+					LocatorUtils.property(thatLocator, "outboundSortCode", rhsOutboundSortCode), lhsOutboundSortCode, rhsOutboundSortCode)) {
 				return false;
 			}
 		}
@@ -550,8 +527,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			String rhsSortingSetupVersion;
 			rhsSortingSetupVersion = that.getSortingSetupVersion();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "sortingSetupVersion", lhsSortingSetupVersion),
-					LocatorUtils.property(thatLocator, "sortingSetupVersion", rhsSortingSetupVersion),
-					lhsSortingSetupVersion, rhsSortingSetupVersion)) {
+					LocatorUtils.property(thatLocator, "sortingSetupVersion", rhsSortingSetupVersion), lhsSortingSetupVersion, rhsSortingSetupVersion)) {
 				return false;
 			}
 		}
@@ -560,8 +536,8 @@ public class LabelDetailElement implements Equals, HashCode {
 			lhsZipPlus4 = this.getZipPlus4();
 			String rhsZipPlus4;
 			rhsZipPlus4 = that.getZipPlus4();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "zipPlus4", lhsZipPlus4),
-					LocatorUtils.property(thatLocator, "zipPlus4", rhsZipPlus4), lhsZipPlus4, rhsZipPlus4)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "zipPlus4", lhsZipPlus4), LocatorUtils.property(thatLocator, "zipPlus4", rhsZipPlus4),
+					lhsZipPlus4, rhsZipPlus4)) {
 				return false;
 			}
 		}
@@ -571,8 +547,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			String rhsServiceLevel;
 			rhsServiceLevel = that.getServiceLevel();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "serviceLevel", lhsServiceLevel),
-					LocatorUtils.property(thatLocator, "serviceLevel", rhsServiceLevel), lhsServiceLevel,
-					rhsServiceLevel)) {
+					LocatorUtils.property(thatLocator, "serviceLevel", rhsServiceLevel), lhsServiceLevel, rhsServiceLevel)) {
 				return false;
 			}
 		}
@@ -582,8 +557,7 @@ public class LabelDetailElement implements Equals, HashCode {
 			String rhsOrderedProductCode;
 			rhsOrderedProductCode = that.getOrderedProductCode();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "orderedProductCode", lhsOrderedProductCode),
-					LocatorUtils.property(thatLocator, "orderedProductCode", rhsOrderedProductCode),
-					lhsOrderedProductCode, rhsOrderedProductCode)) {
+					LocatorUtils.property(thatLocator, "orderedProductCode", rhsOrderedProductCode), lhsOrderedProductCode, rhsOrderedProductCode)) {
 				return false;
 			}
 		}

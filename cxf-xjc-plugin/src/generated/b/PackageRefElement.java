@@ -87,14 +87,12 @@ public class PackageRefElement implements Equals, HashCode {
 		{
 			Boolean thePrintFlag;
 			thePrintFlag = this.isPrintFlag();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "printFlag", thePrintFlag),
-					currentHashCode, thePrintFlag);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "printFlag", thePrintFlag), currentHashCode, thePrintFlag);
 		}
 		{
 			String theLabelText;
 			theLabelText = this.getLabelText();
-			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelText", theLabelText),
-					currentHashCode, theLabelText);
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "labelText", theLabelText), currentHashCode, theLabelText);
 		}
 		return currentHashCode;
 	}
@@ -104,8 +102,7 @@ public class PackageRefElement implements Equals, HashCode {
 		return this.hashCode(null, strategy);
 	}
 
-	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object,
-			EqualsStrategy strategy) {
+	public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy strategy) {
 		if (!(object instanceof PackageRefElement)) {
 			return false;
 		}
@@ -118,8 +115,8 @@ public class PackageRefElement implements Equals, HashCode {
 			lhsPrintFlag = this.isPrintFlag();
 			Boolean rhsPrintFlag;
 			rhsPrintFlag = that.isPrintFlag();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "printFlag", lhsPrintFlag),
-					LocatorUtils.property(thatLocator, "printFlag", rhsPrintFlag), lhsPrintFlag, rhsPrintFlag)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "printFlag", lhsPrintFlag), LocatorUtils.property(thatLocator, "printFlag", rhsPrintFlag),
+					lhsPrintFlag, rhsPrintFlag)) {
 				return false;
 			}
 		}
@@ -128,8 +125,8 @@ public class PackageRefElement implements Equals, HashCode {
 			lhsLabelText = this.getLabelText();
 			String rhsLabelText;
 			rhsLabelText = that.getLabelText();
-			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelText", lhsLabelText),
-					LocatorUtils.property(thatLocator, "labelText", rhsLabelText), lhsLabelText, rhsLabelText)) {
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "labelText", lhsLabelText), LocatorUtils.property(thatLocator, "labelText", rhsLabelText),
+					lhsLabelText, rhsLabelText)) {
 				return false;
 			}
 		}

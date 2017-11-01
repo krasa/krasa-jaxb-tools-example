@@ -20,6 +20,5 @@ public interface Hello {
 	@WebMethod(operationName = "Echo")
 	@Valid
 	@WebResult(name = "parameters", targetNamespace = "", partName = "parameters")
-	public EchoResponse echo(
-			@Valid @WebParam(partName = "parameters", name = "parameters", targetNamespace = "") Echo parameters);
+	public EchoResponse echo(@Valid @WebParam(partName = "parameters", name = "parameters", targetNamespace = "") Echo parameters);
 }
