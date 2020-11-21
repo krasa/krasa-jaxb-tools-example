@@ -80,6 +80,14 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link TimeInstantType }
+	 * 
+	 */
+	public TimeInstantType createTimeInstantType() {
+		return new TimeInstantType();
+	}
+
+	/**
 	 * Create an instance of {@link Numbers }
 	 * 
 	 */

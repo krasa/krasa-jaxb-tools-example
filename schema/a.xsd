@@ -20,6 +20,8 @@
 			<xsd:element name="enumeration" type="a:Enumeration"/>
 			<xsd:element name="array" type="a:ArrayOfBytes"/>
 			<xsd:element name="primitives" type="a:Primitives"/>
+			<xsd:element name="dateOrDateTimeType" type="a:DateOrDateTimeType"/>
+			<xsd:element name="timeInstantType" type="a:TimeInstantType"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -274,5 +276,17 @@
 			<xsd:pattern value="[A-Z]"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+
+
+	<xsd:simpleType name="DateOrDateTimeType">
+		<xsd:union memberTypes="xsd:date xsd:dateTime"/>
+	</xsd:simpleType>
+
+	<xsd:complexType name="TimeInstantType">
+		<xsd:simpleContent>
+			<xsd:extension base="a:DateOrDateTimeType">
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
 
 </xsd:schema>

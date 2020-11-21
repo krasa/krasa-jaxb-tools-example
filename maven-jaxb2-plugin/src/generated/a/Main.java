@@ -41,6 +41,8 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  *         &lt;element name="enumeration" type="{a}Enumeration"/>
  *         &lt;element name="array" type="{a}ArrayOfBytes"/>
  *         &lt;element name="primitives" type="{a}Primitives"/>
+ *         &lt;element name="dateOrDateTimeType" type="{a}DateOrDateTimeType"/>
+ *         &lt;element name="timeInstantType" type="{a}TimeInstantType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -51,7 +53,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Main", propOrder = { "multiplePatternsWithBase", "numbers", "strings", "unsignedByte", "choices", "complexChoices", "choicesWithMinMax",
-		"complexChoicesWithMinMax", "enumerations", "enumeration", "array", "primitives" })
+		"complexChoicesWithMinMax", "enumerations", "enumeration", "array", "primitives", "dateOrDateTimeType", "timeInstantType" })
 public class Main implements Equals, HashCode {
 
 	@Pattern.List({ @Pattern(regexp = "[A-Z]"), @Pattern(regexp = "([0-9])|([A-B])") })
@@ -101,6 +103,13 @@ public class Main implements Equals, HashCode {
 	@javax.validation.constraints.NotNull
 	@Valid
 	protected Primitives primitives;
+	@XmlElement(required = true)
+	@javax.validation.constraints.NotNull
+	protected String dateOrDateTimeType;
+	@XmlElement(required = true)
+	@javax.validation.constraints.NotNull
+	@Valid
+	protected TimeInstantType timeInstantType;
 
 	/**
 	 * Gets the value of the multiplePatternsWithBase property.
@@ -349,6 +358,48 @@ public class Main implements Equals, HashCode {
 		this.primitives = value;
 	}
 
+	/**
+	 * Gets the value of the dateOrDateTimeType property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDateOrDateTimeType() {
+		return dateOrDateTimeType;
+	}
+
+	/**
+	 * Sets the value of the dateOrDateTimeType property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDateOrDateTimeType(String value) {
+		this.dateOrDateTimeType = value;
+	}
+
+	/**
+	 * Gets the value of the timeInstantType property.
+	 * 
+	 * @return possible object is {@link TimeInstantType }
+	 * 
+	 */
+	public TimeInstantType getTimeInstantType() {
+		return timeInstantType;
+	}
+
+	/**
+	 * Sets the value of the timeInstantType property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link TimeInstantType }
+	 * 
+	 */
+	public void setTimeInstantType(TimeInstantType value) {
+		this.timeInstantType = value;
+	}
+
 	public int hashCode(ObjectLocator locator, HashCodeStrategy strategy) {
 		int currentHashCode = 1;
 		{
@@ -413,6 +464,17 @@ public class Main implements Equals, HashCode {
 			Primitives thePrimitives;
 			thePrimitives = this.getPrimitives();
 			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "primitives", thePrimitives), currentHashCode, thePrimitives);
+		}
+		{
+			String theDateOrDateTimeType;
+			theDateOrDateTimeType = this.getDateOrDateTimeType();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "dateOrDateTimeType", theDateOrDateTimeType), currentHashCode,
+					theDateOrDateTimeType);
+		}
+		{
+			TimeInstantType theTimeInstantType;
+			theTimeInstantType = this.getTimeInstantType();
+			currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "timeInstantType", theTimeInstantType), currentHashCode, theTimeInstantType);
 		}
 		return currentHashCode;
 	}
@@ -549,6 +611,26 @@ public class Main implements Equals, HashCode {
 			rhsPrimitives = that.getPrimitives();
 			if (!strategy.equals(LocatorUtils.property(thisLocator, "primitives", lhsPrimitives),
 					LocatorUtils.property(thatLocator, "primitives", rhsPrimitives), lhsPrimitives, rhsPrimitives)) {
+				return false;
+			}
+		}
+		{
+			String lhsDateOrDateTimeType;
+			lhsDateOrDateTimeType = this.getDateOrDateTimeType();
+			String rhsDateOrDateTimeType;
+			rhsDateOrDateTimeType = that.getDateOrDateTimeType();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "dateOrDateTimeType", lhsDateOrDateTimeType),
+					LocatorUtils.property(thatLocator, "dateOrDateTimeType", rhsDateOrDateTimeType), lhsDateOrDateTimeType, rhsDateOrDateTimeType)) {
+				return false;
+			}
+		}
+		{
+			TimeInstantType lhsTimeInstantType;
+			lhsTimeInstantType = this.getTimeInstantType();
+			TimeInstantType rhsTimeInstantType;
+			rhsTimeInstantType = that.getTimeInstantType();
+			if (!strategy.equals(LocatorUtils.property(thisLocator, "timeInstantType", lhsTimeInstantType),
+					LocatorUtils.property(thatLocator, "timeInstantType", rhsTimeInstantType), lhsTimeInstantType, rhsTimeInstantType)) {
 				return false;
 			}
 		}
