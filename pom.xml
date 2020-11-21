@@ -1,104 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.krasa</groupId>
-    <artifactId>krasa-jaxb-tools-example</artifactId>
-    <version>0.5-SNAPSHOT</version>
-    <modules>
-        <module>cxf-xjc-plugin</module>
-        <module>cxf-codegen-plugin</module>
-        <module>maven-jaxb2-plugin</module>
-        <module>common</module>
-    </modules>
-    <packaging>pom</packaging>
+	<groupId>com.github.krasa</groupId>
+	<artifactId>krasa-jaxb-tools-example</artifactId>
+	<version>0.5-SNAPSHOT</version>
+	<modules>
+		<module>cxf-xjc-plugin</module>
+		<module>cxf-codegen-plugin</module>
+		<module>maven-jaxb2-plugin</module>
+		<module>common</module>
+	</modules>
+	<packaging>pom</packaging>
 
-    <properties>
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-        <krasa-jaxb-tools.version>1.6-SNAPSHOT</krasa-jaxb-tools.version>
-        <krasa-jaxb-tools-example.version>0.5-SNAPSHOT</krasa-jaxb-tools-example.version>
+	<properties>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<krasa-jaxb-tools.version>1.6-SNAPSHOT</krasa-jaxb-tools.version>
+		<krasa-jaxb-tools-example.version>0.5-SNAPSHOT</krasa-jaxb-tools-example.version>
 
-        <jaxb2-basics.version>0.9.3</jaxb2-basics.version>
-        <jaxb2-basics-runtime.version>0.9.3</jaxb2-basics-runtime.version>
+		<jaxb2-basics.version>0.9.3</jaxb2-basics.version>
+		<jaxb2-basics-runtime.version>0.9.3</jaxb2-basics-runtime.version>
 
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven-jaxb2-plugin.version>0.8.2</maven-jaxb2-plugin.version>
-        <jaxb.version>2.2.6</jaxb.version>
-        <validation-api.version>1.0.0.GA</validation-api.version>
-        <hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-jaxb2-plugin.version>0.8.2</maven-jaxb2-plugin.version>
+		<jaxb.version>2.2.6</jaxb.version>
+		<validation-api.version>1.0.0.GA</validation-api.version>
+		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
 
-        <cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
-        <jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
-        <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
-    </properties>
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${hibernate-validator.version}</version>
-        </dependency>
+		<cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
+		<jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
+		<build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
+	</properties>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate-validator.version}</version>
+		</dependency>
 
-        <dependency>
-            <groupId>org.jvnet.jaxb2_commons</groupId>
-            <artifactId>jaxb2-basics-runtime</artifactId>
-            <version>${jaxb2-basics-runtime.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>${jaxb2-basics-runtime.version}</version>
+		</dependency>
 
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${validation-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${validation-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
 
-    </dependencies>
-    <build>
+	</dependencies>
+	<build>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
-    <repositories>
-        <repository>
-            <id>snapshots-repo</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>snapshots-repo</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+	<repositories>
+		<repository>
+			<id>snapshots-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>snapshots-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 
 </project>
