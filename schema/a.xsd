@@ -251,8 +251,16 @@
 	<xsd:complexType name="PatternElement">
 		<xsd:sequence>
 			<xsd:element maxOccurs="1" minOccurs="0" name="multiplePatternsWithBase" type="a:patternList"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="enumRestrictions" type="a:enumRestrictions"/>
 		</xsd:sequence>
 	</xsd:complexType>
+
+	<xsd:simpleType name="enumRestrictions">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="test 123"/>
+			<xsd:enumeration value="test (123)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 
 	<xsd:simpleType name="patternList">
 		<xsd:restriction base="a:patternListBase">
