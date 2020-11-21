@@ -45,7 +45,7 @@ public class Enumeration implements Equals, HashCode {
 
 	@XmlElement(required = true)
 	@NotNull
-	@Pattern(regexp = "N05")
+	@Pattern(regexp = "\\QN05\\E")
 	protected String foo;
 
 	/**

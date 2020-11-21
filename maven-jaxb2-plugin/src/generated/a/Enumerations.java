@@ -47,7 +47,7 @@ public class Enumerations implements Equals, HashCode {
 
 	@XmlElement(required = true)
 	@NotNull
-	@Pattern(regexp = "(N05)|(C05)|(N04)")
+	@Pattern(regexp = "(\\QN05\\E)|(\\QC05\\E)|(\\QN04\\E)")
 	protected String foo;
 
 	/**

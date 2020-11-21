@@ -14,6 +14,7 @@ public class BeanValidationTest {
 	public void testValidation() {
 		PatternElement bean = new PatternElement();
 		bean.setMultiplePatternsWithBase("A");
+		bean.setEnumRestrictions("test (123)");
 
 		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 		Validator validator = factory.getValidator();

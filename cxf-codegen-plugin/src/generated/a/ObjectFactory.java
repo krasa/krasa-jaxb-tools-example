@@ -32,22 +32,6 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link PatternElement }
-	 * 
-	 */
-	public PatternElement createPatternElement() {
-		return new PatternElement();
-	}
-
-	/**
-	 * Create an instance of {@link Tea }
-	 * 
-	 */
-	public Tea createTea() {
-		return new Tea();
-	}
-
-	/**
 	 * Create an instance of {@link Enumeration }
 	 * 
 	 */
@@ -56,35 +40,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ChoicesWithMinMax }
+	 * Create an instance of {@link Coffee }
 	 * 
 	 */
-	public ChoicesWithMinMax createChoicesWithMinMax() {
-		return new ChoicesWithMinMax();
-	}
-
-	/**
-	 * Create an instance of {@link NumberWithCode }
-	 * 
-	 */
-	public NumberWithCode createNumberWithCode() {
-		return new NumberWithCode();
-	}
-
-	/**
-	 * Create an instance of {@link Choices }
-	 * 
-	 */
-	public Choices createChoices() {
-		return new Choices();
-	}
-
-	/**
-	 * Create an instance of {@link Dates }
-	 * 
-	 */
-	public Dates createDates() {
-		return new Dates();
+	public Coffee createCoffee() {
+		return new Coffee();
 	}
 
 	/**
@@ -104,11 +64,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ComplexChoices }
+	 * Create an instance of {@link PatternElement }
 	 * 
 	 */
-	public ComplexChoices createComplexChoices() {
-		return new ComplexChoices();
+	public PatternElement createPatternElement() {
+		return new PatternElement();
 	}
 
 	/**
@@ -120,11 +80,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link ComplexChoicesWithMinMax }
+	 * Create an instance of {@link ChoicesWithMinMax }
 	 * 
 	 */
-	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
-		return new ComplexChoicesWithMinMax();
+	public ChoicesWithMinMax createChoicesWithMinMax() {
+		return new ChoicesWithMinMax();
 	}
 
 	/**
@@ -136,11 +96,27 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link Coffee }
+	 * Create an instance of {@link ComplexChoices }
 	 * 
 	 */
-	public Coffee createCoffee() {
-		return new Coffee();
+	public ComplexChoices createComplexChoices() {
+		return new ComplexChoices();
+	}
+
+	/**
+	 * Create an instance of {@link Tea }
+	 * 
+	 */
+	public Tea createTea() {
+		return new Tea();
+	}
+
+	/**
+	 * Create an instance of {@link NumberWithCode }
+	 * 
+	 */
+	public NumberWithCode createNumberWithCode() {
+		return new NumberWithCode();
 	}
 
 	/**
@@ -149,6 +125,30 @@ public class ObjectFactory {
 	 */
 	public Strings createStrings() {
 		return new Strings();
+	}
+
+	/**
+	 * Create an instance of {@link ComplexChoicesWithMinMax }
+	 * 
+	 */
+	public ComplexChoicesWithMinMax createComplexChoicesWithMinMax() {
+		return new ComplexChoicesWithMinMax();
+	}
+
+	/**
+	 * Create an instance of {@link Dates }
+	 * 
+	 */
+	public Dates createDates() {
+		return new Dates();
+	}
+
+	/**
+	 * Create an instance of {@link Choices }
+	 * 
+	 */
+	public Choices createChoices() {
+		return new Choices();
 	}
 
 	/**

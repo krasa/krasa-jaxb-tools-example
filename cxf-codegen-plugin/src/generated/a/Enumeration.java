@@ -48,7 +48,7 @@ public class Enumeration implements Serializable, Equals, HashCode {
 	private final static long serialVersionUID = 1L;
 	@XmlElement(required = true)
 	@NotNull
-	@Pattern(regexp = "N05")
+	@Pattern(regexp = "\\QN05\\E")
 	protected String foo;
 
 	/**

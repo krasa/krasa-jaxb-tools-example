@@ -50,7 +50,7 @@ public class Enumerations implements Serializable, Equals, HashCode {
 	private final static long serialVersionUID = 1L;
 	@XmlElement(required = true)
 	@NotNull
-	@Pattern(regexp = "(N05)|(C05)|(N04)")
+	@Pattern(regexp = "(\\QN05\\E)|(\\QC05\\E)|(\\QN04\\E)")
 	protected String foo;
 
 	/**
