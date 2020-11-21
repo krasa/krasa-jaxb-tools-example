@@ -55,6 +55,7 @@ public enum ImpbConstructValue {
 	C_03("C03"),
 	@XmlEnumValue("C02")
 	C_02("C02");
+
 	private final String value;
 
 	ImpbConstructValue(String v) {
